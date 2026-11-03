@@ -52,7 +52,7 @@ export default defineConfig({
       { text: '示例与资源', link: '/examples/' },
       { text: '更新', link: '/changelog' },
     ],
-    socialLinks: [{ icon: 'github', link: 'https://github.com/hank79445-hub' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/hank79445-hub/maott-TRPG' }],
     search: {
       provider: 'local',
       options: {

@@ -15,6 +15,8 @@
 
 [支持范围](/about/status) · [许可与来源](/about/license) · [更新记录](/changelog)
 
-## 公开仓库进度
+## 开源仓库
 
-程序已整理为独立SRD公共版。GitHub首次公开推送等待作者完成管理端登录；目前可直接下载源码包自行部署。
+[浏览独立公开仓库](https://github.com/hank79445-hub/maott-TRPG) · [贡献指南](https://github.com/hank79445-hub/maott-TRPG/blob/main/CONTRIBUTING.md) · [反馈问题](https://github.com/hank79445-hub/maott-TRPG/issues)
+
+公开版与完整开发版分别维护。源码包与网站均对应公共预览版，不包含开发者运行数据。

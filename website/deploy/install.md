@@ -29,7 +29,7 @@ description: 固定版本后安装，保留锁文件。
 
 ## 当前可用的获取方式
 
-下载[完整公开版源码包](/downloads/maott-trpg-public-source.zip)，解压进入含package.json的目录。GitHub首次公开推送等待作者登录，下方git clone供仓库上线后使用；从源码包开始时跳过这两行。
+下载[完整公开版源码包](/downloads/maott-trpg-public-source.zip)，解压进入含package.json的目录。也可以使用下方git clone获取公开仓库；从源码包开始时跳过git clone和cd两行。
 
 ## 命令示例
 

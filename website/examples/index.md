@@ -35,4 +35,4 @@
 
 ## 公开版程序源码
 
-首次GitHub推送等待作者完成管理端登录。现在可以直接下载[完整公开版源码包](/downloads/maott-trpg-public-source.zip)及其[SHA-256校验值](/downloads/maott-trpg-public-source.sha256.txt)，按[安装教程](/deploy/install)自行部署。源码包含程序、测试、中英文README、本介绍站及许可通知，不包含运行数据或凭据。
+[独立公开仓库](https://github.com/hank79445-hub/maott-TRPG)现已开放。也可以直接下载[完整公开版源码包](/downloads/maott-trpg-public-source.zip)及其[SHA-256校验值](/downloads/maott-trpg-public-source.sha256.txt)，按[安装教程](/deploy/install)自行部署。源码包含程序、测试、中英文README、本介绍站及许可通知，不包含运行数据或凭据。

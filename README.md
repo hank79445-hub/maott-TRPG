@@ -35,7 +35,6 @@
 
 ## 快速开始
 
-> 首次GitHub公开推送等待作者完成管理端登录。目前可使用[完整公开版源码包](https://maott-trpg.turfyherb3.chatgpt.site/downloads/maott-trpg-public-source.zip)，解压后进入项目根目录，跳过git clone步骤即可安装。
 
 **已有GM的玩家**：[加入房间](https://maott-trpg.turfyherb3.chatgpt.site/start/player.html)，无需在自己的电脑安装后端。
 

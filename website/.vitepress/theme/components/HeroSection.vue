@@ -15,8 +15,8 @@ import MediaZoom from './MediaZoom.vue'
           >快速上手 <span aria-hidden="true">→</span></a
         ><a
           class="home-action secondary"
-          :href="withBase('/downloads/maott-trpg-public-source.zip')"
-          >下载开源版</a
+          href="https://github.com/hank79445-hub/maott-TRPG"
+          >GitHub源码</a
         >
       </div>
       <ul class="hero-tags" aria-label="项目特点">
