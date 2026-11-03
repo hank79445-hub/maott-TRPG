@@ -4,7 +4,7 @@
 
 [简体中文](README.md) · [English](README.en.md)
 
-[Website](https://maott-trpg.turfyherb3.chatgpt.site/) · [Getting started](https://maott-trpg.turfyherb3.chatgpt.site/start/) · [Chinese user guide](https://maott-trpg.turfyherb3.chatgpt.site/guide/) · [Original example](https://maott-trpg.turfyherb3.chatgpt.site/examples/)
+[Website](https://maott1.cn/) · [Getting started](https://maott1.cn/start/) · [Chinese user guide](https://maott1.cn/guide/) · [Original example](https://maott1.cn/examples/)
 
 ![Synthetic public-edition scene](website/public/media/scene-desktop.png)
 
@@ -27,7 +27,7 @@ Public preview **0.57.0-public.1** includes SRD5.2.1 and original teaching mater
 
 ## Start
 
-Players can join an existing GM-hosted instance in a browser. GMs can follow the [GM guide](https://maott-trpg.turfyherb3.chatgpt.site/start/gm.html) and import the original Lamplit Inn example. The current full website and tutorials are in Chinese.
+Players can join an existing GM-hosted instance in a browser. GMs can follow the [GM guide](https://maott1.cn/start/gm.html) and import the original Lamplit Inn example. The current full website and tutorials are in Chinese.
 
 For self-hosting, install Node.js **24+** and pnpm **11.25.0**, then run in the project root:
 
@@ -49,7 +49,7 @@ Account-backed script libraries and public hosting require your own protected HT
 
 The website and repository share one Markdown source: 11 player guides, 12 GM guides, 7 creator guides, 8 maintenance guides, 6 optional integration guides, and four onboarding paths.
 
-The original Lamplit Inn example provides three scenes, two prebuilt characters, private opening identities, reusable containers, and optional practice combat. Download the script ZIP, map archive, authoring JSON, character bundle and checksums from [Examples](https://maott-trpg.turfyherb3.chatgpt.site/examples/). Screenshots and short recordings use synthetic public-edition data.
+The original Lamplit Inn example provides three scenes, two prebuilt characters, private opening identities, reusable containers, and optional practice combat. Download the script ZIP, map archive, authoring JSON, character bundle and checksums from [Examples](https://maott1.cn/examples/). Screenshots and short recordings use synthetic public-edition data.
 
 ## Data and limits
 

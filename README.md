@@ -4,7 +4,7 @@
 
 [简体中文](README.md) · [English](README.en.md)
 
-[项目介绍](https://maott-trpg.turfyherb3.chatgpt.site/) · [快速上手](https://maott-trpg.turfyherb3.chatgpt.site/start/) · [完整教程](https://maott-trpg.turfyherb3.chatgpt.site/guide/) · [原创示例](https://maott-trpg.turfyherb3.chatgpt.site/examples/) · [支持范围](https://maott-trpg.turfyherb3.chatgpt.site/about/status.html)
+[项目介绍](https://maott1.cn/) · [快速上手](https://maott1.cn/start/) · [完整教程](https://maott1.cn/guide/) · [原创示例](https://maott1.cn/examples/) · [支持范围](https://maott1.cn/about/status.html)
 
 ![原创教学冒险的玩家场景](website/public/media/scene-desktop.png)
 
@@ -25,20 +25,20 @@
 
 | 功能        | 内容                                       | 教程                                                                                     |
 | ----------- | ------------------------------------------ | ---------------------------------------------------------------------------------------- |
-| 角色与背包  | 七步建卡、资源、状态、库存与穿戴           | [玩家指南](https://maott-trpg.turfyherb3.chatgpt.site/guide/player/character-sheet.html) |
-| 场景与探索  | 地图、队伍、移动、互动、容器取放与可见性   | [地图行动](https://maott-trpg.turfyherb3.chatgpt.site/guide/player/explore.html)         |
-| 战斗        | 名单、先攻、行动、目标、反应与已支持结算   | [战斗入门](https://maott-trpg.turfyherb3.chatgpt.site/guide/player/combat.html)          |
-| GM协作      | 成员权限、意图审核、事件广播、个人开场阅读 | [GM路径](https://maott-trpg.turfyherb3.chatgpt.site/start/gm.html)                       |
-| 剧本        | 编辑、角色位、版本、ZIP导入导出、新实例    | [创作路径](https://maott-trpg.turfyherb3.chatgpt.site/start/creator.html)                |
-| 可选AI／NPC | 旁白、知识记忆、对话与明确审批边界         | [可选接入](https://maott-trpg.turfyherb3.chatgpt.site/guide/advanced/models.html)        |
-| 维护与接入  | 本机／同网／HTTPS实例、数据、可选QQ        | [部署教程](https://maott-trpg.turfyherb3.chatgpt.site/deploy/requirements.html)          |
+| 角色与背包  | 七步建卡、资源、状态、库存与穿戴           | [玩家指南](https://maott1.cn/guide/player/character-sheet.html) |
+| 场景与探索  | 地图、队伍、移动、互动、容器取放与可见性   | [地图行动](https://maott1.cn/guide/player/explore.html)         |
+| 战斗        | 名单、先攻、行动、目标、反应与已支持结算   | [战斗入门](https://maott1.cn/guide/player/combat.html)          |
+| GM协作      | 成员权限、意图审核、事件广播、个人开场阅读 | [GM路径](https://maott1.cn/start/gm.html)                       |
+| 剧本        | 编辑、角色位、版本、ZIP导入导出、新实例    | [创作路径](https://maott1.cn/start/creator.html)                |
+| 可选AI／NPC | 旁白、知识记忆、对话与明确审批边界         | [可选接入](https://maott1.cn/guide/advanced/models.html)        |
+| 维护与接入  | 本机／同网／HTTPS实例、数据、可选QQ        | [部署教程](https://maott1.cn/deploy/requirements.html)          |
 
 ## 快速开始
 
 
-**已有GM的玩家**：[加入房间](https://maott-trpg.turfyherb3.chatgpt.site/start/player.html)，无需在自己的电脑安装后端。
+**已有GM的玩家**：[加入房间](https://maott1.cn/start/player.html)，无需在自己的电脑安装后端。
 
-**第一次开团的GM**：[导入原创示例](https://maott-trpg.turfyherb3.chatgpt.site/examples/)，邀请、分配、保存队伍并入场，再启动开场阅读。
+**第一次开团的GM**：[导入原创示例](https://maott1.cn/examples/)，邀请、分配、保存队伍并入场，再启动开场阅读。
 
 **自行部署**：安装Node.js **24+**与pnpm **11.25.0**，在项目根目录执行：
 
@@ -54,7 +54,7 @@ pnpm start
 
 打开终端显示的本机地址，通常为 `http://127.0.0.1:8787`。服务在前台运行，按Ctrl+C正常关闭。原生依赖需要构建时，按pnpm提示为本项目可信依赖启用构建并重新安装。首发主要在Windows验证；其他平台需满足Node、Sharp与可选SQLite依赖要求。
 
-本机基础房间不要求模型。账号个人库和公网实例另需自己的HTTPS反向代理及访问配置，见[受保护部署](https://maott-trpg.turfyherb3.chatgpt.site/deploy/public-config.html)。GitHub Pages仅运行介绍站，不运行房间服务。
+本机基础房间不要求模型。账号个人库和公网实例另需自己的HTTPS反向代理及访问配置，见[受保护部署](https://maott1.cn/deploy/public-config.html)。GitHub Pages仅运行介绍站，不运行房间服务。
 
 ## 完整文档
 
@@ -69,7 +69,7 @@ pnpm start
 
 ## 原创示例
 
-《暮灯驿站的失物》包含三处场景、两个预制角色、独立身份、可重复容器与可选切磋。提供剧本ZIP、本机冒险JSON、作者格式、角色包及校验清单，详见[下载与步骤](https://maott-trpg.turfyherb3.chatgpt.site/examples/)。模型与QQ默认不需要配置。
+《暮灯驿站的失物》包含三处场景、两个预制角色、独立身份、可重复容器与可选切磋。提供剧本ZIP、本机冒险JSON、作者格式、角色包及校验清单，详见[下载与步骤](https://maott1.cn/examples/)。模型与QQ默认不需要配置。
 
 ## 数据与支持边界
 

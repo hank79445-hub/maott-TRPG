@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 const siteBase = process.env.MAOTT_SITE_BASE || '/'
-const siteOrigin = process.env.MAOTT_SITE_ORIGIN || 'https://maott-trpg.turfyherb3.chatgpt.site'
+const siteOrigin = process.env.MAOTT_SITE_ORIGIN || 'https://maott1.cn'
 export default defineConfig({
   lang: 'zh-CN',
   title: '猫团团-TRPG',
