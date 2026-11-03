@@ -2,11 +2,19 @@ import { randomBytes, randomUUID, scryptSync } from 'node:crypto'
 import { writeFile, mkdir } from 'node:fs/promises'
 import path from 'node:path'
 const args = process.argv.slice(2),
-  get = (k) => args[args.indexOf(k) + 1]
-if (!args.includes('--output') || !args.includes('--username'))
-  throw Error('Usage: node scripts/create-access.mjs --output <private-new-file> --username <name>')
-const output = path.resolve(get('--output')),
+  get = (k) => (args.includes(k) ? args[args.indexOf(k) + 1] : undefined)
+const target = get('--output'),
   username = get('--username')
+if (
+  typeof target !== 'string' ||
+  !target ||
+  target.startsWith('--') ||
+  typeof username !== 'string' ||
+  !username ||
+  username.startsWith('--')
+)
+  throw Error('Usage: node scripts/create-access.mjs --output <private-new-file> --username <name>')
+const output = path.resolve(target)
 if (!/^[a-zA-Z0-9_-]{1,40}$/.test(username)) throw Error('Invalid username')
 const password = randomBytes(18).toString('base64url'),
   salt = randomBytes(16).toString('hex'),

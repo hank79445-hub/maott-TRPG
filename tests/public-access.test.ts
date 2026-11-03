@@ -21,6 +21,10 @@ describe('documented public access setup', () => {
       })
     })
     try {
+      await expect(
+        run(process.execPath, args.slice(0, -1), { windowsHide: true }),
+      ).rejects.toThrow()
+      await expect(readFile(file)).rejects.toThrow()
       const result = await run(process.execPath, args, { windowsHide: true })
       const password = result.stdout.match(/Password: (\S+)/)?.[1]
       expect(Boolean(password)).toBe(true)

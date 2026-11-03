@@ -12,7 +12,7 @@
 
 maott-TRPG is a self-hostable web toolkit for players, human GMs, and adventure creators. It connects character sheets, inventory, scenes, combat, intent review, and table communication. The GM controls rules decisions and story consequences. AI and QQ integrations are optional.
 
-Public preview **0.57.0-public.1** includes SRD5.2.1 and original teaching material. Character progression primarily targets levels 1–5, single class. A catalogue entry does not imply complete automation. The public content set differs from the private development environment.
+Public preview **0.57.0-public.2** includes SRD5.2.1 and original teaching material. Character progression primarily targets levels 1–5, single class. A catalogue entry does not imply complete automation. The public content set differs from the private development environment.
 
 ## Features
 
