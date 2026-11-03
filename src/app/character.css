@@ -1,0 +1,617 @@
+/* TASK-UI-005：角色页视觉重做（依据《冒險中的角色.html》，仅本页生效） */
+
+.room-page.character-theme {background:var(--bg);color:var(--ink)}
+
+
+
+/* 字体：标题衬线，正文 13.5 / 1.6 */
+.room-page.character-theme .runtime,
+.room-page.character-theme .character-picker {
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+.room-page.character-theme .runtime h1,
+.room-page.character-theme .runtime h2,
+.room-page.character-theme .runtime-block-head h3,
+.room-page.character-theme .runtime-status-rail .runtime-block-head h3 {
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', 'Source Han Serif SC', serif;
+}
+
+/* 01 身份 + 02 生命：合并 hero */
+.room-page.character-theme .character-hero {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  margin: 0 0 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.room-page.character-theme .hero-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.room-page.character-theme .hero-id h1 {
+  margin: 2px 0 3px;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+.room-page.character-theme .hero-meta {
+  margin: 0;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+.room-page.character-theme .character-picker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 11.5px;
+  white-space: nowrap;
+  flex: none;
+}
+.room-page.character-theme .character-picker select {
+  min-width: 132px;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 12.5px;
+}
+
+.room-page.character-theme .hero-vitals {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    'hp facts'
+    'bars bars';
+  align-items: center;
+  gap: 8px 14px;
+}
+.room-page.character-theme .hero-hp-wrap {
+  grid-area: hp;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.room-page.character-theme .hero-hp {
+  font-family: Georgia, 'Songti SC', serif;
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.room-page.character-theme .hero-bloodied {
+  padding: 1px 8px;
+  border-radius: 99px;
+  background: var(--danger-soft);
+  color: var(--danger);
+  font-size: 11px;
+}
+.room-page.character-theme .hero-bars {
+  grid-area: bars;
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+.room-page.character-theme .hero-bar {
+  height: 14px;
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  background: var(--bg);
+  overflow: hidden;
+}
+.room-page.character-theme .hero-bar i {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.room-page.character-theme .hero-bar i.mid {
+  background: var(--gold);
+}
+.room-page.character-theme .hero-bar i.low {
+  background: var(--danger);
+}
+.room-page.character-theme .hero-bar.temp {
+  height: 6px;
+}
+.room-page.character-theme .hero-bar.temp i {
+  background: var(--gold);
+}
+.room-page.character-theme .hero-facts {
+  grid-area: facts;
+  display: flex;
+  justify-self: end;
+  gap: 16px;
+  font-size: 11.5px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.room-page.character-theme .hero-facts b {
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.room-page.character-theme .hero-dice {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.room-page.character-theme .pips {
+  display: inline-flex;
+  gap: 4px;
+}
+.room-page.character-theme .pips s {
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+}
+.room-page.character-theme .pips s.on {
+  background: var(--gold);
+}
+
+.room-page.character-theme .hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.room-page.character-theme .hero-chip {
+  padding: 2px 11px;
+  border-radius: 99px;
+  background: var(--danger-soft);
+  color: var(--danger);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+.room-page.character-theme .hero-chip.gold {
+  background: var(--accent-soft);
+  color: var(--gold);
+}
+.room-page.character-theme .hero-empty {
+  font-size: 11.5px;
+  color: var(--muted);
+}
+.room-page.character-theme .hero-senses {
+  margin: 0;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+.room-page.character-theme .hero-death {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: var(--bg);
+}
+.room-page.character-theme .hero-death > summary {
+  cursor: pointer;
+  font-size: 12.5px;
+  color: var(--danger);
+  min-height: 26px;
+}
+.room-page.character-theme .hero-death label {
+  display: block;
+  margin: 6px 0;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+.room-page.character-theme .hero-death input[type='number'] {
+  margin-left: 6px;
+  width: 90px;
+}
+
+/* 6 个子页签：下划线式 */
+.room-page.character-theme .runtime-tabs {
+  gap: 2px;
+  margin: 0 0 12px;
+  padding: 0;
+  background: transparent;
+  border-bottom: 1px solid var(--line);
+}
+.room-page.character-theme .runtime-tabs button {
+  padding: 9px 14px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  background: none;
+  color: var(--muted);
+  font-size: 14px;
+  min-height: 38px;
+}
+.room-page.character-theme .runtime-tabs button:hover {
+  color: var(--ink);
+}
+.room-page.character-theme .runtime-tabs button.active {
+  background: none;
+  color: var(--ink);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+/* 板块卡 */
+.room-page.character-theme .runtime-content {
+  padding: 0;
+}
+.room-page.character-theme .runtime-status-main {
+  gap: 14px;
+}
+.room-page.character-theme .runtime-block {
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+}
+.room-page.character-theme .runtime-block-head {
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.room-page.character-theme .runtime-block-head h3 {
+  font-size: 17px;
+  font-weight: 600;
+}
+.room-page.character-theme .runtime-block-note {
+  font-size: 11.5px;
+}
+.room-page.character-theme .runtime-block-no {
+  width: 22px;
+  height: 22px;
+  font-size: 11px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.room-page.character-theme .runtime-review-tag {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-size: 10.5px;
+}
+
+/* 03 调整生命：两张 row 卡 */
+.room-page.character-theme .runtime-block-adjust .runtime-grid {
+  gap: 14px;
+}
+.room-page.character-theme .runtime-block-adjust .runtime-grid > .panel {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+  box-shadow: none;
+}
+.room-page.character-theme .runtime-block-adjust .runtime-grid > .panel h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+.room-page.character-theme .runtime-block-adjust .runtime-actions {
+  gap: 8px;
+  margin-top: 6px;
+}
+.room-page.character-theme .runtime-block-adjust .runtime-actions .secondary,
+.room-page.character-theme .runtime-block-adjust .runtime-actions .primary,
+.room-page.character-theme .runtime-block-adjust .runtime-actions .danger {
+  flex: 1;
+  min-height: 36px;
+  justify-content: center;
+}
+.room-page.character-theme .runtime-block-adjust label {
+  margin: 5px 0;
+  font-size: 11.5px;
+}
+.room-page.character-theme .runtime-block-adjust .small,
+.room-page.character-theme .runtime-block-adjust .muted {
+  font-size: 11.5px;
+}
+
+/* 04 状态与力竭：卡片网格 + 全部状态 */
+.room-page.character-theme .runtime-block-conditions > .panel {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.room-page.character-theme .runtime-block-conditions .runtime-actions {
+  margin: 2px 0 4px;
+  align-items: end;
+}
+.room-page.character-theme .condition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 8px;
+  margin-top: 10px;
+}
+.room-page.character-theme .condition-card {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+}
+.room-page.character-theme .condition-card.on {
+  background: var(--danger-soft);
+  border-color: var(--danger);
+}
+.room-page.character-theme .condition-text b {
+  font-size: 13px;
+  font-weight: 600;
+}
+.room-page.character-theme .condition-text small {
+  margin-left: 6px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 400;
+}
+.room-page.character-theme .condition-text p {
+  margin: 3px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.room-page.character-theme .condition-foot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.room-page.character-theme .condition-foot .secondary {
+  min-height: 28px;
+  padding: 3px 9px;
+  font-size: 11.5px;
+}
+.room-page.character-theme .condition-foot a {
+  font-size: 11px;
+  color: var(--accent);
+}
+.room-page.character-theme .condition-note {
+  margin: 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+.room-page.character-theme .condition-more {
+  margin-top: 10px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--line);
+}
+.room-page.character-theme .condition-more > summary {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  font-size: 12px;
+  color: var(--accent);
+  cursor: pointer;
+}
+.room-page.character-theme .condition-more .condition-grid {
+  margin-top: 6px;
+}
+
+/* 05 操作记录 */
+.room-page.character-theme .runtime-journal-preview li {
+  padding: 6px 0;
+  border-top: 1px dashed var(--line);
+  font-size: 12.5px;
+}
+.room-page.character-theme .runtime-journal-preview time {
+  font-size: 11px;
+}
+
+/* 右栏：保持 fixed 280，只换皮与放大字号 */
+.room-page.character-theme .rail-switch {
+  padding: 3px;
+  border-radius: 10px;
+  background: var(--panel);
+}
+.room-page.character-theme .rail-switch button {
+  min-height: 30px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.room-page.character-theme .rail-switch button.on {
+  background: var(--accent-soft);
+  color: var(--ink);
+  font-weight: 600;
+}
+.room-page.character-theme .runtime-status-rail {
+  gap: 12px;
+}
+.room-page.character-theme .runtime-status-rail .runtime-block {
+  padding: 14px;
+}
+.room-page.character-theme .runtime-status-rail .runtime-block-head h3 {
+  font-size: 15px;
+}
+.room-page.character-theme .runtime-status-rail .runtime-block-note,
+.room-page.character-theme .runtime-status-rail label,
+.room-page.character-theme .runtime-status-rail .small,
+.room-page.character-theme .runtime-status-rail .muted {
+  font-size: 11.5px;
+  line-height: 1.55;
+}
+.room-page.character-theme .runtime-status-rail .runtime-actions {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+}
+.room-page.character-theme .runtime-status-rail button {
+  min-height: 30px;
+  font-size: 12px;
+}
+.room-page.character-theme .runtime-status-rail .rule-note {
+  margin-top: 8px;
+  padding-top: 4px;
+  border-top: 1px dashed var(--line);
+}
+.room-page.character-theme .runtime-status-rail .rule-note > summary {
+  display: flex;
+  align-items: center;
+  min-height: 28px;
+  font-size: 11.5px;
+  color: var(--accent);
+  cursor: pointer;
+}
+.room-page.character-theme .runtime-status-rail .rule-note p {
+  margin: 2px 0 0;
+}
+.room-page.character-theme .runtime-status-rail .rule-links a {
+  display: block;
+  padding: 2px 0;
+  font-size: 11.5px;
+}
+.room-page.character-theme .runtime-summary-grid {
+  gap: 6px 10px;
+  font-size: 12px;
+}
+.room-page.character-theme .runtime-summary-grid span {
+  font-size: 11.5px;
+}
+.room-page.character-theme .runtime-summary-grid b {
+  font-size: 13px;
+}
+.room-page.character-theme .room-sync {
+  font-size: 11px;
+}
+.room-page.character-theme .runtime-status-rail a {
+  font-size: 11.5px;
+}
+
+/* 输入与按钮统一 */
+.room-page.character-theme .runtime input:not([type='checkbox']),
+.room-page.character-theme .runtime select,
+.room-page.character-theme .runtime textarea {
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 12.5px;
+}
+.room-page.character-theme .runtime button.secondary {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 12.5px;
+}
+.room-page.character-theme .runtime button.secondary:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+.room-page.character-theme .runtime button.primary {
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12.5px;
+}
+.room-page.character-theme .runtime button.danger {
+  border: 1px solid var(--danger);
+  border-radius: 6px;
+  background: var(--danger);
+  color: #fff;
+  font-size: 12.5px;
+}
+
+/* 窄屏 */
+@media (max-width: 900px) {
+  .room-page.character-theme .runtime-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .room-page.character-theme .runtime-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .room-page.character-theme .runtime-tabs button {
+    flex: none;
+  }
+  .room-page.character-theme .character-hero {
+    padding: 14px;
+  }
+  .room-page.character-theme .hero-hp {
+    font-size: 38px;
+  }
+  .room-page.character-theme .hero-vitals {
+    grid-template-areas:
+      'hp hp'
+      'bars bars'
+      'facts facts';
+    gap: 6px;
+  }
+  .room-page.character-theme .hero-facts {
+    justify-self: start;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+  }
+  .room-page.character-theme .runtime-block {
+    padding: 14px;
+  }
+}
+
+/* 侧栏拖拽把手：仅角色页、桌面端 */
+.rail-resize {
+  position: fixed;
+  top: 86px;
+  bottom: 80px;
+  width: 12px;
+  z-index: 33;
+  display: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: col-resize;
+}
+.rail-resize::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 46px;
+  border-radius: 99px;
+  background: var(--line);
+  transition: background 0.15s ease;
+}
+.rail-resize:hover::before,
+.rail-resize:focus-visible::before,
+body.rail-resizing .rail-resize::before {
+  background: var(--accent);
+}
+.rail-resize:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  border-radius: 6px;
+}
+body.rail-resizing {
+  cursor: col-resize;
+  user-select: none;
+}
+
+@media (min-width: 1025px) {
+  .rail-resize {
+    display: block;
+  }
+  .room-page.character-theme .room-rail {
+    width: var(--character-rail-w, 360px);
+  }
+  .room-page.character-theme.workspace-active {
+    padding-right: calc(var(--character-rail-w, 360px) + 24px);
+  }
+  .room-page.character-theme.player-workspace {
+    padding: 10px calc(var(--character-rail-w, 360px) + 24px) 24px 16px !important;
+  }
+}

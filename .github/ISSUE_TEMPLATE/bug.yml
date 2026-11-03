@@ -1,0 +1,11 @@
+name: Bug报告
+description: 使用合成或脱敏步骤描述问题
+body:
+  - type: input
+    id: version
+    attributes: {label: 版本与设备, description: 公共版版本、系统与浏览器}
+    validations: {required: true}
+  - type: textarea
+    id: steps
+    attributes: {label: 复现步骤与预期, description: 不要附带真实房间、账号、邀请码或凭据}
+    validations: {required: true}

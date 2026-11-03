@@ -1,0 +1,36 @@
+{
+  "contract": "trpg-authoring/1",
+  "version": "workbench-sync/5-persona-three-stage",
+  "characterLevels": [
+    1,
+    5
+  ],
+  "classCount": 12,
+  "mechanisms": [
+    {
+      "mechanism": "职业法术与职业能力",
+      "source": "已校验的1–5级职业卡／真实模板能力",
+      "boundary": "程序计算资源；初始描述不替代实际能力和装备"
+    },
+    {
+      "mechanism": "持续区域、光照与空间",
+      "source": "spatialSetup / effectSetup",
+      "boundary": "只接受初始场景引擎支持的效果，编译检查来源和引用"
+    },
+    {
+      "mechanism": "G类叙事法术",
+      "source": "实际法术能力与规则裁定入口",
+      "boundary": "解释、知识和结果由GM裁定，不伪造自动结论"
+    },
+    {
+      "mechanism": "S类召唤",
+      "source": "实际可用法术与材料",
+      "boundary": "开团后合法施放；不预置召唤实例或历史"
+    },
+    {
+      "mechanism": "NPC记忆、模型、QQ与自主授权",
+      "source": "开团后的运行配置",
+      "boundary": "可带默认关闭的practicalSocial、spatialPolicy、resourceStrategy等初始设计；不包含旧记忆、凭据、Bot、运行授权或执行历史"
+    }
+  ]
+}

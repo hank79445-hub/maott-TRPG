@@ -1,0 +1,913 @@
+{
+  "format": "trpg-authoring",
+  "version": 1,
+  "title": "Escape from Fogharbor · Integrated systems example",
+  "author": "",
+  "itemPacks": [
+    {
+      "id": "harbor-example",
+      "version": "1",
+      "name": "Integrated example story items",
+      "attribution": "Original synthetic example; GM-defined",
+      "classes": [],
+      "backgrounds": [],
+      "species": [],
+      "feats": [],
+      "spells": [],
+      "items": [
+        {
+          "id": "harbor-example/bronze-key",
+          "name": "Bronze key",
+          "english": "Crowbar",
+          "summary": "Crowbar",
+          "source": {
+            "pack": "harbor-example",
+            "version": "1",
+            "page": 95,
+            "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+          },
+          "kind": "gear",
+          "cost": 0,
+          "weight": 5,
+          "holdable": true
+        }
+      ]
+    }
+  ],
+  "description": "",
+  "level": 2,
+  "players": 4,
+  "start": "cells",
+  "opening": "The tide is coming. Find your companions, cross the guard gallery and decide Fogharbor’s fate.",
+  "scenes": [
+    {
+      "fog": {
+        "mode": "enclosed",
+        "areas": [
+          {
+            "id": "supply-room",
+            "name": "Supply room",
+            "cells": [
+              "11,4",
+              "12,4",
+              "13,4",
+              "11,5",
+              "12,5",
+              "13,5",
+              "11,6",
+              "12,6",
+              "13,6"
+            ],
+            "doorIds": [
+              "release-door"
+            ],
+            "initiallyRevealed": false,
+            "revealOnOpen": true,
+            "manualOnly": false
+          }
+        ],
+        "shading": {
+          "level1": 0.35,
+          "level2": 0.75
+        },
+        "enabled": true,
+        "shared": true,
+        "rangeFeet": 60,
+        "initial": []
+      },
+      "links": [
+        {
+          "key": "release",
+          "name": "Release mechanism group",
+          "color": "#397b9a",
+          "source": "cage",
+          "outcome": "success",
+          "effects": [
+            {
+              "point": "release-door",
+              "operation": "open"
+            }
+          ]
+        }
+      ],
+      "key": "cells",
+      "effectSetup": {
+        "regions": [
+          {
+            "id": "camp-lamp",
+            "spellId": "mundane-light",
+            "geometry": {
+              "shape": "sphere",
+              "x": 4,
+              "y": 3,
+              "height": 3,
+              "size": 40,
+              "heightFeet": 0,
+              "width": 5,
+              "angle": 0,
+              "originSpan": 1
+            },
+            "slotLevel": 0,
+            "hidden": false,
+            "light": {
+              "bright": 20,
+              "dimExtra": 20,
+              "sunlight": false,
+              "magical": false,
+              "flame": true,
+              "protected": false,
+              "color": "#e8bf77"
+            },
+            "note": "GM verifies the actual camp lantern; material artwork does not define rules"
+          }
+        ],
+        "containers": [
+          {
+            "id": "tank-content",
+            "objectId": "water-tank",
+            "name": "Stone trough",
+            "waterCapacity": 1280,
+            "foodCapacity": 0,
+            "open": true,
+            "hidden": false,
+            "water": 640,
+            "food": 0
+          }
+        ],
+        "materials": []
+      },
+      "spatialSetup": {
+        "floorHeight": 0,
+        "light": "dark",
+        "openSky": false,
+        "ceilingHeight": 20,
+        "objects": [
+          {
+            "id": "water-tank",
+            "name": "Stone trough",
+            "kind": "object",
+            "x": 3,
+            "y": 3,
+            "height": 0,
+            "width": 5,
+            "heightFeet": 3,
+            "depth": 5,
+            "weight": 100,
+            "loose": false,
+            "enabled": true,
+            "hidden": false
+          }
+        ]
+      },
+      "environment": "indoor",
+      "boundaryWalls": "auto-enclose",
+      "art": {
+        "description": "A damp stone prison with traces of seaweed on rough walls. An open central area is bordered by iron cages and a control console. Keep passageways clear.",
+        "publicName": "Submerged stone chamber",
+        "style": "Realistic fantasy tactical map, directly overhead",
+        "materials": "Rough stone, iron bars and bronze",
+        "lighting": "Listed warm wall lamps against cool ambient light; clear floor and exit boundaries",
+        "decorations": "",
+        "exclusions": "Characters, lettering, numbers, grids"
+      },
+      "name": "Tidal Cells",
+      "description": "Waves strike the stone walls. A mechanism beside the cage still glimmers.",
+      "intro": "Waves strike the stone walls. A mechanism beside the cage still glimmers.",
+      "width": 20,
+      "height": 16,
+      "landing": {
+        "x": 2,
+        "y": 2
+      },
+      "floors": [
+        {
+          "x": 1,
+          "y": 1,
+          "width": 18,
+          "height": 14
+        }
+      ],
+      "points": [
+        {
+          "key": "cage",
+          "appearance": {
+            "label": "Cage control console",
+            "description": "A worn bronze lever set into a low stone console",
+            "width": 1,
+            "height": 1,
+            "rotation": 0,
+            "visibility": "public"
+          },
+          "name": "Rescue the scholar",
+          "x": 8,
+          "y": 5,
+          "kind": "clue",
+          "text": "The scholar steps out of the open cage.",
+          "hidden": false,
+          "check": {
+            "skill": "investigation",
+            "dc": 10
+          },
+          "rescueNpc": "scholar",
+          "success": "The cage opens. The scholar nods gratefully to the rescuers.",
+          "failure": "The catch does not release. Another approach is needed."
+        },
+        {
+          "key": "exit",
+          "name": "Go to the gallery",
+          "x": 17,
+          "y": 12,
+          "kind": "exit",
+          "text": "",
+          "hidden": false,
+          "exit": {
+            "scene": "gallery",
+            "point": "back"
+          }
+        },
+        {
+          "key": "supply-cache",
+          "name": "Supply chest",
+          "x": 12,
+          "y": 5,
+          "kind": "chest",
+          "text": "Travel supplies lie inside the chest.",
+          "hidden": false,
+          "itemUse": {
+            "match": "all",
+            "requirements": [
+              {
+                "itemId": "harbor-example/bronze-key",
+                "quantity": 1,
+                "mode": "possess"
+              }
+            ],
+            "effect": "open",
+            "fallback": "gm"
+          },
+          "container": {
+            "items": [
+              {
+                "itemId": "torch",
+                "quantity": 2
+              }
+            ],
+            "coins": 10,
+            "gmNote": "Not automatically distributed to the party; characters must claim the contents."
+          }
+        },
+        {
+          "key": "release-door",
+          "name": "Release door",
+          "x": 10,
+          "y": 5,
+          "kind": "door",
+          "text": "The mechanism releases the door bolt.",
+          "hidden": false
+        },
+        {
+          "key": "scratch",
+          "name": "Wall scratches",
+          "x": 6,
+          "y": 4,
+          "kind": "clue",
+          "text": "The scratches point toward the gallery.",
+          "hidden": true,
+          "discovery": {
+            "method": "proximity",
+            "range": 20,
+            "skill": "perception",
+            "dc": 10
+          }
+        }
+      ],
+      "ground": [
+        {
+          "key": "bronze-key",
+          "x": 3,
+          "y": 4,
+          "item": "harbor-example/bronze-key",
+          "quantity": 1,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "fog": {
+        "enabled": true,
+        "shared": false,
+        "rangeFeet": 60,
+        "initial": [
+          "2,2"
+        ]
+      },
+      "key": "gallery",
+      "environment": "indoor",
+      "boundaryWalls": "auto-enclose",
+      "art": {
+        "description": "A long harbor guard gallery with salt-stained, worn stone tiles. Wooden benches and the listed hanging lamps line the walls; the central passage stays clear.",
+        "publicName": "Stone gallery",
+        "style": "Realistic fantasy tactical map, directly overhead",
+        "materials": "Rough stone, iron bars and bronze",
+        "lighting": "Listed warm wall lamps against cool ambient light; clear floor and exit boundaries",
+        "decorations": "",
+        "exclusions": "Characters, lettering, numbers, grids"
+      },
+      "name": "Guard Gallery",
+      "description": "Footsteps echo from the end of the gallery. A severed wire hangs beside the alarm bell.",
+      "intro": "Footsteps echo from the end of the gallery. A severed wire hangs beside the alarm bell.",
+      "width": 20,
+      "height": 16,
+      "landing": {
+        "x": 2,
+        "y": 2
+      },
+      "floors": [
+        {
+          "x": 1,
+          "y": 1,
+          "width": 18,
+          "height": 14
+        }
+      ],
+      "points": [
+        {
+          "key": "back",
+          "name": "Return to the cells",
+          "x": 1,
+          "y": 12,
+          "kind": "exit",
+          "text": "",
+          "hidden": false,
+          "exit": {
+            "scene": "cells",
+            "point": "exit"
+          }
+        },
+        {
+          "key": "bell",
+          "appearance": {
+            "label": "Bronze bell and pull rope",
+            "description": "A bronze bell hangs from a wall bracket, with a thick rope dangling toward the floor",
+            "width": 1,
+            "height": 1,
+            "rotation": 90,
+            "visibility": "public"
+          },
+          "name": "Alarm-bell switch",
+          "x": 9,
+          "y": 7,
+          "kind": "clue",
+          "text": "",
+          "hidden": false,
+          "arrivalGroup": "reinforcements",
+          "success": "The alarm rings. Two guards appear at their configured positions."
+        },
+        {
+          "key": "alarm-wire",
+          "name": "Disable the alarm wire",
+          "x": 10,
+          "y": 7,
+          "kind": "clue",
+          "text": "",
+          "hidden": false,
+          "check": {
+            "skill": "sleightOfHand",
+            "dc": 12
+          },
+          "failureArrivalGroup": "reinforcements",
+          "success": "The wire is secured without a sound.",
+          "failure": "The wire snaps back and rings the alarm. Harbor guards answer the sound."
+        },
+        {
+          "key": "exit",
+          "name": "Go to the dock",
+          "x": 17,
+          "y": 12,
+          "kind": "exit",
+          "text": "",
+          "hidden": false,
+          "exit": {
+            "scene": "dock",
+            "point": "back"
+          }
+        }
+      ],
+      "ground": []
+    },
+    {
+      "key": "dock",
+      "environment": "outdoor",
+      "boundaryWalls": "explicit-only",
+      "art": {
+        "description": "A timber-and-stone waterfront dock. Mist covers the distant water. An empty skiff lies moored beside ropes and wooden bollards.",
+        "publicName": "Dock in the mist",
+        "style": "Realistic fantasy tactical map, directly overhead",
+        "materials": "Damp planks, stone steps and coarse rope",
+        "lighting": "Listed warm wall lamps against cool ambient light; clear floor and exit boundaries",
+        "decorations": "",
+        "exclusions": "Characters, lettering, numbers, grids"
+      },
+      "name": "Fogharbor Dock",
+      "description": "One skiff remains moored in the fog.",
+      "intro": "One skiff remains moored in the fog.",
+      "width": 20,
+      "height": 16,
+      "landing": {
+        "x": 2,
+        "y": 2
+      },
+      "floors": [
+        {
+          "x": 1,
+          "y": 1,
+          "width": 18,
+          "height": 14
+        }
+      ],
+      "points": [
+        {
+          "key": "back",
+          "name": "Return to the gallery",
+          "x": 1,
+          "y": 12,
+          "kind": "exit",
+          "text": "",
+          "hidden": false,
+          "exit": {
+            "scene": "gallery",
+            "point": "exit"
+          }
+        },
+        {
+          "key": "fight",
+          "name": "Conflict trigger",
+          "x": 10,
+          "y": 8,
+          "kind": "clue",
+          "text": "The GM verifies participants, sides and initiative before starting the conflict.",
+          "hidden": false,
+          "battle": "dock-battle"
+        },
+        {
+          "key": "boat",
+          "name": "Escape by boat",
+          "x": 16,
+          "y": 10,
+          "kind": "clue",
+          "text": "",
+          "hidden": false,
+          "success": "The party casts off and sails into the mist. The adventure ends in escape."
+        },
+        {
+          "key": "stay",
+          "name": "Stay and keep watch",
+          "x": 7,
+          "y": 10,
+          "kind": "clue",
+          "text": "",
+          "hidden": false,
+          "success": "The party stays at the dock to await the next tide. The adventure ends with their vigil."
+        }
+      ],
+      "ground": []
+    }
+  ],
+  "quests": [
+    {
+      "key": "escape-route",
+      "title": "Find a safe way out",
+      "chapter": "Cells",
+      "description": "Examine the cells, then consult the rescued captive.",
+      "initialStatus": "active",
+      "visibility": "public",
+      "main": true,
+      "current": true,
+      "pinnedStep": "rescue",
+      "steps": [
+        {
+          "key": "rescue",
+          "title": "Rescue the captive scholar",
+          "description": "Inspect the cage mechanism.",
+          "visibility": "public",
+          "initialStatus": "active",
+          "after": [],
+          "scene": "cells",
+          "point": "cage",
+          "trigger": "point-success",
+          "alternatives": "If the mechanism cannot be released, find tools or ask the GM to adjudicate another method.",
+          "gmNote": "Complete after the rescue result is confirmed."
+        },
+        {
+          "key": "route",
+          "title": "Inspect the gallery",
+          "description": "Look for an available exit.",
+          "visibility": "hidden",
+          "initialStatus": "inactive",
+          "after": [
+            "rescue"
+          ],
+          "scene": "gallery",
+          "trigger": "scene-enter",
+          "alternatives": "Ask the rescued scholar, or return to the cells to look for clues."
+        }
+      ]
+    }
+  ],
+  "knowledgeDesign": {
+    "factions": [
+      {
+        "id": "harbor-union",
+        "name": "Harbor Mutual Aid Guild",
+        "description": "Provides harbor supplies and rescue services.",
+        "hidden": false,
+        "initialScore": 0
+      },
+      {
+        "id": "night-charts",
+        "name": "Night Chart Society",
+        "description": "A secret organization created by the GM.",
+        "hidden": true,
+        "initialScore": 0
+      }
+    ],
+    "templates": [
+      {
+        "id": "harbor-weather",
+        "name": "Harbor knowledge",
+        "version": 1,
+        "layer": "region",
+        "visibility": "public",
+        "text": "The dock’s stone steps are slippery at low tide. The gallery leads to the dock."
+      },
+      {
+        "id": "private-route",
+        "name": "Private shipping route",
+        "version": 1,
+        "layer": "script",
+        "visibility": "private",
+        "text": "GM-only: the Society’s old route passes the northern reefs. This is not shared knowledge among all NPCs."
+      }
+    ]
+  },
+  "npcs": [
+    {
+      "key": "scholar",
+      "name": "Irena, the captive scholar",
+      "practicalSocial": {
+        "enabled": false,
+        "rules": [
+          {
+            "id": "join-after-rescue",
+            "goal": "Please travel with us once we are free",
+            "willingness": "judge",
+            "skill": "persuasion",
+            "dc": 15,
+            "cost": "none",
+            "success": {
+              "text": "The scholar agrees to travel as an optional companion.",
+              "revealIds": [],
+              "promise": "I will come with you, as agreed.",
+              "operations": [
+                {
+                  "kind": "follow",
+                  "join": true
+                }
+              ]
+            },
+            "failure": {
+              "text": "The scholar declines to accompany the party for now.",
+              "revealIds": [],
+              "promise": ""
+            }
+          }
+        ]
+      },
+      "resourceStrategy": "balanced",
+      "scene": "cells",
+      "x": 8,
+      "y": 4,
+      "template": "srd-guard",
+      "cardType": "character",
+      "character": {
+        "build": {
+          "classId": "wizard",
+          "backgroundId": "soldier",
+          "speciesId": "human",
+          "method": "array",
+          "scores": {
+            "str": 8,
+            "dex": 12,
+            "con": 13,
+            "int": 15,
+            "wis": 14,
+            "cha": 10
+          },
+          "boosts": {
+            "str": 2,
+            "dex": 1,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "rolls": null,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "arcana",
+              "history"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "class-cantrips": [
+              "acid-splash",
+              "chill-touch",
+              "dancing-lights"
+            ],
+            "spellbook": [
+              "alarm",
+              "burning-hands",
+              "charm-person",
+              "chromatic-orb",
+              "color-spray",
+              "comprehend-languages"
+            ],
+            "class-spells": [
+              "alarm",
+              "burning-hands",
+              "charm-person",
+              "chromatic-orb"
+            ]
+          },
+          "classEquipment": 0,
+          "backgroundEquipment": 0,
+          "equipmentChoices": {
+            "background-gaming-item": [
+              "dice-set"
+            ]
+          },
+          "purchases": [],
+          "equipped": [],
+          "name": "Example adventurer",
+          "alignment": "Neutral",
+          "appearance": "",
+          "story": "",
+          "adjustments": [],
+          "customItems": []
+        },
+        "growth": []
+      },
+      "type": "important",
+      "side": "neutral",
+      "hidden": false,
+      "description": "A weary but watchful scholar.",
+      "personality": "Cautious and concise",
+      "publicSpeechStyle": "Brief and practical. When unwilling to answer, say “No comment” without discussing information limitations.",
+      "knowledgeProfile": {
+        "enabled": true,
+        "factionId": "night-charts",
+        "membership": "direct",
+        "hiddenMembership": true,
+        "backgroundBias": 0,
+        "lockedAttitude": null,
+        "lockReason": "",
+        "templateIds": [
+          "harbor-weather",
+          "private-route"
+        ]
+      },
+      "knowledge": "Knows the gallery leads to the dock.",
+      "secret": "Once charted routes for harbor smugglers.",
+      "dialogue": "Help me open this cage first.",
+      "importanceRole": "companion"
+    },
+    {
+      "key": "keeper",
+      "name": "Lorn, the harbor keeper",
+      "scene": "dock",
+      "x": 14,
+      "y": 6,
+      "template": "srd-guard",
+      "cardType": "template",
+      "type": "important",
+      "side": "neutral",
+      "hidden": false,
+      "description": "An old sailor keeping watch over Fogharbor.",
+      "personality": "Cautious and concise",
+      "knowledge": "There are two ways forward from the dock.",
+      "secret": "",
+      "dialogue": "Leave or stay? Your choice."
+    },
+    {
+      "key": "guard-1",
+      "name": "Rian, the supplier",
+      "merchantPolicy": {
+        "enabled": true,
+        "buy": true,
+        "buyRate": 0.5,
+        "buyItems": [
+          "torch",
+          "rope"
+        ],
+        "blockedItems": [
+          "harbor-example/bronze-key"
+        ],
+        "autoPurchase": false,
+        "zeroPrice": false,
+        "practical": {
+          "enabled": false,
+          "scope": "listed",
+          "buyback": true,
+          "barter": true,
+          "negotiation": true,
+          "dc": 15,
+          "cost": "free"
+        }
+      },
+      "coinsGP": 25,
+      "stock": [
+        {
+          "itemId": "torch",
+          "quantity": 4,
+          "priceGP": 0.01
+        },
+        {
+          "itemId": "rope",
+          "quantity": 2,
+          "priceGP": 1
+        }
+      ],
+      "scene": "cells",
+      "x": 5,
+      "y": 6,
+      "template": "srd-guard",
+      "cardType": "template",
+      "type": "ordinary",
+      "side": "neutral",
+      "hidden": false,
+      "description": "",
+      "personality": "Cautious and concise",
+      "knowledgeProfile": {
+        "enabled": true,
+        "factionId": "harbor-union",
+        "membership": "direct",
+        "hiddenMembership": false,
+        "backgroundBias": 0,
+        "lockedAttitude": null,
+        "lockReason": "",
+        "templateIds": [
+          "harbor-weather"
+        ]
+      },
+      "knowledge": "",
+      "secret": "",
+      "dialogue": "Halt.",
+      "fixedReplies": [
+        {
+          "key": "welcome",
+          "text": "Torches and rope are here."
+        },
+        {
+          "key": "price",
+          "text": "Prices are on the manifest. Nothing else to say."
+        }
+      ],
+      "fixedReplyMode": "end",
+      "fixedReplyEnd": "I have said all I can."
+    },
+    {
+      "key": "guard-2",
+      "name": "Harbor guard 2",
+      "scene": "cells",
+      "x": 12,
+      "y": 6,
+      "template": "srd-guard",
+      "cardType": "template",
+      "type": "ordinary",
+      "side": "enemy",
+      "hidden": false,
+      "description": "",
+      "personality": "Cautious and concise",
+      "knowledge": "",
+      "secret": "",
+      "dialogue": "Halt."
+    },
+    {
+      "key": "guard-3",
+      "name": "Harbor guard 3",
+      "scene": "gallery",
+      "x": 5,
+      "y": 6,
+      "template": "srd-guard",
+      "cardType": "template",
+      "type": "ordinary",
+      "side": "enemy",
+      "hidden": false,
+      "description": "",
+      "personality": "Cautious and concise",
+      "knowledge": "",
+      "secret": "",
+      "dialogue": "Halt."
+    },
+    {
+      "key": "guard-4",
+      "name": "Harbor guard 4",
+      "scene": "gallery",
+      "x": 12,
+      "y": 6,
+      "template": "srd-guard",
+      "cardType": "template",
+      "type": "ordinary",
+      "side": "enemy",
+      "hidden": false,
+      "description": "",
+      "personality": "Cautious and concise",
+      "knowledge": "",
+      "secret": "",
+      "dialogue": "Halt."
+    },
+    {
+      "key": "guard-5",
+      "name": "Harbor guard 5",
+      "scene": "dock",
+      "x": 5,
+      "y": 6,
+      "template": "srd-guard",
+      "cardType": "template",
+      "type": "ordinary",
+      "side": "enemy",
+      "hidden": false,
+      "description": "",
+      "personality": "Cautious and concise",
+      "knowledge": "",
+      "secret": "",
+      "dialogue": "Halt."
+    },
+    {
+      "key": "guard-6",
+      "name": "Harbor guard 6",
+      "scene": "dock",
+      "x": 12,
+      "y": 6,
+      "template": "srd-guard",
+      "cardType": "template",
+      "type": "ordinary",
+      "side": "enemy",
+      "hidden": false,
+      "description": "",
+      "personality": "Cautious and concise",
+      "knowledge": "",
+      "secret": "",
+      "dialogue": "Halt."
+    }
+  ],
+  "arrivals": [
+    {
+      "key": "reinforcements",
+      "scene": "gallery",
+      "name": "Alarm reinforcements",
+      "npcs": [
+        "guard-3",
+        "guard-4"
+      ],
+      "battleMode": "start",
+      "intro": "Two harbor guards respond to the alarm."
+    }
+  ],
+  "battles": [
+    {
+      "key": "dock-battle",
+      "scene": "dock",
+      "name": "Dock confrontation",
+      "npcs": [
+        "guard-5",
+        "guard-6"
+      ],
+      "intro": "Harbor guards block the route."
+    }
+  ],
+  "broadcasts": [
+    {
+      "title": "GM note",
+      "text": "Escape and staying are alternative endings. Confirm the party’s choice before triggering the corresponding interaction. Do not apply both endings to the same game.",
+      "audience": "gm",
+      "trigger": "manual",
+      "result": "any"
+    }
+  ],
+  "contentLocale": "en"
+}

@@ -1,0 +1,45 @@
+.m2-control-form,
+.m2-control-fields {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.m2-control-form label:has(select),
+.m2-control-form label:has(textarea),
+.m2-control-fields label {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  margin-block: 10px;
+}
+.m2-control-form select,
+.m2-control-form textarea,
+.m2-control-fields select,
+.m2-control-fields textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.m2-control-form label:has(input[type='checkbox']) {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+.m2-control-form input[type='checkbox'] {
+  flex: none;
+}
+@media (pointer: coarse) {
+  .m2-control-form button,
+  .m2-control-form select,
+  .m2-control-fields select {
+    min-height: 44px;
+  }
+}
+.room-page > .battle-page {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}

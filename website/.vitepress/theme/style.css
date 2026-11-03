@@ -1,0 +1,200 @@
+@import './palette.css';
+:root {
+  --vp-c-brand-1: var(--accent);
+  --vp-c-brand-2: var(--accent);
+  --vp-c-brand-3: var(--accent);
+  --vp-c-brand-soft: var(--accent-soft);
+  --vp-c-bg: var(--bg);
+  --vp-c-bg-alt: var(--surface);
+  --vp-c-bg-elv: var(--panel);
+  --vp-c-bg-soft: var(--panel);
+  --vp-c-text-1: var(--ink);
+  --vp-c-text-2: var(--ink);
+  --vp-c-text-3: var(--muted);
+  --vp-c-divider: var(--line);
+  --vp-c-border: var(--line);
+  --vp-c-gutter: var(--line);
+  --vp-font-family-base: system-ui, -apple-system, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  --vp-font-family-mono: Consolas, monospace;
+  --vp-nav-bg-color: var(--panel);
+  --vp-sidebar-bg-color: var(--panel);
+  --vp-c-brand-nav-active: var(--accent);
+  --vp-button-brand-bg: var(--accent);
+  --vp-button-brand-text: #fff;
+  --vp-button-brand-hover-bg: var(--accent);
+  --vp-button-alt-bg: var(--panel);
+  --vp-button-alt-text: var(--ink);
+  --vp-code-block-bg: var(--panel);
+}
+.dark {
+  --bg: #111819;
+  --panel: #192224;
+  --surface: #111819;
+  --ink: #e2ebea;
+  --muted: #8fa1a3;
+  --line: #2b3a3c;
+  --accent: #6cbab2;
+  --accent-soft: #203532;
+  --gold: #d1b36a;
+  --button-bg: #192224;
+  --button-hover: #203532;
+  --button-border: #2b3a3c;
+  --button-disabled: #263133;
+  --vp-button-brand-text: #111819;
+  color-scheme: dark;
+}
+html {
+  scroll-padding-top: 88px;
+}
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
+h1,
+h2,
+h3 {
+  font-family: Georgia, 'Songti SC', 'Noto Serif SC', serif;
+  text-wrap: balance;
+}
+a,
+button,
+input {
+  touch-action: manipulation;
+}
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+.vp-doc {
+  font-size: 17px;
+  line-height: 1.85;
+}
+.vp-doc p,
+.vp-doc li {
+  line-height: 1.85;
+}
+.vp-doc h1 {
+  font-size: 36px;
+}
+.vp-doc h2 {
+  border-color: var(--line);
+}
+.vp-doc a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.vp-doc img {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+.vp-doc table {
+  display: block;
+  overflow: auto;
+}
+.vp-doc :is(th, td) {
+  background: var(--panel);
+}
+.VPDoc.has-aside .content-container {
+  max-width: 760px !important;
+}
+.VPNavBar {
+  border-bottom: 1px solid var(--line) !important;
+}
+.VPNavBarTitle .logo {
+  width: 30px;
+  height: 30px;
+}
+.VPSidebar {
+  border-right: 1px solid var(--line);
+}
+.VPSidebarItem .text {
+  font-size: 14px !important;
+}
+.vp-doc .custom-block {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--ink);
+}
+.VPFooter {
+  background: var(--panel);
+}
+.VPFooter .message,
+.VPFooter .copyright {
+  color: var(--ink);
+}
+.vp-doc .doc-meta {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.vp-doc .doc-meta p {
+  margin: 4px 0;
+}
+.VPNavBarMenuLink,
+.VPNavBarMenuGroup,
+.VPNavBarSearch,
+.VPNavBarAppearance {
+  min-height: 44px;
+}
+.vp-doc :is(a, code) {
+  overflow-wrap: anywhere;
+}
+.vp-doc pre code {
+  overflow-wrap: normal;
+}
+.vp-doc blockquote {
+  color: var(--ink);
+}
+@media (max-width: 767px) {
+  .vp-doc {
+    font-size: 16px;
+  }
+  .vp-doc h1 {
+    font-size: 28px;
+  }
+  .vp-doc h2 {
+    font-size: 24px;
+  }
+  .vp-doc h3 {
+    font-size: 20px;
+  }
+  .VPDoc {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+  .VPNavBarTitle .title {
+    font-size: 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+  .VPNavBarSearch .DocSearch-Button-Placeholder,
+  .VPNavBarSearch .DocSearch-Button-Keys {
+    display: none !important;
+  }
+  .VPNavBarSearch .DocSearch-Button {
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    padding: 0;
+  }
+  .VPNavBarTitle {
+    flex-shrink: 0;
+  }
+}

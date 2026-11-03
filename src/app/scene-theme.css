@@ -1,0 +1,643 @@
+/* Scene aliases inherit the shared character palette, including body portals. */
+.room-page.scene-theme,main.room-page.player-workspace > aside.room-rail,main.room-page.player-workspace > aside.player-message-rail {
+ --scene-bg:var(--bg);--scene-card:var(--panel);--scene-ink:var(--ink);--scene-muted:var(--muted);--scene-line:var(--line);--scene-accent:var(--accent);--scene-accent-soft:var(--accent-soft);--scene-gold:var(--gold);--scene-danger:var(--danger);--scene-danger-soft:var(--danger-soft);
+ background:var(--bg);color:var(--ink);
+}
+/* 顶部导航深色（组件 scoped 无法跨 :global 祖先，放这里统一覆盖） */
+html:root[data-theme='dark'] .room-top-nav button {
+  background: #192224;
+  border-color: #2b3a3c;
+  color: #e2ebea;
+}
+html:root[data-theme='dark'] .room-top-nav button:hover:not(:disabled) {
+  border-color: #6cbab2;
+  color: #6cbab2;
+}
+html:root[data-theme='dark'] .room-top-nav button.active {
+  background: #203532;
+  border-color: #6cbab2;
+  color: #6cbab2;
+}
+html:root[data-theme='dark'] .room-top-nav button:focus-visible {
+  outline-color: #6cbab2;
+}
+html:root[data-theme='dark'] .room-top-nav[data-stuck='true'] {
+  background: color-mix(in srgb, #111819 94%, transparent);
+  box-shadow:
+    0 1px 0 #2b3a3c,
+    0 6px 16px rgb(0 0 0 / 25%);
+}
+
+/* 房间条 */
+.room-page.scene-theme.workspace-active .room-bar,
+.room-page.scene-theme.player-workspace .room-bar {
+  padding: 8px 14px;
+  margin: 0;
+  min-height: 40px;
+  background: var(--scene-card);
+  border: 1px solid var(--scene-line);
+  border-radius: 12px;
+}
+.room-page.scene-theme .room-bar strong {
+  font-size: 14px;
+}
+.room-page.scene-theme .room-bar small,
+.room-page.scene-theme .room-sync {
+  color: var(--scene-muted);
+  font-size: 11.5px;
+}
+
+/* GM：场景 hero */
+.room-page.scene-theme .gm-scene-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px 12px;
+  padding: 12px 14px;
+  background: var(--scene-card);
+  border: 1px solid var(--scene-line);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgb(38 54 64 / 4%);
+}
+.room-page.scene-theme .gm-scene-top .map-scene-heading {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.room-page.scene-theme .gm-scene-top .map-scene-heading > div {
+  order: 1;
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+.room-page.scene-theme .gm-scene-top .map-scene-heading h2 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.3;
+}
+.room-page.scene-theme .gm-scene-top .map-badge {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 1px 8px;
+  border-radius: 99px;
+  background: var(--scene-accent-soft);
+  color: var(--scene-accent);
+  font-size: 11px;
+}
+.room-page.scene-theme .gm-scene-top .map-scene-heading > .workspace-scene-toggle {
+  order: 2;
+}
+.room-page.scene-theme .gm-scene-top .map-scene-heading > button.secondary:not(.workspace-scene-toggle) {
+  order: 3;
+}
+.room-page.scene-theme .gm-scene-top .map-scene-heading > button.primary {
+  order: 4;
+}
+.room-page.scene-theme .gm-scene-top .map-save-status {
+  grid-column: 2;
+  justify-self: end;
+  margin: 0;
+  font-size: 11.5px;
+  color: var(--scene-muted);
+}
+
+/* GM：按钮分级 */
+.room-page.scene-theme .gm-scene-top .map-scene-heading > button {
+  min-height: 40px;
+  padding: 7px 14px;
+  font-size: 13px;
+  line-height: 1.2;
+  border-radius: 6px;
+  background: var(--scene-card);
+  border: 1px solid var(--scene-line);
+  color: var(--scene-ink);
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+.room-page.scene-theme .gm-scene-top .map-scene-heading > button:hover:not(:disabled) {
+  border-color: var(--scene-accent);
+  color: var(--scene-accent);
+}
+.room-page.scene-theme .gm-scene-top .map-scene-heading > button.primary {
+  background: var(--scene-accent);
+  border-color: var(--scene-accent);
+  color: #fff;
+  font-weight: 500;
+}
+.room-page.scene-theme .gm-scene-top .map-scene-heading > button.primary:hover:not(:disabled) {
+  background: #245a56;
+  border-color: #245a56;
+  color: #fff;
+}
+:root[data-theme='dark']
+  .room-page.scene-theme
+  .gm-scene-top
+  .map-scene-heading
+  > button.primary {
+  color: #0b1412;
+  font-weight: 600;
+}
+:root[data-theme='dark'] .room-page.scene-theme button.good {
+  color: #0b1412;
+  font-weight: 600;
+}
+:root[data-theme='dark']
+  .room-page.scene-theme
+  .gm-scene-top
+  .map-scene-heading
+  > button.primary:hover:not(:disabled) {
+  background: #7fcac2;
+  border-color: #7fcac2;
+  color: #0b1412;
+}
+.room-page.scene-theme .gm-scene-top .map-scene-heading button:focus-visible,
+.room-page.scene-theme .map-toolbar button:focus-visible,
+.room-page.scene-theme .map-viewport-controls button:focus-visible {
+  outline: 2px solid var(--scene-accent);
+  outline-offset: -2px;
+}
+
+/* GM：分段控件 */
+.room-page.scene-theme .gm-scene-top .map-modes {
+  grid-column: 1;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 2px;
+  padding: 3px;
+  background: var(--scene-bg);
+  border: 1px solid var(--scene-line);
+  border-radius: 9px;
+}
+.room-page.scene-theme .gm-scene-top .map-modes button {
+  min-height: 32px;
+  padding: 4px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--scene-muted);
+  font-size: 12.5px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.room-page.scene-theme .gm-scene-top .map-modes button.active {
+  background: var(--scene-card);
+  color: var(--scene-ink);
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgb(38 54 64 / 12%);
+}
+.room-page.scene-theme .gm-scene-top .map-modes button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+/* 工具栏 / 视口控件：ghost */
+.room-page.scene-theme .map-toolbar,
+.room-page.scene-theme .map-interaction-controls,
+.room-page.scene-theme .map-viewport-controls,
+.room-page.scene-theme .editor-tool-groups {
+  gap: 6px;
+  padding: 6px 8px;
+  background: var(--scene-card);
+  border: 1px solid var(--scene-line);
+  border-radius: 10px;
+}
+.room-page.scene-theme .map-toolbar {
+  border-bottom: 1px solid var(--scene-line);
+}
+.room-page.scene-theme .map-toolbar button,
+.room-page.scene-theme .map-interaction-controls button,
+.room-page.scene-theme .map-viewport-controls button,
+.room-page.scene-theme .map-toolbar summary,
+.room-page.scene-theme .editor-basic > button,
+.room-page.scene-theme .editor-basic > details > summary,
+.room-page.scene-theme .editor-view-tools > button {
+  min-height: 32px;
+  padding: 4px 9px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--scene-muted);
+  font-size: 12.5px;
+  cursor: pointer;
+}
+.room-page.scene-theme .editor-basic > details > summary {
+  display: inline-flex;
+  align-items: center;
+  list-style: none;
+}
+.room-page.scene-theme .editor-basic > details > summary::-webkit-details-marker {
+  display: none;
+}
+.room-page.scene-theme .editor-tool-options button {
+  min-height: 30px;
+  padding: 4px 8px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--scene-ink);
+  font-size: 12.5px;
+}
+.room-page.scene-theme .editor-tool-options button:hover:not(:disabled) {
+  background: var(--scene-bg);
+}
+.room-page.scene-theme .editor-tool-options button[aria-pressed='true'] {
+  background: var(--scene-accent-soft);
+  color: var(--scene-accent);
+}
+.room-page.scene-theme .editor-view-tools > span {
+  min-width: 42px;
+  text-align: center;
+  color: var(--scene-muted);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.room-page.scene-theme .editor-basic > button[aria-pressed='true'] {
+  background: var(--scene-accent-soft);
+  color: var(--scene-accent);
+  font-weight: 600;
+}
+.room-page.scene-theme .map-toolbar button:hover:not(:disabled),
+.room-page.scene-theme .map-interaction-controls button:hover:not(:disabled),
+.room-page.scene-theme .map-viewport-controls button:hover:not(:disabled) {
+  background: var(--scene-bg);
+  color: var(--scene-ink);
+}
+.room-page.scene-theme .map-toolbar button.active,
+.room-page.scene-theme .map-viewport-controls button.active {
+  background: var(--scene-accent-soft);
+  border-color: transparent;
+  color: var(--scene-accent);
+  font-weight: 600;
+}
+.room-page.scene-theme .map-toolbar button:disabled,
+.room-page.scene-theme .map-interaction-controls button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.room-page.scene-theme .map-toolbar .subtle,
+.room-page.scene-theme .map-viewport-controls .subtle,
+.room-page.scene-theme .map-interaction-controls button.subtle {
+  background: transparent;
+  border-color: transparent;
+  color: var(--scene-muted);
+}
+.room-page.scene-theme .map-interaction-controls > span {
+  font-size: 12px;
+  color: var(--scene-muted);
+}
+.room-page.scene-theme .map-interaction-controls > span.active {
+  color: var(--scene-accent);
+  font-weight: 600;
+}
+.room-page.scene-theme button.good {
+  background: var(--scene-accent);
+  border-color: var(--scene-accent);
+  color: #fff;
+}
+.room-page.scene-theme button.good:hover:not(:disabled) {
+  background: #245a56;
+  border-color: #245a56;
+  color: #fff;
+}
+
+/* 地图卡 */
+.room-page.scene-theme .map-center {
+  gap: 10px;
+}
+.room-page.scene-theme .map-viewport {
+  background: var(--map-ground);
+  border: 1px solid var(--scene-line);
+  border-radius: 12px;
+  max-height: none;
+  box-shadow: 0 1px 2px rgb(38 54 64 / 4%);
+}
+.room-page.scene-theme .room-map-scroll {
+  max-height: none;
+}
+body.map-resizing {
+  cursor: row-resize;
+  user-select: none;
+}
+.room-page.scene-theme .map-feedback {
+  margin: 0;
+  padding: 8px 12px;
+  background: var(--scene-card);
+  border: 1px dashed var(--scene-line);
+  border-radius: 10px;
+  color: var(--scene-muted);
+  font-size: 12px;
+}
+.room-page.scene-theme .map-feedback.error {
+  border-color: color-mix(in srgb, var(--scene-danger) 40%, var(--scene-line));
+  color: var(--scene-danger);
+}
+
+/* 右栏：与场景页同一套卡片与按钮 */
+.room-page.scene-theme .rail-switch {
+  background: transparent;
+}
+.room-page.scene-theme .rail-switch button {
+  min-height: 34px;
+  border: 1px solid var(--scene-line);
+  border-radius: 8px;
+  background: var(--scene-card);
+  color: var(--scene-muted);
+  font-size: 13px;
+}
+.room-page.scene-theme .rail-switch .on {
+  background: var(--scene-accent-soft);
+  border-color: var(--scene-accent);
+  color: var(--scene-accent);
+  font-weight: 600;
+}
+.room-page.scene-theme .rail-card {
+  background: var(--scene-card);
+  border: 1px solid var(--scene-line);
+  border-radius: 10px;
+}
+.room-page.scene-theme .rail-card > summary {
+  color: var(--scene-ink);
+  font-size: 13px;
+}
+.room-page.scene-theme .rail-card .rail-note,
+.room-page.scene-theme .rail-card small {
+  color: var(--scene-muted);
+  font-size: 12px;
+}
+.room-page.scene-theme .rail-card button:not(.rail-link) {
+  min-height: 34px;
+  border: 1px solid var(--scene-line);
+  border-radius: 6px;
+  background: var(--scene-card);
+  color: var(--scene-ink);
+  font-size: 12.5px;
+}
+.room-page.scene-theme .rail-card button:not(.rail-link):hover:not(:disabled) {
+  border-color: var(--scene-accent);
+  color: var(--scene-accent);
+}
+.room-page.scene-theme .rail-card .rail-link {
+  color: var(--scene-accent);
+  font-size: 12.5px;
+}
+.room-page.scene-theme .room-rail button {
+  font-size: 12.5px;
+}
+.room-page.scene-theme .room-rail button.secondary,
+.room-page.scene-theme .room-rail button.subtle {
+  min-height: 30px;
+  font-size: 12px;
+}
+/* 玩家端：公开地图 */
+.room-page.scene-theme .player-map-toolbar {
+  background: var(--scene-card);
+  border: 1px solid var(--scene-line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  gap: 8px;
+}
+.room-page.scene-theme .player-map-toolbar h3 {
+  margin: 0;
+  font-size: 17px;
+}
+.room-page.scene-theme .room-map {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  background: var(--scene-card);
+  border: 1px solid var(--scene-line);
+  border-radius: 12px;
+}
+.room-page.scene-theme .room-map-scroll {
+  border: 1px solid var(--scene-line);
+  border-radius: 10px;
+  background: var(--map-ground);
+}
+.room-page.scene-theme .room-scene-header {
+  padding: 2px 2px 0;
+}
+.room-page.scene-theme .room-scene-title h2 {
+  font-size: 18px;
+}
+.room-page.scene-theme .room-scene-title > span,
+.room-page.scene-theme .room-scene-meta > .check {
+  color: var(--scene-muted);
+  font-size: 12px;
+}
+.room-page.scene-theme .room-avatar-button {
+  background: var(--scene-card);
+  border: 1px solid var(--scene-line);
+  border-radius: 8px;
+}
+.room-page.scene-theme .room-avatar-button.current {
+  border-color: var(--scene-accent);
+  box-shadow: 0 0 0 1px var(--scene-accent) inset;
+}
+.room-page.scene-theme .status-detail {
+  background: var(--scene-bg);
+  border: 1px solid var(--scene-line);
+  border-radius: 8px;
+  font-size: 12.5px;
+}
+
+/* 玩家端地图页按钮 */
+.room-page.scene-theme.player-workspace .room-map button,
+.room-page.scene-theme.player-workspace .player-map-toolbar button {
+  min-height: 36px;
+  padding: 5px 12px;
+  border: 1px solid var(--scene-line);
+  border-radius: 6px;
+  background: var(--scene-card);
+  color: var(--scene-ink);
+  font-size: 12.5px;
+}
+.room-page.scene-theme.player-workspace .room-map button:hover:not(:disabled),
+.room-page.scene-theme.player-workspace .player-map-toolbar button:hover:not(:disabled) {
+  border-color: var(--scene-accent);
+  color: var(--scene-accent);
+}
+.room-page.scene-theme.player-workspace .map-viewport-controls button {
+  min-height: 32px;
+  padding: 4px 9px;
+  border-color: transparent;
+  background: transparent;
+  color: var(--scene-muted);
+}
+.room-page.scene-theme.player-workspace .map-viewport-controls button:hover:not(:disabled) {
+  background: var(--scene-bg);
+  color: var(--scene-ink);
+}
+
+@media (max-width: 900px) {
+  .room-page.scene-theme .gm-scene-top {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .room-page.scene-theme .gm-scene-top .map-save-status {
+    grid-column: 1;
+    justify-self: start;
+  }
+  .room-page.scene-theme .gm-scene-top .map-modes {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+}
+
+/* Player tools use the scene skin across all nine tabs; page skins stay in the main area. */
+main.room-page.player-workspace > aside.room-rail {
+  font-size: 12px;
+  line-height: 1.4;
+}
+main.room-page.player-workspace > aside.room-rail .rail-stack {
+  gap: 8px;
+}
+main.room-page.player-workspace > aside.room-rail .rail-switch {
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: transparent;
+}
+main.room-page.player-workspace > aside.room-rail :is(.rail-switch, .rail-card, .runtime-status-rail) button:where(:not(.primary):not(.danger)) {
+  min-height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+main.room-page.player-workspace > aside.room-rail button.secondary,
+main.room-page.player-workspace > aside.room-rail button.subtle {
+  min-height: 30px;
+  font-size: 12px;
+}
+main.room-page.player-workspace > aside.room-rail :is(.rail-switch, .rail-card, .runtime-status-rail) button:where(:not(.primary):not(.danger)):hover:not(:disabled) {
+  border-color: var(--scene-accent);
+  color: var(--scene-accent);
+  background: var(--button-hover);
+}
+main.room-page.player-workspace > aside.room-rail .rail-switch button {
+  min-height: 34px;
+  border-radius: 8px;
+  color: var(--muted);
+}
+main.room-page.player-workspace > aside.room-rail .rail-switch button.on,
+main.room-page.player-workspace > aside.room-rail .quick-item.on,
+main.room-page.player-workspace > aside.room-rail .quick-item.current {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+main.room-page.player-workspace > aside.room-rail .quick-item.current {
+  border-left: 4px solid var(--gold);
+}
+main.room-page.player-workspace > aside.room-rail :is(.rail-switch, .rail-card, .runtime-status-rail) button:disabled {
+  background: var(--button-disabled);
+  border-color: var(--line);
+  color: var(--muted);
+}
+main.room-page.player-workspace > aside.room-rail .rail-card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--ink);
+}
+main.room-page.player-workspace > aside.room-rail .rail-card > summary {
+  background: var(--panel);
+  border-color: var(--line);
+  color: var(--ink);
+  font-size: 13px;
+}
+main.room-page.player-workspace > aside.room-rail .rail-note {
+  color: var(--muted);
+  font-size: 12px;
+}
+main.room-page.player-workspace > aside.room-rail :is(small, .quick-name i, .quick-facts, .quick-tags) {
+  font-size: 11.5px;
+}
+main.room-page.player-workspace > aside.room-rail .runtime-status-rail {
+  gap: 8px;
+  color: var(--ink);
+}
+main.room-page.player-workspace > aside.room-rail .runtime-status-rail .runtime-block {
+  padding: 9px 10px;
+  border-color: var(--line);
+  background: var(--panel);
+}
+main.room-page.player-workspace > aside.room-rail .runtime-status-rail .runtime-block-head {
+  gap: 7px;
+  margin-bottom: 6px;
+}
+main.room-page.player-workspace > aside.room-rail .runtime-status-rail .runtime-block-head h3 {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 650;
+}
+main.room-page.player-workspace > aside.room-rail .runtime-block-no {
+  width: 20px;
+  height: 20px;
+  background: var(--surface);
+  color: var(--accent);
+  font-size: 11.5px;
+}
+main.room-page.player-workspace > aside.room-rail .runtime-review-tag {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-size: 11.5px;
+}
+main.room-page.player-workspace > aside.room-rail .runtime-status-rail :is(label, .runtime-block-note, .small, .muted),
+main.room-page.player-workspace > aside.room-rail .runtime-status-rail .runtime-rest-panel :is(p, .small) {
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+main.room-page.player-workspace > aside.room-rail .runtime-status-rail .runtime-actions {
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+main.room-page.player-workspace > aside.room-rail .runtime-status-rail .rule-note {
+  margin-top: 8px;
+  padding-top: 4px;
+  border-top: 1px dashed var(--line);
+}
+main.room-page.player-workspace > aside.room-rail .runtime-status-rail .rule-note > summary {
+  display: block;
+  min-height: 28px;
+  color: var(--accent);
+  font-size: 11.5px;
+}
+main.room-page.player-workspace > aside.room-rail .runtime-status-rail .rule-note p {
+  margin: 2px 0 0;
+}
+main.room-page.player-workspace > aside.room-rail .runtime-status-rail .rule-links a {
+  display: block;
+  padding: 3px 0;
+  font-size: 11.5px;
+}
+main.room-page.player-workspace > aside.room-rail .runtime-summary-grid {
+  gap: 4px 10px;
+  font-size: 12px;
+}
+main.room-page.player-workspace > aside.room-rail .runtime-summary-grid :is(div, span) {
+  font-size: 11.5px;
+}
+main.room-page.player-workspace > aside.room-rail .runtime-summary-grid b {
+  font-size: 12px;
+}
+@media (max-width: 1024px), (pointer: coarse) {
+  main.room-page.player-workspace > aside.room-rail :is(.rail-switch, .rail-card, .runtime-status-rail) :is(button, select) {
+    min-height: 44px;
+  }
+}

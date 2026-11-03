@@ -1,0 +1,6 @@
+export { authoringModelFiles } from '../src/core/authoring-model-files'
+export { authoringExample } from '../src/content/script-authoring-example'
+export { authoringWorkbenchExample } from '../src/content/script-authoring-workbench-example'
+export { authoringPrompt } from '../src/core/script-authoring'
+export {localizeSyntheticAuthoringExample} from '../src/content/authoring-example-language'
+export {stageFiles} from '../src/core/authoring-stages'

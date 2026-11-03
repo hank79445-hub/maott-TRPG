@@ -1,0 +1,222 @@
+[
+  {
+    "group": "player",
+    "title": "加入房间与身份保存",
+    "path": "/guide/player/join.html"
+  },
+  {
+    "group": "player",
+    "title": "七步创建角色",
+    "path": "/guide/player/create-character.html"
+  },
+  {
+    "group": "player",
+    "title": "使用自己的角色",
+    "path": "/guide/player/control.html"
+  },
+  {
+    "group": "player",
+    "title": "查看角色与资源",
+    "path": "/guide/player/character-sheet.html"
+  },
+  {
+    "group": "player",
+    "title": "背包、穿戴与物品",
+    "path": "/guide/player/inventory.html"
+  },
+  {
+    "group": "player",
+    "title": "地图移动与行动",
+    "path": "/guide/player/explore.html"
+  },
+  {
+    "group": "player",
+    "title": "宝箱与容器取放",
+    "path": "/guide/player/containers.html"
+  },
+  {
+    "group": "player",
+    "title": "法术、卷轴与快捷按钮",
+    "path": "/guide/player/spells.html"
+  },
+  {
+    "group": "player",
+    "title": "战斗中的玩家操作",
+    "path": "/guide/player/combat.html"
+  },
+  {
+    "group": "player",
+    "title": "消息与NPC互动",
+    "path": "/guide/player/messages.html"
+  },
+  {
+    "group": "player",
+    "title": "手机、布局与恢复",
+    "path": "/guide/player/preferences.html"
+  },
+  {
+    "group": "gm",
+    "title": "准备第一次开团",
+    "path": "/guide/gm/prepare.html"
+  },
+  {
+    "group": "gm",
+    "title": "成员、队伍与入场",
+    "path": "/guide/gm/members.html"
+  },
+  {
+    "group": "gm",
+    "title": "配置场景与地图",
+    "path": "/guide/gm/scenes.html"
+  },
+  {
+    "group": "gm",
+    "title": "互动点与容器",
+    "path": "/guide/gm/points.html"
+  },
+  {
+    "group": "gm",
+    "title": "光照、迷雾与可见性",
+    "path": "/guide/gm/visibility.html"
+  },
+  {
+    "group": "gm",
+    "title": "四段开场阅读",
+    "path": "/guide/gm/opening.html"
+  },
+  {
+    "group": "gm",
+    "title": "审核玩家行动",
+    "path": "/guide/gm/review.html"
+  },
+  {
+    "group": "gm",
+    "title": "从场景进入战斗",
+    "path": "/guide/gm/battle-start.html"
+  },
+  {
+    "group": "gm",
+    "title": "战斗、法术与后果",
+    "path": "/guide/gm/battle-resolution.html"
+  },
+  {
+    "group": "gm",
+    "title": "管理普通与重要NPC",
+    "path": "/guide/gm/npc.html"
+  },
+  {
+    "group": "gm",
+    "title": "事件广播与消息",
+    "path": "/guide/gm/broadcasts.html"
+  },
+  {
+    "group": "gm",
+    "title": "保存、恢复与会话衔接",
+    "path": "/guide/gm/save-restore.html"
+  },
+  {
+    "group": "creator",
+    "title": "从构思到剧本结构",
+    "path": "/guide/creator/new-script.html"
+  },
+  {
+    "group": "creator",
+    "title": "场景、美术与地图",
+    "path": "/guide/creator/maps.html"
+  },
+  {
+    "group": "creator",
+    "title": "NPC、物品与遭遇",
+    "path": "/guide/creator/actors.html"
+  },
+  {
+    "group": "creator",
+    "title": "任务、事件与广播",
+    "path": "/guide/creator/story-flow.html"
+  },
+  {
+    "group": "creator",
+    "title": "角色位与四段开场",
+    "path": "/guide/creator/opening.html"
+  },
+  {
+    "group": "creator",
+    "title": "版本、导入导出与再次开团",
+    "path": "/guide/creator/versions.html"
+  },
+  {
+    "group": "creator",
+    "title": "可选模型创作工作台",
+    "path": "/guide/creator/generation.html"
+  },
+  {
+    "group": "advanced",
+    "title": "模型与用量",
+    "path": "/guide/advanced/models.html"
+  },
+  {
+    "group": "advanced",
+    "title": "人设、知识与记忆",
+    "path": "/guide/advanced/npc-knowledge.html"
+  },
+  {
+    "group": "advanced",
+    "title": "NPC对话与互谈",
+    "path": "/guide/advanced/npc-dialogue.html"
+  },
+  {
+    "group": "advanced",
+    "title": "AI辅助审核",
+    "path": "/guide/advanced/assisted-review.html"
+  },
+  {
+    "group": "advanced",
+    "title": "可选QQ接入",
+    "path": "/guide/advanced/qq.html"
+  },
+  {
+    "group": "advanced",
+    "title": "自定义内容与缺依赖",
+    "path": "/guide/advanced/content.html"
+  },
+  {
+    "group": "deploy",
+    "title": "环境要求",
+    "path": "/deploy/requirements.html"
+  },
+  {
+    "group": "deploy",
+    "title": "获取版本与安装依赖",
+    "path": "/deploy/install.html"
+  },
+  {
+    "group": "deploy",
+    "title": "构建、启动与正常关闭",
+    "path": "/deploy/run.html"
+  },
+  {
+    "group": "deploy",
+    "title": "本机、同网与公网访问",
+    "path": "/deploy/network.html"
+  },
+  {
+    "group": "deploy",
+    "title": "账号、GM与控制权",
+    "path": "/deploy/accounts.html"
+  },
+  {
+    "group": "deploy",
+    "title": "数据、备份与恢复",
+    "path": "/deploy/data.html"
+  },
+  {
+    "group": "deploy",
+    "title": "更新与回退",
+    "path": "/deploy/update.html"
+  },
+  {
+    "group": "deploy",
+    "title": "启动与网络问题排查",
+    "path": "/deploy/troubleshooting.html"
+  }
+]

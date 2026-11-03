@@ -1,0 +1,4 @@
+11f873563497f46ac17e184273dd51fdacbe450ea82102107456445e76e14c70  lamplit-inn.authoring.json
+de118122a064813cc5a93e4b58a043e69c3f7c20be22d36db241785e9af6df24  lamplit-inn.trpg-script.zip
+28d5b57977b5b440003c3c712a6c85d1feefd14624eade6e7b35079280be59f8  lamplit-inn.trpg-map.json
+75980f4a01ed5f80b5223950596a65fe1b1ea5cf45ae03ae95afb1146c278e29  lamplit-inn-characters.zip

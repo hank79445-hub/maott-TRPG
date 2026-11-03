@@ -1,0 +1,36 @@
+{
+  "contract": "trpg-authoring/1",
+  "version": "workbench-sync/5-persona-three-stage",
+  "characterLevels": [
+    1,
+    5
+  ],
+  "classCount": 12,
+  "mechanisms": [
+    {
+      "mechanism": "Class spells and abilities",
+      "source": "Validated level 1–5 class cards / actual template abilities",
+      "boundary": "The program computes resources. Initial descriptions do not substitute for actual abilities and equipment."
+    },
+    {
+      "mechanism": "Ongoing areas, lighting and spatial effects",
+      "source": "spatialSetup / effectSetup",
+      "boundary": "Only supported initial scene effects are accepted. Compilation checks sources and references."
+    },
+    {
+      "mechanism": "G-category narrative spells",
+      "source": "Actual spell capability and the adjudication entry point",
+      "boundary": "The GM adjudicates explanations, knowledge and results. Do not fabricate automatic conclusions."
+    },
+    {
+      "mechanism": "S-category summoning",
+      "source": "Actually available spells and materials",
+      "boundary": "Cast legally after starting the game. Do not pre-create summon instances or casting history."
+    },
+    {
+      "mechanism": "NPC memory, models, QQ and autonomous authorization",
+      "source": "Runtime configuration after starting the game",
+      "boundary": "Initial practicalSocial, spatialPolicy and resourceStrategy designs may be included with authorization disabled. Exclude old memories, credentials, Bots, runtime authorization and execution history."
+    }
+  ]
+}

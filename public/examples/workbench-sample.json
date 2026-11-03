@@ -1,0 +1,912 @@
+{
+  "format": "trpg-authoring",
+  "version": 1,
+  "title": "雾港脱困 · 新系统综合示例",
+  "author": "",
+  "itemPacks": [
+    {
+      "id": "harbor-example",
+      "version": "1",
+      "name": "GM综合示例剧情道具",
+      "attribution": "原创合成测试示例，GM自定",
+      "classes": [],
+      "backgrounds": [],
+      "species": [],
+      "feats": [],
+      "spells": [],
+      "items": [
+        {
+          "id": "harbor-example/bronze-key",
+          "name": "青铜钥匙",
+          "english": "Crowbar",
+          "summary": "Crowbar",
+          "source": {
+            "pack": "harbor-example",
+            "version": "1",
+            "page": 95,
+            "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf"
+          },
+          "kind": "gear",
+          "cost": 0,
+          "weight": 5,
+          "holdable": true
+        }
+      ]
+    }
+  ],
+  "description": "",
+  "level": 2,
+  "players": 4,
+  "start": "cells",
+  "opening": "潮汐将至。找到同伴，穿过守卫回廊，决定雾港的命运。",
+  "scenes": [
+    {
+      "fog": {
+        "mode": "enclosed",
+        "areas": [
+          {
+            "id": "supply-room",
+            "name": "补给间",
+            "cells": [
+              "11,4",
+              "12,4",
+              "13,4",
+              "11,5",
+              "12,5",
+              "13,5",
+              "11,6",
+              "12,6",
+              "13,6"
+            ],
+            "doorIds": [
+              "release-door"
+            ],
+            "initiallyRevealed": false,
+            "revealOnOpen": true,
+            "manualOnly": false
+          }
+        ],
+        "shading": {
+          "level1": 0.35,
+          "level2": 0.75
+        },
+        "enabled": true,
+        "shared": true,
+        "rangeFeet": 60,
+        "initial": []
+      },
+      "links": [
+        {
+          "key": "release",
+          "name": "释放机关组",
+          "color": "#397b9a",
+          "source": "cage",
+          "outcome": "success",
+          "effects": [
+            {
+              "point": "release-door",
+              "operation": "open"
+            }
+          ]
+        }
+      ],
+      "key": "cells",
+      "effectSetup": {
+        "regions": [
+          {
+            "id": "camp-lamp",
+            "spellId": "mundane-light",
+            "geometry": {
+              "shape": "sphere",
+              "x": 4,
+              "y": 3,
+              "height": 3,
+              "size": 40,
+              "heightFeet": 0,
+              "width": 5,
+              "angle": 0,
+              "originSpan": 1
+            },
+            "slotLevel": 0,
+            "hidden": false,
+            "light": {
+              "bright": 20,
+              "dimExtra": 20,
+              "sunlight": false,
+              "magical": false,
+              "flame": true,
+              "protected": false,
+              "color": "#e8bf77"
+            },
+            "note": "GM确认真实营灯，不将材质美术当规则"
+          }
+        ],
+        "containers": [
+          {
+            "id": "tank-content",
+            "objectId": "water-tank",
+            "name": "石水槽",
+            "waterCapacity": 1280,
+            "foodCapacity": 0,
+            "open": true,
+            "hidden": false,
+            "water": 640,
+            "food": 0
+          }
+        ],
+        "materials": []
+      },
+      "spatialSetup": {
+        "floorHeight": 0,
+        "light": "dark",
+        "openSky": false,
+        "ceilingHeight": 20,
+        "objects": [
+          {
+            "id": "water-tank",
+            "name": "石水槽",
+            "kind": "object",
+            "x": 3,
+            "y": 3,
+            "height": 0,
+            "width": 5,
+            "heightFeet": 3,
+            "depth": 5,
+            "weight": 100,
+            "loose": false,
+            "enabled": true,
+            "hidden": false
+          }
+        ]
+      },
+      "environment": "indoor",
+      "boundaryWalls": "auto-enclose",
+      "art": {
+        "description": "潮湿的石砌囚室，粗石墙面附着少量海藻。中央为开放活动区，靠墙布置铁笼与控制台，通道保持清晰。",
+        "publicName": "海底石室",
+        "style": "写实奇幻战术地图，正上方俯视",
+        "materials": "粗石、铁栏与青铜",
+        "lighting": "暖色壁灯与冷色环境光，地板和出口边界清晰",
+        "decorations": "",
+        "exclusions": "人物、文字、数字、网格"
+      },
+      "name": "潮汐囚室",
+      "description": "潮水敲击石壁，囚笼旁的机关仍闪着微光。",
+      "intro": "潮水敲击石壁，囚笼旁的机关仍闪着微光。",
+      "width": 20,
+      "height": 16,
+      "landing": {
+        "x": 2,
+        "y": 2
+      },
+      "floors": [
+        {
+          "x": 1,
+          "y": 1,
+          "width": 18,
+          "height": 14
+        }
+      ],
+      "points": [
+        {
+          "key": "cage",
+          "appearance": {
+            "label": "铁笼控制台",
+            "description": "低矮石台上嵌着一根青铜拉杆，金属表面有磨损",
+            "width": 1,
+            "height": 1,
+            "rotation": 0,
+            "visibility": "public"
+          },
+          "name": "解救学者",
+          "x": 8,
+          "y": 5,
+          "kind": "clue",
+          "text": "学者从开启的牢笼中走出。",
+          "hidden": false,
+          "check": {
+            "skill": "investigation",
+            "dc": 10
+          },
+          "rescueNpc": "scholar",
+          "success": "牢笼打开，学者向救援者点头致谢。",
+          "failure": "锁扣没有松开，需要另寻办法。"
+        },
+        {
+          "key": "exit",
+          "name": "前往回廊",
+          "x": 17,
+          "y": 12,
+          "kind": "exit",
+          "text": "",
+          "hidden": false,
+          "exit": {
+            "scene": "gallery",
+            "point": "back"
+          }
+        },
+        {
+          "key": "supply-cache",
+          "name": "补给箱",
+          "x": 12,
+          "y": 5,
+          "kind": "chest",
+          "text": "箱中放着旅行用品。",
+          "hidden": false,
+          "itemUse": {
+            "match": "all",
+            "requirements": [
+              {
+                "itemId": "harbor-example/bronze-key",
+                "quantity": 1,
+                "mode": "possess"
+              }
+            ],
+            "effect": "open",
+            "fallback": "gm"
+          },
+          "container": {
+            "items": [
+              {
+                "itemId": "torch",
+                "quantity": 2
+              }
+            ],
+            "coins": 10,
+            "gmNote": "不自动发给全队；由角色领取。"
+          }
+        },
+        {
+          "key": "release-door",
+          "name": "释放门",
+          "x": 10,
+          "y": 5,
+          "kind": "door",
+          "text": "机关释放了门闩。",
+          "hidden": false
+        },
+        {
+          "key": "scratch",
+          "name": "墙面擦痕",
+          "x": 6,
+          "y": 4,
+          "kind": "clue",
+          "text": "擦痕指向回廊。",
+          "hidden": true,
+          "discovery": {
+            "method": "proximity",
+            "range": 20,
+            "skill": "perception",
+            "dc": 10
+          }
+        }
+      ],
+      "ground": [
+        {
+          "key": "bronze-key",
+          "x": 3,
+          "y": 4,
+          "item": "harbor-example/bronze-key",
+          "quantity": 1,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "fog": {
+        "enabled": true,
+        "shared": false,
+        "rangeFeet": 60,
+        "initial": [
+          "2,2"
+        ]
+      },
+      "key": "gallery",
+      "environment": "indoor",
+      "boundaryWalls": "auto-enclose",
+      "art": {
+        "description": "狭长的海港守卫回廊，磨损石砖上有盐渍，墙边留有木凳和挂灯，中央通道畅通。",
+        "publicName": "石砌回廊",
+        "style": "写实奇幻战术地图，正上方俯视",
+        "materials": "粗石、铁栏与青铜",
+        "lighting": "暖色壁灯与冷色环境光，地板和出口边界清晰",
+        "decorations": "",
+        "exclusions": "人物、文字、数字、网格"
+      },
+      "name": "守卫回廊",
+      "description": "回廊尽头传来脚步声，警铃旁露着一根断线。",
+      "intro": "回廊尽头传来脚步声，警铃旁露着一根断线。",
+      "width": 20,
+      "height": 16,
+      "landing": {
+        "x": 2,
+        "y": 2
+      },
+      "floors": [
+        {
+          "x": 1,
+          "y": 1,
+          "width": 18,
+          "height": 14
+        }
+      ],
+      "points": [
+        {
+          "key": "back",
+          "name": "返回囚室",
+          "x": 1,
+          "y": 12,
+          "kind": "exit",
+          "text": "",
+          "hidden": false,
+          "exit": {
+            "scene": "cells",
+            "point": "exit"
+          }
+        },
+        {
+          "key": "bell",
+          "appearance": {
+            "label": "铜铃与拉绳",
+            "description": "墙边支架上悬挂一只铜铃，粗绳垂向地面",
+            "width": 1,
+            "height": 1,
+            "rotation": 90,
+            "visibility": "public"
+          },
+          "name": "警铃开关",
+          "x": 9,
+          "y": 7,
+          "kind": "clue",
+          "text": "",
+          "hidden": false,
+          "arrivalGroup": "reinforcements",
+          "success": "警铃响起，两名守卫从预设位置现身。"
+        },
+        {
+          "key": "alarm-wire",
+          "name": "拆除警铃断线",
+          "x": 10,
+          "y": 7,
+          "kind": "clue",
+          "text": "",
+          "hidden": false,
+          "check": {
+            "skill": "sleightOfHand",
+            "dc": 12
+          },
+          "failureArrivalGroup": "reinforcements",
+          "success": "断线被稳稳夹住，没有发出声响。",
+          "failure": "断线弹回，警铃响起，港卫应声现身。"
+        },
+        {
+          "key": "exit",
+          "name": "前往码头",
+          "x": 17,
+          "y": 12,
+          "kind": "exit",
+          "text": "",
+          "hidden": false,
+          "exit": {
+            "scene": "dock",
+            "point": "back"
+          }
+        }
+      ],
+      "ground": []
+    },
+    {
+      "key": "dock",
+      "environment": "outdoor",
+      "boundaryWalls": "explicit-only",
+      "art": {
+        "description": "临水的木石码头，雾气笼罩远处水面，靠岸停泊一艘空小艇，地面铺设系缆绳与木桩。",
+        "publicName": "雾中码头",
+        "style": "写实奇幻战术地图，正上方俯视",
+        "materials": "潮湿木板、石阶与粗麻绳",
+        "lighting": "暖色壁灯与冷色环境光，地板和出口边界清晰",
+        "decorations": "",
+        "exclusions": "人物、文字、数字、网格"
+      },
+      "name": "雾港码头",
+      "description": "雾气中只有一艘尚未解缆的小艇。",
+      "intro": "雾气中只有一艘尚未解缆的小艇。",
+      "width": 20,
+      "height": 16,
+      "landing": {
+        "x": 2,
+        "y": 2
+      },
+      "floors": [
+        {
+          "x": 1,
+          "y": 1,
+          "width": 18,
+          "height": 14
+        }
+      ],
+      "points": [
+        {
+          "key": "back",
+          "name": "返回回廊",
+          "x": 1,
+          "y": 12,
+          "kind": "exit",
+          "text": "",
+          "hidden": false,
+          "exit": {
+            "scene": "gallery",
+            "point": "exit"
+          }
+        },
+        {
+          "key": "fight",
+          "name": "冲突触发点",
+          "x": 10,
+          "y": 8,
+          "kind": "clue",
+          "text": "GM核对参战者、阵营与先攻后开始冲突。",
+          "hidden": false,
+          "battle": "dock-battle"
+        },
+        {
+          "key": "boat",
+          "name": "乘船逃离",
+          "x": 16,
+          "y": 10,
+          "kind": "clue",
+          "text": "",
+          "hidden": false,
+          "success": "众人解开船缆，驶向雾中。冒险以逃离告终。"
+        },
+        {
+          "key": "stay",
+          "name": "留下守望",
+          "x": 7,
+          "y": 10,
+          "kind": "clue",
+          "text": "",
+          "hidden": false,
+          "success": "众人选择留守码头，等待下一次潮汐。冒险以留守告终。"
+        }
+      ],
+      "ground": []
+    }
+  ],
+  "quests": [
+    {
+      "key": "escape-route",
+      "title": "找到安全离开的路线",
+      "chapter": "囚室",
+      "description": "先观察囚室，再与获救者商议。",
+      "initialStatus": "active",
+      "visibility": "public",
+      "main": true,
+      "current": true,
+      "pinnedStep": "rescue",
+      "steps": [
+        {
+          "key": "rescue",
+          "title": "解救被困学者",
+          "description": "检查囚笼机关。",
+          "visibility": "public",
+          "initialStatus": "active",
+          "after": [],
+          "scene": "cells",
+          "point": "cage",
+          "trigger": "point-success",
+          "alternatives": "机关无法解开时，寻找工具或请GM裁定其他方法。",
+          "gmNote": "确认解救结果后完成。"
+        },
+        {
+          "key": "route",
+          "title": "检查回廊",
+          "description": "寻找可用出口。",
+          "visibility": "hidden",
+          "initialStatus": "inactive",
+          "after": [
+            "rescue"
+          ],
+          "scene": "gallery",
+          "trigger": "scene-enter",
+          "alternatives": "询问获救学者，或退回囚室寻找线索。"
+        }
+      ]
+    }
+  ],
+  "knowledgeDesign": {
+    "factions": [
+      {
+        "id": "harbor-union",
+        "name": "港口互助会",
+        "description": "经营港口补给与救援。",
+        "hidden": false,
+        "initialScore": 0
+      },
+      {
+        "id": "night-charts",
+        "name": "夜航绘图社",
+        "description": "GM设计的秘密组织。",
+        "hidden": true,
+        "initialScore": 0
+      }
+    ],
+    "templates": [
+      {
+        "id": "harbor-weather",
+        "name": "港口常识",
+        "version": 1,
+        "layer": "region",
+        "visibility": "public",
+        "text": "退潮时码头石阶湿滑，回廊通向码头。"
+      },
+      {
+        "id": "private-route",
+        "name": "私密航线",
+        "version": 1,
+        "layer": "script",
+        "visibility": "private",
+        "text": "GM专用：夜航社的旧航线经过北侧暗礁，不属于全体NPC共同知识。"
+      }
+    ]
+  },
+  "npcs": [
+    {
+      "key": "scholar",
+      "name": "被囚学者伊莲",
+      "practicalSocial": {
+        "enabled": false,
+        "rules": [
+          {
+            "id": "join-after-rescue",
+            "goal": "请在脱困后与我们同行",
+            "willingness": "judge",
+            "skill": "persuasion",
+            "dc": 15,
+            "cost": "none",
+            "success": {
+              "text": "学者同意以可随队身份同行。",
+              "revealIds": [],
+              "promise": "我会按约定同行。",
+              "operations": [
+                {
+                  "kind": "follow",
+                  "join": true
+                }
+              ]
+            },
+            "failure": {
+              "text": "学者暂时拒绝同行。",
+              "revealIds": [],
+              "promise": ""
+            }
+          }
+        ]
+      },
+      "resourceStrategy": "balanced",
+      "scene": "cells",
+      "x": 8,
+      "y": 4,
+      "template": "srd-guard",
+      "cardType": "character",
+      "character": {
+        "build": {
+          "classId": "wizard",
+          "backgroundId": "soldier",
+          "speciesId": "human",
+          "method": "array",
+          "scores": {
+            "str": 8,
+            "dex": 12,
+            "con": 13,
+            "int": 15,
+            "wis": 14,
+            "cha": 10
+          },
+          "boosts": {
+            "str": 2,
+            "dex": 1,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "rolls": null,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "arcana",
+              "history"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "class-cantrips": [
+              "acid-splash",
+              "chill-touch",
+              "dancing-lights"
+            ],
+            "spellbook": [
+              "alarm",
+              "burning-hands",
+              "charm-person",
+              "chromatic-orb",
+              "color-spray",
+              "comprehend-languages"
+            ],
+            "class-spells": [
+              "alarm",
+              "burning-hands",
+              "charm-person",
+              "chromatic-orb"
+            ]
+          },
+          "classEquipment": 0,
+          "backgroundEquipment": 0,
+          "equipmentChoices": {
+            "background-gaming-item": [
+              "dice-set"
+            ]
+          },
+          "purchases": [],
+          "equipped": [],
+          "name": "测试冒险者",
+          "alignment": "中立",
+          "appearance": "",
+          "story": "",
+          "adjustments": [],
+          "customItems": []
+        },
+        "growth": []
+      },
+      "type": "important",
+      "side": "neutral",
+      "hidden": false,
+      "description": "疲惫但警觉的学者。",
+      "personality": "谨慎、简洁",
+      "publicSpeechStyle": "简短务实；不愿回答时说“无可奉告”，不解释资料限制。",
+      "knowledgeProfile": {
+        "enabled": true,
+        "factionId": "night-charts",
+        "membership": "direct",
+        "hiddenMembership": true,
+        "backgroundBias": 0,
+        "lockedAttitude": null,
+        "lockReason": "",
+        "templateIds": [
+          "harbor-weather",
+          "private-route"
+        ]
+      },
+      "knowledge": "知道回廊通向码头。",
+      "secret": "曾为港口的走私者绘制航线。",
+      "dialogue": "先帮我打开牢笼吧。",
+      "importanceRole": "companion"
+    },
+    {
+      "key": "keeper",
+      "name": "守港人洛恩",
+      "scene": "dock",
+      "x": 14,
+      "y": 6,
+      "template": "srd-guard",
+      "cardType": "template",
+      "type": "important",
+      "side": "neutral",
+      "hidden": false,
+      "description": "守在雾港的老水手。",
+      "personality": "谨慎、简洁",
+      "knowledge": "码头有两条去路。",
+      "secret": "",
+      "dialogue": "要走，还是留下？由你们决定。"
+    },
+    {
+      "key": "guard-1",
+      "name": "补给商莱恩",
+      "merchantPolicy": {
+        "enabled": true,
+        "buy": true,
+        "buyRate": 0.5,
+        "buyItems": [
+          "torch",
+          "rope"
+        ],
+        "blockedItems": [
+          "harbor-example/bronze-key"
+        ],
+        "autoPurchase": false,
+        "zeroPrice": false,
+        "practical": {
+          "enabled": false,
+          "scope": "listed",
+          "buyback": true,
+          "barter": true,
+          "negotiation": true,
+          "dc": 15,
+          "cost": "free"
+        }
+      },
+      "coinsGP": 25,
+      "stock": [
+        {
+          "itemId": "torch",
+          "quantity": 4,
+          "priceGP": 0.01
+        },
+        {
+          "itemId": "rope",
+          "quantity": 2,
+          "priceGP": 1
+        }
+      ],
+      "scene": "cells",
+      "x": 5,
+      "y": 6,
+      "template": "srd-guard",
+      "cardType": "template",
+      "type": "ordinary",
+      "side": "neutral",
+      "hidden": false,
+      "description": "",
+      "personality": "谨慎、简洁",
+      "knowledgeProfile": {
+        "enabled": true,
+        "factionId": "harbor-union",
+        "membership": "direct",
+        "hiddenMembership": false,
+        "backgroundBias": 0,
+        "lockedAttitude": null,
+        "lockReason": "",
+        "templateIds": [
+          "harbor-weather"
+        ]
+      },
+      "knowledge": "",
+      "secret": "",
+      "dialogue": "止步。",
+      "fixedReplies": [
+        {
+          "key": "welcome",
+          "text": "火把和绳索都在这里。"
+        },
+        {
+          "key": "price",
+          "text": "价钱写在货单上，其他的无可奉告。"
+        }
+      ],
+      "fixedReplyMode": "end",
+      "fixedReplyEnd": "该说的我都说完了。"
+    },
+    {
+      "key": "guard-2",
+      "name": "港卫2",
+      "scene": "cells",
+      "x": 12,
+      "y": 6,
+      "template": "srd-guard",
+      "cardType": "template",
+      "type": "ordinary",
+      "side": "enemy",
+      "hidden": false,
+      "description": "",
+      "personality": "谨慎、简洁",
+      "knowledge": "",
+      "secret": "",
+      "dialogue": "止步。"
+    },
+    {
+      "key": "guard-3",
+      "name": "港卫3",
+      "scene": "gallery",
+      "x": 5,
+      "y": 6,
+      "template": "srd-guard",
+      "cardType": "template",
+      "type": "ordinary",
+      "side": "enemy",
+      "hidden": false,
+      "description": "",
+      "personality": "谨慎、简洁",
+      "knowledge": "",
+      "secret": "",
+      "dialogue": "止步。"
+    },
+    {
+      "key": "guard-4",
+      "name": "港卫4",
+      "scene": "gallery",
+      "x": 12,
+      "y": 6,
+      "template": "srd-guard",
+      "cardType": "template",
+      "type": "ordinary",
+      "side": "enemy",
+      "hidden": false,
+      "description": "",
+      "personality": "谨慎、简洁",
+      "knowledge": "",
+      "secret": "",
+      "dialogue": "止步。"
+    },
+    {
+      "key": "guard-5",
+      "name": "港卫5",
+      "scene": "dock",
+      "x": 5,
+      "y": 6,
+      "template": "srd-guard",
+      "cardType": "template",
+      "type": "ordinary",
+      "side": "enemy",
+      "hidden": false,
+      "description": "",
+      "personality": "谨慎、简洁",
+      "knowledge": "",
+      "secret": "",
+      "dialogue": "止步。"
+    },
+    {
+      "key": "guard-6",
+      "name": "港卫6",
+      "scene": "dock",
+      "x": 12,
+      "y": 6,
+      "template": "srd-guard",
+      "cardType": "template",
+      "type": "ordinary",
+      "side": "enemy",
+      "hidden": false,
+      "description": "",
+      "personality": "谨慎、简洁",
+      "knowledge": "",
+      "secret": "",
+      "dialogue": "止步。"
+    }
+  ],
+  "arrivals": [
+    {
+      "key": "reinforcements",
+      "scene": "gallery",
+      "name": "警铃增援",
+      "npcs": [
+        "guard-3",
+        "guard-4"
+      ],
+      "battleMode": "start",
+      "intro": "两名港卫应警铃现身。"
+    }
+  ],
+  "battles": [
+    {
+      "key": "dock-battle",
+      "scene": "dock",
+      "name": "码头冲突",
+      "npcs": [
+        "guard-5",
+        "guard-6"
+      ],
+      "intro": "港卫阻住去路。"
+    }
+  ],
+  "broadcasts": [
+    {
+      "title": "主持人提示",
+      "text": "逃离与留守为可选结局，确认队伍选择后触发对应互动；两者不应同时作为本团结局。",
+      "audience": "gm",
+      "trigger": "manual",
+      "result": "any"
+    }
+  ]
+}

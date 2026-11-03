@@ -1,0 +1,111 @@
+.broadcast-panel {
+  min-width: 0;
+  padding: 1rem;
+}
+.broadcast-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+.broadcast-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+.broadcast-panel label {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.5rem 0;
+}
+.broadcast-panel .check {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.broadcast-panel .check input {
+  width: auto;
+}
+.broadcast-panel input,
+.broadcast-panel textarea,
+.broadcast-panel select {
+  width: 100%;
+  min-width: 0;
+}
+.broadcast-panel textarea,
+.broadcast-list p,
+.broadcast-preview p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.broadcast-preview {
+  background: var(--surface);
+  border-left: 3px solid var(--gold);
+  padding: 0.75rem;
+  margin: 0.75rem 0;
+}
+.broadcast-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+.broadcast-list li {
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  background: var(--panel);
+}
+.broadcast-meta {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+}
+.broadcast-meta time {
+  color: var(--muted);
+}
+.broadcast-meta small {
+  background: var(--surface);
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.35rem;
+}
+.broadcast-list li.superseded {
+  opacity: 0.7;
+  border-style: dashed;
+}
+.broadcast-list pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.broadcast-filters label {
+  min-width: 10rem;
+}
+.broadcast-latest {
+  padding: 0.6rem 1rem;
+  background: var(--surface);
+  border-left: 3px solid #94704c;
+  overflow-wrap: anywhere;
+}
+.broadcast-latest button {
+  margin-left: 0.5rem;
+}
+@media (max-width: 600px) {
+  .broadcast-fields {
+    grid-template-columns: 1fr;
+  }
+  .broadcast-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .broadcast-panel {
+    padding: 0.5rem;
+  }
+  .broadcast-editor {
+    padding: 0.75rem;
+  }
+}
+
+.broadcast-editor > label {
+  max-width: none;
+}

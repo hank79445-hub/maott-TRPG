@@ -1,0 +1,456 @@
+/* TASK-UI-010：GM 端「AI 旁白与 NPC」左导航 + 单面板皮肤 */
+.room-page.ai-theme {background:var(--bg);color:var(--ink)}
+
+
+.ai-panel {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+.ai-panel > .ai-hero {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.ai-hero h2 {
+  margin: 0 0 4px;
+  font-size: 26px;
+}
+.ai-hero > p {
+  margin: 0 0 4px;
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.ai-hero > p.muted {
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.ai-shell {
+  display: grid;
+  grid-template-columns: 176px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  min-width: 0;
+}
+.ai-nav {
+  position: sticky;
+  top: 96px;
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+.ai-nav-group {
+  display: grid;
+  gap: 2px;
+}
+.ai-nav-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  min-height: 38px;
+  padding: 8px 11px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 13.5px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+.ai-nav-head:hover {
+  border-color: var(--accent);
+}
+.ai-nav-head.on {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+.ai-nav-head em {
+  margin-left: auto;
+  width: 0;
+  height: 0;
+  border-left: 5px solid var(--muted);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transition: transform 0.15s ease;
+}
+.ai-nav-head[aria-expanded='true'] em {
+  transform: rotate(90deg);
+}
+.ai-nav-head i,
+.ai-nav-sub i {
+  min-width: 18px;
+  padding: 0 5px;
+  border-radius: 99px;
+  background: var(--danger);
+  color: #fff;
+  font-size: 11px;
+  font-style: normal;
+  line-height: 18px;
+  text-align: center;
+}
+.ai-nav-sub {
+  display: grid;
+  gap: 1px;
+  margin: 1px 0 4px 10px;
+  padding-left: 8px;
+  border-left: 2px solid var(--line);
+}
+.ai-nav-sub button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 5px 8px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+}
+.ai-nav-sub button:hover {
+  background: var(--bg);
+  color: var(--ink);
+}
+.ai-nav-sub button.on {
+  background: var(--accent-soft);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.ai-main {
+  min-width: 0;
+  min-height: 520px;
+  padding: 20px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.ai-crumb {
+  margin: 0 0 2px;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+.ai-main > h2 {
+  margin: 0 0 14px;
+  font-size: 21px;
+  line-height: 1.35;
+}
+
+/* 分区卡：AiPanel 内联块与子组件根 details 统一外壳 */
+.ai-main > .room-card,
+.ai-main > details.room-card {
+  margin: 0 0 14px;
+  padding: 14px;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.ai-main > .room-card:last-child,
+.ai-main > details.room-card:last-child,
+.ai-main > .ai-job-card:last-child {
+  margin-bottom: 0;
+}
+/* 入口已由 h2 承担标题，直接子级 details 的 summary 不再重复 */
+.ai-main > details.room-card > summary {
+  display: none;
+}
+.ai-main details.room-card > summary {
+  min-height: 30px;
+  padding: 4px 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+}
+/* 嵌套卡片降一级 */
+.ai-main .room-card .room-card,
+.ai-main details .room-card {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--surface);
+}
+.ai-main .ai-form {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 8px 0;
+}
+.ai-main label {
+  font-size: 13px;
+  color: var(--muted);
+}
+.ai-main input,
+.ai-main select,
+.ai-main textarea {
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: var(--bg);
+  border-color: var(--line);
+  color: var(--ink);
+  font-size: 13.5px;
+}
+.ai-main button:not(.subtle):not(.text-button):not(.danger-text) {
+  min-height: 34px;
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 13px;
+  cursor: pointer;
+}
+.ai-main button:not(.subtle):not(.text-button):not(.danger-text):hover:not(:disabled) {
+  border-color: var(--accent);
+}
+.ai-main button:not(.subtle):not(.text-button):not(.danger-text):disabled,
+.ai-nav button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.ai-main button.subtle,
+.ai-main button.text-button {
+  min-height: 30px;
+  padding: 4px 8px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+.ai-main button.subtle:hover:not(:disabled),
+.ai-main button.text-button:hover:not(:disabled) {
+  background: var(--bg);
+  color: var(--ink);
+}
+.ai-main button.danger-text {
+  color: var(--danger);
+}
+.ai-main .empty,
+.ai-main > .room-card.muted {
+  padding: 12px;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 13px;
+}
+.ai-main .muted {
+  font-size: 12.5px;
+  line-height: 1.65;
+}
+
+@media (max-width: 860px) {
+  .ai-shell {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ai-nav {
+    position: static;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .ai-nav-group {
+    min-width: 0;
+  }
+  .ai-nav-sub {
+    grid-column: 1 / -1;
+  }
+  .ai-main {
+    min-height: 0;
+    padding: 14px;
+  }
+  .ai-main > h2 {
+    font-size: 18px;
+  }
+}
+
+/* TASK-UI-011：NPC 配置与行为边界·方案 A（分页编辑） */
+.npc-editor {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+.npc-filter {
+  display: grid;
+  grid-template-columns: minmax(180px, 1.4fr) repeat(2, minmax(140px, 1fr)) auto;
+  gap: 10px;
+  align-items: end;
+}
+.npc-filter label {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.npc-filter .secondary {
+  min-height: 36px;
+  white-space: nowrap;
+}
+.npc-filter-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+.npc-filter-note.warning {
+  color: var(--gold);
+}
+.npc-tools {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+}
+.npc-tools > summary {
+  min-height: 28px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.npc-picker {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 2px 0 6px;
+  scrollbar-width: thin;
+  overscroll-behavior-x: contain;
+}
+.npc-chip {
+  flex: none;
+  min-height: 32px;
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 12.5px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.npc-chip:hover {
+  border-color: var(--accent);
+}
+.npc-chip.on {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+.npc-chip small {
+  color: var(--muted);
+  font-size: 11px;
+}
+.npc-chip.more {
+  border-style: dashed;
+  color: var(--muted);
+}
+.npc-edit-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0 4px;
+}
+.npc-edit-head h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.3;
+}
+.npc-edit-head span {
+  color: var(--muted);
+  font-size: 12.5px;
+}
+.npc-pages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 4px 0 10px;
+  border-bottom: 1px solid var(--line);
+}
+.npc-pages button {
+  min-height: 34px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 12.5px;
+  cursor: pointer;
+}
+.npc-pages button:hover {
+  border-color: var(--accent);
+  color: var(--ink);
+}
+.npc-pages button.on {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+.npc-page {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+.npc-sec {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  min-width: 0;
+}
+.npc-sec > label {
+  font-size: 13px;
+  color: var(--muted);
+}
+.npc-sec > .ai-wide,
+.npc-sec > p,
+.npc-sec > fieldset,
+.npc-sec > details,
+.npc-sec > section {
+  grid-column: 1 / -1;
+}
+.npc-sec fieldset {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.npc-sec legend {
+  padding: 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.npc-savebar {
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--panel) 94%, transparent);
+  backdrop-filter: blur(8px);
+}
+.npc-savebar > span {
+  margin-right: auto;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+@media (max-width: 860px) {
+  .npc-filter {
+    grid-template-columns: 1fr 1fr;
+  }
+  .npc-filter .secondary {
+    grid-column: 1 / -1;
+  }
+  .npc-savebar {
+    position: static;
+  }
+}

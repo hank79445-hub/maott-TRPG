@@ -1,0 +1,77 @@
+.config-tools {
+  margin-block: 1rem;
+}
+.config-tools p {
+  overflow-wrap: anywhere;
+}
+.config-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 0.75rem;
+  border: 1px solid var(--border, #d5d4cd);
+  border-radius: 0.65rem;
+  padding: 0.8rem;
+  margin-block: 0.8rem;
+  min-width: 0;
+}
+.config-grid label,
+.config-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+.config-grid input,
+.config-grid select,
+.config-upload input {
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+.config-grid label.check,
+.config-tools label.check {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+}
+.config-preview-item {
+  margin-block: 0.6rem;
+  padding: 0.8rem;
+  border: 1px solid var(--border, #d5d4cd);
+  border-radius: 0.65rem;
+}
+.config-preview-item summary {
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+.config-error {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  border-left: 4px solid #b83b39;
+  padding: 0.7rem;
+  background: #fff2ed;
+  color: #7f2724;
+}
+.config-preview {
+  border-top: 2px solid #547f83;
+  padding-top: 0.8rem;
+  margin-top: 1rem;
+}
+.config-tools .room-row {
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-block: 0.8rem;
+}
+.config-tools button {
+  min-height: 42px;
+}
+.config-tools textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 7rem;
+}
+.config-tools :focus-visible {
+  outline: 3px solid #337f91;
+  outline-offset: 2px;
+}

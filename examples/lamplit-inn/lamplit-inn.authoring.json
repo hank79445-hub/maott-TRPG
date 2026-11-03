@@ -1,0 +1,320 @@
+{
+  "format": "trpg-authoring",
+  "version": 1,
+  "title": "暮灯驿站的失物",
+  "author": "",
+  "description": "",
+  "level": 1,
+  "players": 2,
+  "start": "courtyard",
+  "opening": "雨夜里，暮灯驿站的铜铃响了。出发前的补给少了一箱，请你们帮忙找回。",
+  "openingPresentation": {
+    "opening": "雨停之前，补给必须装回商车。管事端来热茶，向你们说明眼下的委托。",
+    "background": "暮灯驿站位于两条商路交会处，庭院、大厅与地窖互相连通。今晚的货物有一箱被搬错了位置。",
+    "origin": "午后搬运时灯架倒下，新的货物标签被雨水打湿。管事需要你们找到证据，确认补给的去向。",
+    "identities": [
+      {
+        "characterId": "player-1",
+        "text": "你曾替商队护送过这批货物，认得箱角的铜钉。请把发现告诉同伴，是否提到旧委托由你决定。"
+      },
+      {
+        "characterId": "player-2",
+        "text": "你来驿站取回导师寄存的一张教学卷轴。你还不知道它与丢失的补给是否放在一起。"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "key": "courtyard",
+      "name": "驿站庭院",
+      "description": "",
+      "intro": "灯光照着雨后的石板路，管事在门前等待。",
+      "width": 16,
+      "height": 12,
+      "landing": {
+        "x": 2,
+        "y": 2
+      },
+      "floors": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 16,
+          "height": 12
+        }
+      ],
+      "points": [
+        {
+          "key": "hall",
+          "name": "进入大厅",
+          "x": 13,
+          "y": 8,
+          "kind": "exit",
+          "text": "",
+          "hidden": false,
+          "exit": {
+            "scene": "hall",
+            "point": "yard"
+          }
+        },
+        {
+          "key": "supply",
+          "name": "补给箱",
+          "x": 4,
+          "y": 2,
+          "kind": "chest",
+          "repeatAccess": true,
+          "text": "",
+          "hidden": false,
+          "container": {
+            "items": [
+              {
+                "itemId": "torch",
+                "quantity": 3
+              },
+              {
+                "itemId": "scroll-magic-missile",
+                "quantity": 1
+              }
+            ],
+            "coins": 5,
+            "gmNote": "教学容器；允许反复访问，库存不会再生。"
+          }
+        },
+        {
+          "key": "notice",
+          "name": "查看搬运记录",
+          "x": 5,
+          "y": 5,
+          "kind": "clue",
+          "text": "记录上写着：备用物资临时放在地窖门边。",
+          "hidden": false,
+          "success": "你们找到了新的搬运方向。"
+        }
+      ],
+      "ground": []
+    },
+    {
+      "key": "hall",
+      "name": "暖灯大厅",
+      "description": "",
+      "intro": "大厅里有长桌、灯架与一扇通往地窖的门。",
+      "width": 16,
+      "height": 12,
+      "landing": {
+        "x": 3,
+        "y": 3
+      },
+      "floors": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 16,
+          "height": 12
+        }
+      ],
+      "points": [
+        {
+          "key": "yard",
+          "name": "返回庭院",
+          "x": 2,
+          "y": 8,
+          "kind": "exit",
+          "text": "",
+          "hidden": false,
+          "exit": {
+            "scene": "courtyard",
+            "point": "hall"
+          }
+        },
+        {
+          "key": "stairs",
+          "name": "走下地窖",
+          "x": 13,
+          "y": 8,
+          "kind": "exit",
+          "text": "",
+          "hidden": false,
+          "exit": {
+            "scene": "cellar",
+            "point": "stairs"
+          }
+        },
+        {
+          "key": "label",
+          "name": "调查湿标签",
+          "x": 7,
+          "y": 4,
+          "kind": "clue",
+          "text": "",
+          "hidden": false,
+          "check": {
+            "skill": "investigation",
+            "dc": 10
+          },
+          "success": "标签留下的压痕与补给箱的编号一致。",
+          "failure": "纸面太湿，管事建议你们带上灯去地窖核对。"
+        }
+      ],
+      "ground": []
+    },
+    {
+      "key": "cellar",
+      "name": "小地窖",
+      "description": "",
+      "intro": "整齐的木箱排在墙边，巡夜者举起灯向你们示意。",
+      "width": 16,
+      "height": 12,
+      "landing": {
+        "x": 3,
+        "y": 3
+      },
+      "floors": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 16,
+          "height": 12
+        }
+      ],
+      "points": [
+        {
+          "key": "stairs",
+          "name": "返回大厅",
+          "x": 2,
+          "y": 8,
+          "kind": "exit",
+          "text": "",
+          "hidden": false,
+          "exit": {
+            "scene": "hall",
+            "point": "stairs"
+          }
+        },
+        {
+          "key": "lost",
+          "name": "找回的物资",
+          "x": 5,
+          "y": 4,
+          "kind": "chest",
+          "repeatAccess": true,
+          "text": "",
+          "hidden": false,
+          "container": {
+            "items": [
+              {
+                "itemId": "rope",
+                "quantity": 1
+              }
+            ],
+            "coins": 0
+          },
+          "success": "管事核对了标签，确认这就是那箱物资。"
+        },
+        {
+          "key": "practice",
+          "name": "可选切磋",
+          "x": 10,
+          "y": 7,
+          "kind": "clue",
+          "text": "巡夜者建议在安全边界内练习一次战斗，是否开始由GM确认。",
+          "hidden": false,
+          "battle": "practice"
+        }
+      ],
+      "ground": []
+    }
+  ],
+  "npcs": [
+    {
+      "key": "keeper",
+      "name": "管事青叶",
+      "scene": "courtyard",
+      "x": 6,
+      "y": 2,
+      "template": "srd-commoner",
+      "cardType": "template",
+      "type": "important",
+      "side": "neutral",
+      "hidden": false,
+      "description": "认真记账的驿站管事。",
+      "personality": "谨慎、简洁",
+      "knowledge": "知道三个场景的连接。",
+      "secret": "",
+      "dialogue": "先喝口茶，我们再一起找。"
+    },
+    {
+      "key": "watcher",
+      "name": "巡夜者小岚",
+      "scene": "cellar",
+      "x": 8,
+      "y": 3,
+      "template": "srd-guard",
+      "cardType": "template",
+      "type": "important",
+      "side": "neutral",
+      "hidden": false,
+      "description": "",
+      "personality": "谨慎、简洁",
+      "knowledge": "",
+      "secret": "",
+      "dialogue": "我守在这里，箱子没有离开驿站。"
+    },
+    {
+      "key": "guard-a",
+      "name": "切磋伙伴甲",
+      "scene": "cellar",
+      "x": 11,
+      "y": 5,
+      "template": "srd-guard",
+      "cardType": "template",
+      "type": "ordinary",
+      "side": "enemy",
+      "hidden": false,
+      "description": "",
+      "personality": "谨慎、简洁",
+      "knowledge": "",
+      "secret": "",
+      "dialogue": ""
+    },
+    {
+      "key": "guard-b",
+      "name": "切磋伙伴乙",
+      "scene": "cellar",
+      "x": 12,
+      "y": 5,
+      "template": "srd-guard",
+      "cardType": "template",
+      "type": "ordinary",
+      "side": "enemy",
+      "hidden": false,
+      "description": "",
+      "personality": "谨慎、简洁",
+      "knowledge": "",
+      "secret": "",
+      "dialogue": ""
+    }
+  ],
+  "arrivals": [],
+  "battles": [
+    {
+      "key": "practice",
+      "scene": "cellar",
+      "name": "自愿切磋",
+      "npcs": [
+        "guard-a",
+        "guard-b"
+      ],
+      "intro": "确认参与者和非致命约定后，由GM开始。"
+    }
+  ],
+  "broadcasts": [
+    {
+      "title": "收尾提醒",
+      "text": "核对物资、库存和角色状态，保存后结束本次教学冒险。",
+      "audience": "gm",
+      "trigger": "manual",
+      "result": "any"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "sourceBackup": "936ce8f603e0f980ef161013740d541b49ae46b9",
+  "publicScope": "SRD 5.2.1 plus original program and teaching content",
+  "sourceChanges": [
+    {
+      "file": "src/app/App.vue",
+      "action": "public-edition adaptation"
+    },
+    {
+      "file": "src/content/builtin-ids.ts",
+      "action": "public-edition adaptation"
+    },
+    {
+      "file": "src/content/builtin-packs.ts",
+      "action": "public-edition adaptation"
+    },
+    {
+      "file": "src/content/locales/builder-controls.ts",
+      "action": "public-edition adaptation"
+    },
+    {
+      "file": "src/content/locales/interface.ts",
+      "action": "public-edition adaptation"
+    },
+    {
+      "file": "src/content/locales/operations-controls.ts",
+      "action": "public-edition adaptation"
+    },
+    {
+      "file": "src/content/nautiloid-config.ts",
+      "action": "excluded from public edition"
+    },
+    {
+      "file": "src/content/phb-advanced.ts",
+      "action": "excluded from public edition"
+    },
+    {
+      "file": "src/content/phb-feats.ts",
+      "action": "public-edition adaptation"
+    },
+    {
+      "file": "src/content/phb-items.ts",
+      "action": "excluded from public edition"
+    },
+    {
+      "file": "src/content/phb-origins.ts",
+      "action": "public-edition adaptation"
+    },
+    {
+      "file": "src/content/phb-source.ts",
+      "action": "excluded from public edition"
+    },
+    {
+      "file": "src/content/phb-spells.json",
+      "action": "excluded from public edition"
+    },
+    {
+      "file": "src/content/phb-spells.ts",
+      "action": "excluded from public edition"
+    },
+    {
+      "file": "src/content/phb-subclasses.ts",
+      "action": "public-edition adaptation"
+    },
+    {
+      "file": "src/content/spell-details-zh.json",
+      "action": "public-edition adaptation"
+    },
+    {
+      "file": "src/content/srd.ts",
+      "action": "public-edition adaptation"
+    },
+    {
+      "file": "src/core/phb-companions.ts",
+      "action": "public-edition adaptation"
+    },
+    {
+      "file": "src/core/phb-powers.ts",
+      "action": "public-edition adaptation"
+    },
+    {
+      "file": "src/core/summon-rules.ts",
+      "action": "public-edition adaptation"
+    },
+    {
+      "file": "src/core/summon-templates.ts",
+      "action": "public-edition adaptation"
+    },
+    {
+      "file": "src/modules/config-imports/FixedTextTools.vue",
+      "action": "public-edition adaptation"
+    },
+    {
+      "file": "src/modules/config-imports/NpcConfigTools.vue",
+      "action": "public-edition adaptation"
+    },
+    {
+      "file": "src/server/main.ts",
+      "action": "public-edition adaptation"
+    }
+  ],
+  "dependencyChange": "Override ExcelJS unzipper to 0.12.3 to remove buffers@0.1.1 without a distributable license. Original private lockfile is unchanged."
+}

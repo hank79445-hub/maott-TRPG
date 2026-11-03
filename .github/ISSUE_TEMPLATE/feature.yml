@@ -1,0 +1,7 @@
+name: 功能建议
+description: 描述使用者和需要完成的任务
+body:
+  - type: textarea
+    id: need
+    attributes: {label: 使用场景与期望结果}
+    validations: {required: true}

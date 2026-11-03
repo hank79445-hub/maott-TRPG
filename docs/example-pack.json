@@ -1,0 +1,23 @@
+{
+  "id": "example-expedition",
+  "version": "1.0.0",
+  "name": "示例 · 远征补给",
+  "attribution": "本项目自定义示例，非 SRD 官方规则。",
+  "classes": [],
+  "backgrounds": [],
+  "species": [],
+  "feats": [],
+  "spells": [],
+  "items": [
+    {
+      "id": "example-expedition/survey-journal",
+      "name": "勘察日志",
+      "english": "Survey Journal",
+      "summary": "记录探索发现的空白日志。没有额外数值效果。",
+      "source": { "pack": "example-expedition", "version": "1.0.0", "page": 0 },
+      "kind": "gear",
+      "cost": 1,
+      "weight": 1
+    }
+  ]
+}

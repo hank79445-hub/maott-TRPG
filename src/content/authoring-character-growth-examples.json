@@ -1,0 +1,3274 @@
+[
+  {
+    "classId": "barbarian",
+    "cardType": "character",
+    "character": {
+      "build": {
+        "classId": "barbarian",
+        "backgroundId": "soldier",
+        "speciesId": "human",
+        "method": "array",
+        "scores": {
+          "str": 15,
+          "dex": 13,
+          "con": 14,
+          "int": 10,
+          "wis": 12,
+          "cha": 8
+        },
+        "boosts": {
+          "str": 2,
+          "dex": 1,
+          "con": 0,
+          "int": 0,
+          "wis": 0,
+          "cha": 0
+        },
+        "rolls": null,
+        "choices": {
+          "size": [
+            "small"
+          ],
+          "languages": [
+            "commonSign",
+            "draconic"
+          ],
+          "class-skills": [
+            "animalHandling",
+            "nature"
+          ],
+          "human-skill": [
+            "acrobatics"
+          ],
+          "human-feat": [
+            "alert"
+          ],
+          "gaming-tool": [
+            "dice-set"
+          ],
+          "mastery": [
+            "club",
+            "dagger"
+          ]
+        },
+        "classEquipment": 0,
+        "backgroundEquipment": 0,
+        "equipmentChoices": {
+          "background-gaming-item": [
+            "dice-set"
+          ]
+        },
+        "purchases": [],
+        "equipped": [],
+        "name": "测试冒险者",
+        "alignment": "中立",
+        "appearance": "",
+        "story": "",
+        "adjustments": [],
+        "customItems": []
+      },
+      "growth": [
+        {
+          "targetLevel": 2,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "animalHandling",
+              "nature"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "mastery": [
+              "club",
+              "dagger"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 3,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "animalHandling",
+              "nature"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "mastery": [
+              "club",
+              "dagger"
+            ],
+            "subclass": [
+              "berserker"
+            ],
+            "primal-skill": [
+              "perception"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 4,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "animalHandling",
+              "nature"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "mastery": [
+              "club",
+              "dagger",
+              "greatclub"
+            ],
+            "subclass": [
+              "berserker"
+            ],
+            "primal-skill": [
+              "perception"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {
+            "con": 2
+          },
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 5,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "animalHandling",
+              "nature"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "mastery": [
+              "club",
+              "dagger",
+              "greatclub"
+            ],
+            "subclass": [
+              "berserker"
+            ],
+            "primal-skill": [
+              "perception"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        }
+      ]
+    }
+  },
+  {
+    "classId": "bard",
+    "cardType": "character",
+    "character": {
+      "build": {
+        "classId": "bard",
+        "backgroundId": "soldier",
+        "speciesId": "human",
+        "method": "array",
+        "scores": {
+          "str": 8,
+          "dex": 14,
+          "con": 12,
+          "int": 13,
+          "wis": 10,
+          "cha": 15
+        },
+        "boosts": {
+          "str": 2,
+          "dex": 1,
+          "con": 0,
+          "int": 0,
+          "wis": 0,
+          "cha": 0
+        },
+        "rolls": null,
+        "choices": {
+          "size": [
+            "small"
+          ],
+          "languages": [
+            "commonSign",
+            "draconic"
+          ],
+          "class-skills": [
+            "acrobatics",
+            "animalHandling",
+            "arcana"
+          ],
+          "human-skill": [
+            "deception"
+          ],
+          "human-feat": [
+            "alert"
+          ],
+          "gaming-tool": [
+            "dice-set"
+          ],
+          "bard-tools": [
+            "bagpipes",
+            "drum",
+            "dulcimer"
+          ],
+          "class-cantrips": [
+            "dancing-lights",
+            "light"
+          ],
+          "class-spells": [
+            "animal-friendship",
+            "bane",
+            "charm-person",
+            "color-spray"
+          ]
+        },
+        "classEquipment": 0,
+        "backgroundEquipment": 0,
+        "equipmentChoices": {
+          "class-instrument": [
+            "bagpipes"
+          ],
+          "background-gaming-item": [
+            "dice-set"
+          ]
+        },
+        "purchases": [],
+        "equipped": [],
+        "name": "测试冒险者",
+        "alignment": "中立",
+        "appearance": "",
+        "story": "",
+        "adjustments": [],
+        "customItems": []
+      },
+      "growth": [
+        {
+          "targetLevel": 2,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "acrobatics",
+              "animalHandling",
+              "arcana"
+            ],
+            "human-skill": [
+              "deception"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "bard-tools": [
+              "bagpipes",
+              "drum",
+              "dulcimer"
+            ],
+            "class-cantrips": [
+              "dancing-lights",
+              "light"
+            ],
+            "class-spells": [
+              "animal-friendship",
+              "bane",
+              "charm-person",
+              "color-spray",
+              "command"
+            ],
+            "growth-expertise": [
+              "acrobatics",
+              "animalHandling"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 3,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "acrobatics",
+              "animalHandling",
+              "arcana"
+            ],
+            "human-skill": [
+              "deception"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "bard-tools": [
+              "bagpipes",
+              "drum",
+              "dulcimer"
+            ],
+            "class-cantrips": [
+              "dancing-lights",
+              "light"
+            ],
+            "class-spells": [
+              "animal-friendship",
+              "bane",
+              "charm-person",
+              "color-spray",
+              "command",
+              "comprehend-languages"
+            ],
+            "growth-expertise": [
+              "acrobatics",
+              "animalHandling"
+            ],
+            "subclass": [
+              "lore"
+            ],
+            "lore-skills": [
+              "history",
+              "insight",
+              "investigation"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 4,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "acrobatics",
+              "animalHandling",
+              "arcana"
+            ],
+            "human-skill": [
+              "deception"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "bard-tools": [
+              "bagpipes",
+              "drum",
+              "dulcimer"
+            ],
+            "class-cantrips": [
+              "dancing-lights",
+              "light",
+              "mage-hand"
+            ],
+            "class-spells": [
+              "animal-friendship",
+              "bane",
+              "charm-person",
+              "color-spray",
+              "command",
+              "comprehend-languages",
+              "cure-wounds"
+            ],
+            "growth-expertise": [
+              "acrobatics",
+              "animalHandling"
+            ],
+            "subclass": [
+              "lore"
+            ],
+            "lore-skills": [
+              "history",
+              "insight",
+              "investigation"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {
+            "con": 2
+          },
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 5,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "acrobatics",
+              "animalHandling",
+              "arcana"
+            ],
+            "human-skill": [
+              "deception"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "bard-tools": [
+              "bagpipes",
+              "drum",
+              "dulcimer"
+            ],
+            "class-cantrips": [
+              "dancing-lights",
+              "light",
+              "mage-hand"
+            ],
+            "class-spells": [
+              "animal-friendship",
+              "bane",
+              "charm-person",
+              "color-spray",
+              "command",
+              "comprehend-languages",
+              "cure-wounds",
+              "detect-magic",
+              "disguise-self"
+            ],
+            "growth-expertise": [
+              "acrobatics",
+              "animalHandling"
+            ],
+            "subclass": [
+              "lore"
+            ],
+            "lore-skills": [
+              "history",
+              "insight",
+              "investigation"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        }
+      ]
+    }
+  },
+  {
+    "classId": "cleric",
+    "cardType": "character",
+    "character": {
+      "build": {
+        "classId": "cleric",
+        "backgroundId": "soldier",
+        "speciesId": "human",
+        "method": "array",
+        "scores": {
+          "str": 14,
+          "dex": 8,
+          "con": 13,
+          "int": 10,
+          "wis": 15,
+          "cha": 12
+        },
+        "boosts": {
+          "str": 2,
+          "dex": 1,
+          "con": 0,
+          "int": 0,
+          "wis": 0,
+          "cha": 0
+        },
+        "rolls": null,
+        "choices": {
+          "size": [
+            "small"
+          ],
+          "languages": [
+            "commonSign",
+            "draconic"
+          ],
+          "class-skills": [
+            "history",
+            "insight"
+          ],
+          "human-skill": [
+            "acrobatics"
+          ],
+          "human-feat": [
+            "alert"
+          ],
+          "gaming-tool": [
+            "dice-set"
+          ],
+          "order": [
+            "protector"
+          ],
+          "class-cantrips": [
+            "guidance",
+            "light",
+            "mending"
+          ],
+          "class-spells": [
+            "bane",
+            "bless",
+            "command",
+            "create-or-destroy-water"
+          ]
+        },
+        "classEquipment": 0,
+        "backgroundEquipment": 0,
+        "equipmentChoices": {
+          "class-holy": [
+            "holy-amulet"
+          ],
+          "background-gaming-item": [
+            "dice-set"
+          ]
+        },
+        "purchases": [],
+        "equipped": [],
+        "name": "测试冒险者",
+        "alignment": "中立",
+        "appearance": "",
+        "story": "",
+        "adjustments": [],
+        "customItems": []
+      },
+      "growth": [
+        {
+          "targetLevel": 2,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "history",
+              "insight"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "order": [
+              "protector"
+            ],
+            "class-cantrips": [
+              "guidance",
+              "light",
+              "mending"
+            ],
+            "class-spells": [
+              "bane",
+              "bless",
+              "command",
+              "create-or-destroy-water",
+              "cure-wounds"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 3,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "history",
+              "insight"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "order": [
+              "protector"
+            ],
+            "class-cantrips": [
+              "guidance",
+              "light",
+              "mending"
+            ],
+            "class-spells": [
+              "bane",
+              "command",
+              "create-or-destroy-water",
+              "detect-evil-and-good",
+              "detect-magic",
+              "detect-poison-and-disease"
+            ],
+            "subclass": [
+              "life"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 4,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "history",
+              "insight"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "order": [
+              "protector"
+            ],
+            "class-cantrips": [
+              "guidance",
+              "light",
+              "mending",
+              "resistance"
+            ],
+            "class-spells": [
+              "bane",
+              "command",
+              "create-or-destroy-water",
+              "detect-evil-and-good",
+              "detect-magic",
+              "detect-poison-and-disease",
+              "guiding-bolt"
+            ],
+            "subclass": [
+              "life"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {
+            "con": 2
+          },
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 5,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "history",
+              "insight"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "order": [
+              "protector"
+            ],
+            "class-cantrips": [
+              "guidance",
+              "light",
+              "mending",
+              "resistance"
+            ],
+            "class-spells": [
+              "bane",
+              "command",
+              "create-or-destroy-water",
+              "detect-evil-and-good",
+              "detect-magic",
+              "detect-poison-and-disease",
+              "guiding-bolt",
+              "healing-word",
+              "inflict-wounds"
+            ],
+            "subclass": [
+              "life"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        }
+      ]
+    }
+  },
+  {
+    "classId": "druid",
+    "cardType": "character",
+    "character": {
+      "build": {
+        "classId": "druid",
+        "backgroundId": "soldier",
+        "speciesId": "human",
+        "method": "array",
+        "scores": {
+          "str": 8,
+          "dex": 12,
+          "con": 14,
+          "int": 13,
+          "wis": 15,
+          "cha": 10
+        },
+        "boosts": {
+          "str": 2,
+          "dex": 1,
+          "con": 0,
+          "int": 0,
+          "wis": 0,
+          "cha": 0
+        },
+        "rolls": null,
+        "choices": {
+          "size": [
+            "small"
+          ],
+          "languages": [
+            "commonSign",
+            "draconic"
+          ],
+          "class-skills": [
+            "animalHandling",
+            "arcana"
+          ],
+          "human-skill": [
+            "acrobatics"
+          ],
+          "human-feat": [
+            "alert"
+          ],
+          "gaming-tool": [
+            "dice-set"
+          ],
+          "order": [
+            "warden"
+          ],
+          "class-cantrips": [
+            "druidcraft",
+            "elementalism"
+          ],
+          "class-spells": [
+            "animal-friendship",
+            "charm-person",
+            "create-or-destroy-water",
+            "cure-wounds"
+          ]
+        },
+        "classEquipment": 0,
+        "backgroundEquipment": 0,
+        "equipmentChoices": {
+          "background-gaming-item": [
+            "dice-set"
+          ]
+        },
+        "purchases": [],
+        "equipped": [],
+        "name": "测试冒险者",
+        "alignment": "中立",
+        "appearance": "",
+        "story": "",
+        "adjustments": [],
+        "customItems": []
+      },
+      "growth": [
+        {
+          "targetLevel": 2,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "animalHandling",
+              "arcana"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "order": [
+              "warden"
+            ],
+            "class-cantrips": [
+              "druidcraft",
+              "elementalism"
+            ],
+            "class-spells": [
+              "animal-friendship",
+              "charm-person",
+              "create-or-destroy-water",
+              "cure-wounds",
+              "detect-magic"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 3,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "animalHandling",
+              "arcana"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "order": [
+              "warden"
+            ],
+            "class-cantrips": [
+              "druidcraft",
+              "elementalism"
+            ],
+            "class-spells": [
+              "animal-friendship",
+              "charm-person",
+              "create-or-destroy-water",
+              "cure-wounds",
+              "detect-magic",
+              "detect-poison-and-disease"
+            ],
+            "subclass": [
+              "land"
+            ],
+            "land": [
+              "arid"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 4,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "animalHandling",
+              "arcana"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "order": [
+              "warden"
+            ],
+            "class-cantrips": [
+              "druidcraft",
+              "elementalism",
+              "guidance"
+            ],
+            "class-spells": [
+              "animal-friendship",
+              "charm-person",
+              "create-or-destroy-water",
+              "cure-wounds",
+              "detect-magic",
+              "detect-poison-and-disease",
+              "entangle"
+            ],
+            "subclass": [
+              "land"
+            ],
+            "land": [
+              "arid"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {
+            "con": 2
+          },
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 5,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "animalHandling",
+              "arcana"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "order": [
+              "warden"
+            ],
+            "class-cantrips": [
+              "druidcraft",
+              "elementalism",
+              "guidance"
+            ],
+            "class-spells": [
+              "animal-friendship",
+              "charm-person",
+              "create-or-destroy-water",
+              "cure-wounds",
+              "detect-magic",
+              "detect-poison-and-disease",
+              "entangle",
+              "faerie-fire",
+              "fog-cloud"
+            ],
+            "subclass": [
+              "land"
+            ],
+            "land": [
+              "arid"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        }
+      ]
+    }
+  },
+  {
+    "classId": "fighter",
+    "cardType": "character",
+    "character": {
+      "build": {
+        "classId": "fighter",
+        "backgroundId": "soldier",
+        "speciesId": "human",
+        "method": "array",
+        "scores": {
+          "str": 15,
+          "dex": 14,
+          "con": 13,
+          "int": 8,
+          "wis": 10,
+          "cha": 12
+        },
+        "boosts": {
+          "str": 2,
+          "dex": 1,
+          "con": 0,
+          "int": 0,
+          "wis": 0,
+          "cha": 0
+        },
+        "rolls": null,
+        "choices": {
+          "size": [
+            "small"
+          ],
+          "languages": [
+            "commonSign",
+            "draconic"
+          ],
+          "class-skills": [
+            "acrobatics",
+            "animalHandling"
+          ],
+          "human-skill": [
+            "arcana"
+          ],
+          "human-feat": [
+            "alert"
+          ],
+          "gaming-tool": [
+            "dice-set"
+          ],
+          "style": [
+            "archery"
+          ],
+          "mastery": [
+            "club",
+            "dagger",
+            "greatclub"
+          ]
+        },
+        "classEquipment": 0,
+        "backgroundEquipment": 0,
+        "equipmentChoices": {
+          "background-gaming-item": [
+            "dice-set"
+          ]
+        },
+        "purchases": [],
+        "equipped": [],
+        "name": "测试冒险者",
+        "alignment": "中立",
+        "appearance": "",
+        "story": "",
+        "adjustments": [],
+        "customItems": []
+      },
+      "growth": [
+        {
+          "targetLevel": 2,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "acrobatics",
+              "animalHandling"
+            ],
+            "human-skill": [
+              "arcana"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "style": [
+              "archery"
+            ],
+            "mastery": [
+              "club",
+              "dagger",
+              "greatclub"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 3,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "acrobatics",
+              "animalHandling"
+            ],
+            "human-skill": [
+              "arcana"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "style": [
+              "archery"
+            ],
+            "mastery": [
+              "club",
+              "dagger",
+              "greatclub"
+            ],
+            "subclass": [
+              "champion"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 4,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "acrobatics",
+              "animalHandling"
+            ],
+            "human-skill": [
+              "arcana"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "style": [
+              "archery"
+            ],
+            "mastery": [
+              "club",
+              "dagger",
+              "greatclub",
+              "handaxe"
+            ],
+            "subclass": [
+              "champion"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {
+            "con": 2
+          },
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 5,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "acrobatics",
+              "animalHandling"
+            ],
+            "human-skill": [
+              "arcana"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "style": [
+              "archery"
+            ],
+            "mastery": [
+              "club",
+              "dagger",
+              "greatclub",
+              "handaxe"
+            ],
+            "subclass": [
+              "champion"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        }
+      ]
+    }
+  },
+  {
+    "classId": "monk",
+    "cardType": "character",
+    "character": {
+      "build": {
+        "classId": "monk",
+        "backgroundId": "soldier",
+        "speciesId": "human",
+        "method": "array",
+        "scores": {
+          "str": 12,
+          "dex": 15,
+          "con": 13,
+          "int": 10,
+          "wis": 14,
+          "cha": 8
+        },
+        "boosts": {
+          "str": 2,
+          "dex": 1,
+          "con": 0,
+          "int": 0,
+          "wis": 0,
+          "cha": 0
+        },
+        "rolls": null,
+        "choices": {
+          "size": [
+            "small"
+          ],
+          "languages": [
+            "commonSign",
+            "draconic"
+          ],
+          "class-skills": [
+            "acrobatics",
+            "history"
+          ],
+          "human-skill": [
+            "animalHandling"
+          ],
+          "human-feat": [
+            "alert"
+          ],
+          "gaming-tool": [
+            "dice-set"
+          ],
+          "monk-tool": [
+            "alchemist"
+          ]
+        },
+        "classEquipment": 0,
+        "backgroundEquipment": 0,
+        "equipmentChoices": {
+          "class-monk-tool-item": [
+            "alchemist"
+          ],
+          "background-gaming-item": [
+            "dice-set"
+          ]
+        },
+        "purchases": [],
+        "equipped": [],
+        "name": "测试冒险者",
+        "alignment": "中立",
+        "appearance": "",
+        "story": "",
+        "adjustments": [],
+        "customItems": []
+      },
+      "growth": [
+        {
+          "targetLevel": 2,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "acrobatics",
+              "history"
+            ],
+            "human-skill": [
+              "animalHandling"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "monk-tool": [
+              "alchemist"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 3,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "acrobatics",
+              "history"
+            ],
+            "human-skill": [
+              "animalHandling"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "monk-tool": [
+              "alchemist"
+            ],
+            "subclass": [
+              "open-hand"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 4,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "acrobatics",
+              "history"
+            ],
+            "human-skill": [
+              "animalHandling"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "monk-tool": [
+              "alchemist"
+            ],
+            "subclass": [
+              "open-hand"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {
+            "con": 2
+          },
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 5,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "acrobatics",
+              "history"
+            ],
+            "human-skill": [
+              "animalHandling"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "monk-tool": [
+              "alchemist"
+            ],
+            "subclass": [
+              "open-hand"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        }
+      ]
+    }
+  },
+  {
+    "classId": "paladin",
+    "cardType": "character",
+    "character": {
+      "build": {
+        "classId": "paladin",
+        "backgroundId": "soldier",
+        "speciesId": "human",
+        "method": "array",
+        "scores": {
+          "str": 15,
+          "dex": 10,
+          "con": 13,
+          "int": 8,
+          "wis": 12,
+          "cha": 14
+        },
+        "boosts": {
+          "str": 2,
+          "dex": 1,
+          "con": 0,
+          "int": 0,
+          "wis": 0,
+          "cha": 0
+        },
+        "rolls": null,
+        "choices": {
+          "size": [
+            "small"
+          ],
+          "languages": [
+            "commonSign",
+            "draconic"
+          ],
+          "class-skills": [
+            "insight",
+            "medicine"
+          ],
+          "human-skill": [
+            "acrobatics"
+          ],
+          "human-feat": [
+            "alert"
+          ],
+          "gaming-tool": [
+            "dice-set"
+          ],
+          "mastery": [
+            "club",
+            "dagger"
+          ],
+          "class-spells": [
+            "bless",
+            "command"
+          ]
+        },
+        "classEquipment": 0,
+        "backgroundEquipment": 0,
+        "equipmentChoices": {
+          "class-holy": [
+            "holy-amulet"
+          ],
+          "background-gaming-item": [
+            "dice-set"
+          ]
+        },
+        "purchases": [],
+        "equipped": [],
+        "name": "测试冒险者",
+        "alignment": "中立",
+        "appearance": "",
+        "story": "",
+        "adjustments": [],
+        "customItems": []
+      },
+      "growth": [
+        {
+          "targetLevel": 2,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "insight",
+              "medicine"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "mastery": [
+              "club",
+              "dagger"
+            ],
+            "class-spells": [
+              "bless",
+              "command",
+              "cure-wounds"
+            ],
+            "style": [
+              "archery"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 3,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "insight",
+              "medicine"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "mastery": [
+              "club",
+              "dagger"
+            ],
+            "class-spells": [
+              "bless",
+              "command",
+              "cure-wounds",
+              "detect-evil-and-good"
+            ],
+            "style": [
+              "archery"
+            ],
+            "subclass": [
+              "devotion"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 4,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "insight",
+              "medicine"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "mastery": [
+              "club",
+              "dagger"
+            ],
+            "class-spells": [
+              "bless",
+              "command",
+              "cure-wounds",
+              "detect-evil-and-good",
+              "detect-magic"
+            ],
+            "style": [
+              "archery"
+            ],
+            "subclass": [
+              "devotion"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {
+            "con": 2
+          },
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 5,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "insight",
+              "medicine"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "mastery": [
+              "club",
+              "dagger"
+            ],
+            "class-spells": [
+              "bless",
+              "command",
+              "cure-wounds",
+              "detect-evil-and-good",
+              "detect-magic",
+              "detect-poison-and-disease"
+            ],
+            "style": [
+              "archery"
+            ],
+            "subclass": [
+              "devotion"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        }
+      ]
+    }
+  },
+  {
+    "classId": "ranger",
+    "cardType": "character",
+    "character": {
+      "build": {
+        "classId": "ranger",
+        "backgroundId": "soldier",
+        "speciesId": "human",
+        "method": "array",
+        "scores": {
+          "str": 12,
+          "dex": 15,
+          "con": 13,
+          "int": 8,
+          "wis": 14,
+          "cha": 10
+        },
+        "boosts": {
+          "str": 2,
+          "dex": 1,
+          "con": 0,
+          "int": 0,
+          "wis": 0,
+          "cha": 0
+        },
+        "rolls": null,
+        "choices": {
+          "size": [
+            "small"
+          ],
+          "languages": [
+            "commonSign",
+            "draconic"
+          ],
+          "class-skills": [
+            "animalHandling",
+            "insight",
+            "investigation"
+          ],
+          "human-skill": [
+            "acrobatics"
+          ],
+          "human-feat": [
+            "alert"
+          ],
+          "gaming-tool": [
+            "dice-set"
+          ],
+          "mastery": [
+            "club",
+            "dagger"
+          ],
+          "class-spells": [
+            "alarm",
+            "animal-friendship"
+          ]
+        },
+        "classEquipment": 0,
+        "backgroundEquipment": 0,
+        "equipmentChoices": {
+          "background-gaming-item": [
+            "dice-set"
+          ]
+        },
+        "purchases": [],
+        "equipped": [],
+        "name": "测试冒险者",
+        "alignment": "中立",
+        "appearance": "",
+        "story": "",
+        "adjustments": [],
+        "customItems": []
+      },
+      "growth": [
+        {
+          "targetLevel": 2,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "animalHandling",
+              "insight",
+              "investigation"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "mastery": [
+              "club",
+              "dagger"
+            ],
+            "class-spells": [
+              "alarm",
+              "animal-friendship",
+              "cure-wounds"
+            ],
+            "style": [
+              "archery"
+            ],
+            "growth-expertise": [
+              "acrobatics"
+            ],
+            "deft-languages": [
+              "dwarvish",
+              "elvish"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 3,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "animalHandling",
+              "insight",
+              "investigation"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "mastery": [
+              "club",
+              "dagger"
+            ],
+            "class-spells": [
+              "alarm",
+              "animal-friendship",
+              "cure-wounds",
+              "detect-magic"
+            ],
+            "style": [
+              "archery"
+            ],
+            "growth-expertise": [
+              "acrobatics"
+            ],
+            "deft-languages": [
+              "dwarvish",
+              "elvish"
+            ],
+            "subclass": [
+              "hunter"
+            ],
+            "hunter-choice": [
+              "colossus"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 4,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "animalHandling",
+              "insight",
+              "investigation"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "mastery": [
+              "club",
+              "dagger"
+            ],
+            "class-spells": [
+              "alarm",
+              "animal-friendship",
+              "cure-wounds",
+              "detect-magic",
+              "detect-poison-and-disease"
+            ],
+            "style": [
+              "archery"
+            ],
+            "growth-expertise": [
+              "acrobatics"
+            ],
+            "deft-languages": [
+              "dwarvish",
+              "elvish"
+            ],
+            "subclass": [
+              "hunter"
+            ],
+            "hunter-choice": [
+              "colossus"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {
+            "con": 2
+          },
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 5,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "animalHandling",
+              "insight",
+              "investigation"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "mastery": [
+              "club",
+              "dagger"
+            ],
+            "class-spells": [
+              "alarm",
+              "animal-friendship",
+              "cure-wounds",
+              "detect-magic",
+              "detect-poison-and-disease",
+              "ensnaring-strike"
+            ],
+            "style": [
+              "archery"
+            ],
+            "growth-expertise": [
+              "acrobatics"
+            ],
+            "deft-languages": [
+              "dwarvish",
+              "elvish"
+            ],
+            "subclass": [
+              "hunter"
+            ],
+            "hunter-choice": [
+              "colossus"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        }
+      ]
+    }
+  },
+  {
+    "classId": "rogue",
+    "cardType": "character",
+    "character": {
+      "build": {
+        "classId": "rogue",
+        "backgroundId": "soldier",
+        "speciesId": "human",
+        "method": "array",
+        "scores": {
+          "str": 12,
+          "dex": 15,
+          "con": 13,
+          "int": 14,
+          "wis": 10,
+          "cha": 8
+        },
+        "boosts": {
+          "str": 2,
+          "dex": 1,
+          "con": 0,
+          "int": 0,
+          "wis": 0,
+          "cha": 0
+        },
+        "rolls": null,
+        "choices": {
+          "size": [
+            "small"
+          ],
+          "languages": [
+            "commonSign",
+            "draconic"
+          ],
+          "rogue-language": [
+            "dwarvish"
+          ],
+          "class-skills": [
+            "acrobatics",
+            "deception",
+            "insight",
+            "investigation"
+          ],
+          "human-skill": [
+            "animalHandling"
+          ],
+          "human-feat": [
+            "alert"
+          ],
+          "gaming-tool": [
+            "dice-set"
+          ],
+          "expertise": [
+            "athletics",
+            "intimidation"
+          ],
+          "mastery": [
+            "club",
+            "dagger"
+          ]
+        },
+        "classEquipment": 0,
+        "backgroundEquipment": 0,
+        "equipmentChoices": {
+          "background-gaming-item": [
+            "dice-set"
+          ]
+        },
+        "purchases": [],
+        "equipped": [],
+        "name": "测试冒险者",
+        "alignment": "中立",
+        "appearance": "",
+        "story": "",
+        "adjustments": [],
+        "customItems": []
+      },
+      "growth": [
+        {
+          "targetLevel": 2,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "rogue-language": [
+              "dwarvish"
+            ],
+            "class-skills": [
+              "acrobatics",
+              "deception",
+              "insight",
+              "investigation"
+            ],
+            "human-skill": [
+              "animalHandling"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "expertise": [
+              "athletics",
+              "intimidation"
+            ],
+            "mastery": [
+              "club",
+              "dagger"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 3,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "rogue-language": [
+              "dwarvish"
+            ],
+            "class-skills": [
+              "acrobatics",
+              "deception",
+              "insight",
+              "investigation"
+            ],
+            "human-skill": [
+              "animalHandling"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "expertise": [
+              "athletics",
+              "intimidation"
+            ],
+            "mastery": [
+              "club",
+              "dagger"
+            ],
+            "subclass": [
+              "thief"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 4,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "rogue-language": [
+              "dwarvish"
+            ],
+            "class-skills": [
+              "acrobatics",
+              "deception",
+              "insight",
+              "investigation"
+            ],
+            "human-skill": [
+              "animalHandling"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "expertise": [
+              "athletics",
+              "intimidation"
+            ],
+            "mastery": [
+              "club",
+              "dagger"
+            ],
+            "subclass": [
+              "thief"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {
+            "con": 2
+          },
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 5,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "rogue-language": [
+              "dwarvish"
+            ],
+            "class-skills": [
+              "acrobatics",
+              "deception",
+              "insight",
+              "investigation"
+            ],
+            "human-skill": [
+              "animalHandling"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "expertise": [
+              "athletics",
+              "intimidation"
+            ],
+            "mastery": [
+              "club",
+              "dagger"
+            ],
+            "subclass": [
+              "thief"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        }
+      ]
+    }
+  },
+  {
+    "classId": "sorcerer",
+    "cardType": "character",
+    "character": {
+      "build": {
+        "classId": "sorcerer",
+        "backgroundId": "soldier",
+        "speciesId": "human",
+        "method": "array",
+        "scores": {
+          "str": 10,
+          "dex": 13,
+          "con": 14,
+          "int": 8,
+          "wis": 12,
+          "cha": 15
+        },
+        "boosts": {
+          "str": 2,
+          "dex": 1,
+          "con": 0,
+          "int": 0,
+          "wis": 0,
+          "cha": 0
+        },
+        "rolls": null,
+        "choices": {
+          "size": [
+            "small"
+          ],
+          "languages": [
+            "commonSign",
+            "draconic"
+          ],
+          "class-skills": [
+            "arcana",
+            "deception"
+          ],
+          "human-skill": [
+            "acrobatics"
+          ],
+          "human-feat": [
+            "alert"
+          ],
+          "gaming-tool": [
+            "dice-set"
+          ],
+          "class-cantrips": [
+            "acid-splash",
+            "chill-touch",
+            "dancing-lights",
+            "elementalism"
+          ],
+          "class-spells": [
+            "burning-hands",
+            "charm-person"
+          ]
+        },
+        "classEquipment": 0,
+        "backgroundEquipment": 0,
+        "equipmentChoices": {
+          "background-gaming-item": [
+            "dice-set"
+          ]
+        },
+        "purchases": [],
+        "equipped": [],
+        "name": "测试冒险者",
+        "alignment": "中立",
+        "appearance": "",
+        "story": "",
+        "adjustments": [],
+        "customItems": []
+      },
+      "growth": [
+        {
+          "targetLevel": 2,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "arcana",
+              "deception"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "class-cantrips": [
+              "acid-splash",
+              "chill-touch",
+              "dancing-lights",
+              "elementalism"
+            ],
+            "class-spells": [
+              "burning-hands",
+              "charm-person",
+              "chromatic-orb",
+              "color-spray"
+            ],
+            "metamagic": [
+              "careful",
+              "distant"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 3,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "arcana",
+              "deception"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "class-cantrips": [
+              "acid-splash",
+              "chill-touch",
+              "dancing-lights",
+              "elementalism"
+            ],
+            "class-spells": [
+              "burning-hands",
+              "charm-person",
+              "color-spray",
+              "comprehend-languages",
+              "detect-magic",
+              "disguise-self"
+            ],
+            "metamagic": [
+              "careful",
+              "distant"
+            ],
+            "subclass": [
+              "draconic"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 4,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "arcana",
+              "deception"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "class-cantrips": [
+              "acid-splash",
+              "chill-touch",
+              "dancing-lights",
+              "elementalism",
+              "fire-bolt"
+            ],
+            "class-spells": [
+              "burning-hands",
+              "charm-person",
+              "color-spray",
+              "comprehend-languages",
+              "detect-magic",
+              "disguise-self",
+              "expeditious-retreat"
+            ],
+            "metamagic": [
+              "careful",
+              "distant"
+            ],
+            "subclass": [
+              "draconic"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {
+            "con": 2
+          },
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 5,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "arcana",
+              "deception"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "class-cantrips": [
+              "acid-splash",
+              "chill-touch",
+              "dancing-lights",
+              "elementalism",
+              "fire-bolt"
+            ],
+            "class-spells": [
+              "burning-hands",
+              "charm-person",
+              "color-spray",
+              "comprehend-languages",
+              "detect-magic",
+              "disguise-self",
+              "expeditious-retreat",
+              "false-life",
+              "feather-fall"
+            ],
+            "metamagic": [
+              "careful",
+              "distant"
+            ],
+            "subclass": [
+              "draconic"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        }
+      ]
+    }
+  },
+  {
+    "classId": "warlock",
+    "cardType": "character",
+    "character": {
+      "build": {
+        "classId": "warlock",
+        "backgroundId": "soldier",
+        "speciesId": "human",
+        "method": "array",
+        "scores": {
+          "str": 8,
+          "dex": 14,
+          "con": 13,
+          "int": 12,
+          "wis": 10,
+          "cha": 15
+        },
+        "boosts": {
+          "str": 2,
+          "dex": 1,
+          "con": 0,
+          "int": 0,
+          "wis": 0,
+          "cha": 0
+        },
+        "rolls": null,
+        "choices": {
+          "size": [
+            "small"
+          ],
+          "languages": [
+            "commonSign",
+            "draconic"
+          ],
+          "class-skills": [
+            "arcana",
+            "deception"
+          ],
+          "human-skill": [
+            "acrobatics"
+          ],
+          "human-feat": [
+            "alert"
+          ],
+          "gaming-tool": [
+            "dice-set"
+          ],
+          "invocation": [
+            "shadows"
+          ],
+          "class-cantrips": [
+            "chill-touch",
+            "eldritch-blast"
+          ],
+          "class-spells": [
+            "bane",
+            "charm-person"
+          ]
+        },
+        "classEquipment": 0,
+        "backgroundEquipment": 0,
+        "equipmentChoices": {
+          "background-gaming-item": [
+            "dice-set"
+          ]
+        },
+        "purchases": [],
+        "equipped": [],
+        "name": "测试冒险者",
+        "alignment": "中立",
+        "appearance": "",
+        "story": "",
+        "adjustments": [],
+        "customItems": []
+      },
+      "growth": [
+        {
+          "targetLevel": 2,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "arcana",
+              "deception"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "invocation": [
+              "shadows",
+              "mind",
+              "blade"
+            ],
+            "class-cantrips": [
+              "chill-touch",
+              "eldritch-blast"
+            ],
+            "class-spells": [
+              "bane",
+              "charm-person",
+              "comprehend-languages"
+            ],
+            "pact-weapon": [
+              "club"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 3,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "arcana",
+              "deception"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "invocation": [
+              "shadows",
+              "mind",
+              "blade"
+            ],
+            "class-cantrips": [
+              "chill-touch",
+              "eldritch-blast"
+            ],
+            "class-spells": [
+              "bane",
+              "charm-person",
+              "comprehend-languages",
+              "detect-magic"
+            ],
+            "pact-weapon": [
+              "club"
+            ],
+            "subclass": [
+              "fiend"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 4,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "arcana",
+              "deception"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "invocation": [
+              "shadows",
+              "mind",
+              "blade"
+            ],
+            "class-cantrips": [
+              "chill-touch",
+              "eldritch-blast",
+              "mage-hand"
+            ],
+            "class-spells": [
+              "bane",
+              "charm-person",
+              "comprehend-languages",
+              "detect-magic",
+              "expeditious-retreat"
+            ],
+            "pact-weapon": [
+              "club"
+            ],
+            "subclass": [
+              "fiend"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {
+            "con": 2
+          },
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 5,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "arcana",
+              "deception"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "invocation": [
+              "shadows",
+              "mind",
+              "blade",
+              "chain",
+              "tome"
+            ],
+            "class-cantrips": [
+              "chill-touch",
+              "eldritch-blast",
+              "mage-hand"
+            ],
+            "class-spells": [
+              "bane",
+              "charm-person",
+              "comprehend-languages",
+              "detect-magic",
+              "expeditious-retreat",
+              "hellish-rebuke"
+            ],
+            "pact-weapon": [
+              "club"
+            ],
+            "subclass": [
+              "fiend"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ],
+            "tome-cantrips": [
+              "acid-splash",
+              "dancing-lights",
+              "druidcraft"
+            ],
+            "tome-rituals": [
+              "alarm",
+              "detect-poison-and-disease"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        }
+      ]
+    }
+  },
+  {
+    "classId": "wizard",
+    "cardType": "character",
+    "character": {
+      "build": {
+        "classId": "wizard",
+        "backgroundId": "soldier",
+        "speciesId": "human",
+        "method": "array",
+        "scores": {
+          "str": 8,
+          "dex": 12,
+          "con": 13,
+          "int": 15,
+          "wis": 14,
+          "cha": 10
+        },
+        "boosts": {
+          "str": 2,
+          "dex": 1,
+          "con": 0,
+          "int": 0,
+          "wis": 0,
+          "cha": 0
+        },
+        "rolls": null,
+        "choices": {
+          "size": [
+            "small"
+          ],
+          "languages": [
+            "commonSign",
+            "draconic"
+          ],
+          "class-skills": [
+            "arcana",
+            "history"
+          ],
+          "human-skill": [
+            "acrobatics"
+          ],
+          "human-feat": [
+            "alert"
+          ],
+          "gaming-tool": [
+            "dice-set"
+          ],
+          "class-cantrips": [
+            "acid-splash",
+            "chill-touch",
+            "dancing-lights"
+          ],
+          "spellbook": [
+            "alarm",
+            "burning-hands",
+            "charm-person",
+            "chromatic-orb",
+            "color-spray",
+            "comprehend-languages"
+          ],
+          "class-spells": [
+            "alarm",
+            "burning-hands",
+            "charm-person",
+            "chromatic-orb"
+          ]
+        },
+        "classEquipment": 0,
+        "backgroundEquipment": 0,
+        "equipmentChoices": {
+          "background-gaming-item": [
+            "dice-set"
+          ]
+        },
+        "purchases": [],
+        "equipped": [],
+        "name": "测试冒险者",
+        "alignment": "中立",
+        "appearance": "",
+        "story": "",
+        "adjustments": [],
+        "customItems": []
+      },
+      "growth": [
+        {
+          "targetLevel": 2,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "arcana",
+              "history"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "class-cantrips": [
+              "acid-splash",
+              "chill-touch",
+              "dancing-lights"
+            ],
+            "spellbook": [
+              "alarm",
+              "burning-hands",
+              "charm-person",
+              "chromatic-orb",
+              "color-spray",
+              "comprehend-languages",
+              "detect-magic",
+              "disguise-self"
+            ],
+            "class-spells": [
+              "alarm",
+              "burning-hands",
+              "charm-person",
+              "chromatic-orb",
+              "color-spray"
+            ],
+            "growth-expertise": [
+              "arcana"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 3,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "arcana",
+              "history"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "class-cantrips": [
+              "acid-splash",
+              "chill-touch",
+              "dancing-lights"
+            ],
+            "spellbook": [
+              "alarm",
+              "burning-hands",
+              "charm-person",
+              "chromatic-orb",
+              "color-spray",
+              "comprehend-languages",
+              "detect-magic",
+              "disguise-self",
+              "expeditious-retreat",
+              "false-life",
+              "magic-missile",
+              "thunderwave"
+            ],
+            "class-spells": [
+              "alarm",
+              "burning-hands",
+              "charm-person",
+              "chromatic-orb",
+              "color-spray",
+              "comprehend-languages"
+            ],
+            "growth-expertise": [
+              "arcana"
+            ],
+            "subclass": [
+              "evoker"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 4,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "arcana",
+              "history"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "class-cantrips": [
+              "acid-splash",
+              "chill-touch",
+              "dancing-lights",
+              "elementalism"
+            ],
+            "spellbook": [
+              "alarm",
+              "burning-hands",
+              "charm-person",
+              "chromatic-orb",
+              "color-spray",
+              "comprehend-languages",
+              "detect-magic",
+              "disguise-self",
+              "expeditious-retreat",
+              "false-life",
+              "magic-missile",
+              "thunderwave",
+              "feather-fall",
+              "find-familiar"
+            ],
+            "class-spells": [
+              "alarm",
+              "burning-hands",
+              "charm-person",
+              "chromatic-orb",
+              "color-spray",
+              "comprehend-languages",
+              "detect-magic"
+            ],
+            "growth-expertise": [
+              "arcana"
+            ],
+            "subclass": [
+              "evoker"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {
+            "con": 2
+          },
+          "hpMethod": "fixed"
+        },
+        {
+          "targetLevel": 5,
+          "choices": {
+            "size": [
+              "small"
+            ],
+            "languages": [
+              "commonSign",
+              "draconic"
+            ],
+            "class-skills": [
+              "arcana",
+              "history"
+            ],
+            "human-skill": [
+              "acrobatics"
+            ],
+            "human-feat": [
+              "alert"
+            ],
+            "gaming-tool": [
+              "dice-set"
+            ],
+            "class-cantrips": [
+              "acid-splash",
+              "chill-touch",
+              "dancing-lights",
+              "elementalism"
+            ],
+            "spellbook": [
+              "alarm",
+              "burning-hands",
+              "charm-person",
+              "chromatic-orb",
+              "color-spray",
+              "comprehend-languages",
+              "detect-magic",
+              "disguise-self",
+              "expeditious-retreat",
+              "false-life",
+              "magic-missile",
+              "thunderwave",
+              "feather-fall",
+              "find-familiar",
+              "fireball",
+              "lightning-bolt",
+              "tiny-hut"
+            ],
+            "class-spells": [
+              "alarm",
+              "burning-hands",
+              "charm-person",
+              "chromatic-orb",
+              "color-spray",
+              "comprehend-languages",
+              "detect-magic",
+              "disguise-self",
+              "expeditious-retreat"
+            ],
+            "growth-expertise": [
+              "arcana"
+            ],
+            "subclass": [
+              "evoker"
+            ],
+            "growth-feat": [
+              "ability-score-improvement"
+            ]
+          },
+          "abilityIncreases": {},
+          "hpMethod": "fixed"
+        }
+      ]
+    }
+  }
+]

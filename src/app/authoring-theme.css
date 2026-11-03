@@ -1,0 +1,40 @@
+/* TASK-UI-005：角色页视觉重做（依据《冒險中的角色.html》，仅本页生效） */
+
+.script-generation.authoring-theme {background:var(--bg);color:var(--ink)}
+
+
+
+.script-generation.authoring-theme {
+  padding: 20px;
+  max-width: 1760px;
+  margin: auto;
+  line-height: 1.6;
+}
+.authoring-theme .script-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px;
+}
+.authoring-theme button.primary {
+  background: var(--accent);
+  color: var(--panel);
+  border: 1px solid var(--accent);
+}
+:root[data-theme='dark'] .authoring-theme button.primary {
+  color: #111819;
+}
+.authoring-theme .script-heading h1 {
+  font-family: Georgia, 'Songti SC', serif;
+}
+.authoring-theme button {
+  min-height: 44px;
+}
+.authoring-theme textarea {
+  line-height: 1.8;
+}
+@media (max-width: 900px) {
+  .script-generation.authoring-theme {
+    padding: 12px;
+  }
+}

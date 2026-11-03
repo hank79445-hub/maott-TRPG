@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.local/
+website/node_modules/
+website/.vitepress/dist/
+website/.vitepress/cache/
+website/public/
+public/examples/
+examples/lamplit-inn/

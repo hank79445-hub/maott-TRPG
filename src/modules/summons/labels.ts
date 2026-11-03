@@ -1,0 +1,1 @@
+export const summonFormNames:Record<string,string>={air:'天空',land:'大地',water:'海洋',fuming:'愤怒',mirthful:'欢欣',tricksy:'诡诈',ghostly:'幽体',putrid:'腐尸',skeletal:'骸骨',celestial:'天族',fey:'妖精',fiend:'邪魔','riding-horse':'乘用马',skeleton:'骷髅',zombie:'丧尸',force:'无形力量',Bat:'蝙蝠',Cat:'猫',Frog:'蛙',Hawk:'隼',Lizard:'蜥蜴',Octopus:'章鱼',Owl:'猫头鹰',Rat:'鼠',Raven:'渡鸦',Spider:'蜘蛛',Weasel:'鼬'}

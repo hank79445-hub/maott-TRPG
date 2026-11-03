@@ -1,0 +1,30 @@
+[
+  {
+    "name": "@algolia/autocomplete-shared",
+    "version": "1.17.7",
+    "file": "_algolia_autocomplete-shared_1.17.7-UPSTREAM-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/algolia/autocomplete/v1.17.7/LICENSE",
+    "note": "Upstream version tag"
+  },
+  {
+    "name": "@vue/devtools-api",
+    "version": "6.6.4",
+    "file": "_vue_devtools-api_6.6.4-UPSTREAM-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/vuejs/devtools-v6/v6.6.4/LICENSE",
+    "note": "Upstream version tag"
+  },
+  {
+    "name": "@vue/devtools-api",
+    "version": "7.7.10",
+    "file": "_vue_devtools-api_7.7.10-UPSTREAM-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/vuejs/devtools/v7.7.10/LICENSE",
+    "note": "Upstream version tag"
+  },
+  {
+    "name": "tr46",
+    "version": "0.0.3",
+    "file": "tr46_0.0.3-UPSTREAM-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/Sebmaster/tr46.js/master/LICENSE.md",
+    "note": "Original author repository; package 0.0.3 declares MIT"
+  }
+]

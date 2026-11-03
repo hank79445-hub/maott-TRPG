@@ -1,0 +1,1051 @@
+{
+  "format": "trpg-npc-config",
+  "version": 1,
+  "scenes": [
+    {
+      "id": "b6d8e0e9-baee-4ff4-a0bb-114f85247785",
+      "name": "驿站庭院",
+      "presets": [],
+      "points": [
+        {
+          "id": "e8f872d5-e109-4784-bb21-52fbbe8d9df5",
+          "name": "进入大厅"
+        },
+        {
+          "id": "689a6732-10e1-4a35-8615-be633738681e",
+          "name": "补给箱"
+        },
+        {
+          "id": "97f8716b-041d-4821-8db4-10ec5f2dcb50",
+          "name": "查看搬运记录"
+        }
+      ]
+    },
+    {
+      "id": "73903e70-1230-4fc6-a43c-f1f23390c1a0",
+      "name": "小地窖",
+      "presets": [
+        {
+          "id": "c7ef18db-c0f5-4391-9d41-e913961ab7fc",
+          "name": "自愿切磋"
+        }
+      ],
+      "points": [
+        {
+          "id": "1cd0e4e5-fde4-43d0-bbbe-c3bb14df62f0",
+          "name": "返回大厅"
+        },
+        {
+          "id": "08e500e1-b759-4313-b87f-3c82a598fccd",
+          "name": "找回的物资"
+        },
+        {
+          "id": "27175c6a-58e3-43b6-a092-6f0f0e7c7c32",
+          "name": "可选切磋"
+        }
+      ]
+    }
+  ],
+  "subjects": [],
+  "npcs": [
+    {
+      "initiallyAbsent": false,
+      "initialMemories": [],
+      "affinityEnabled": false,
+      "initialRelations": [],
+      "id": "b481fe58-72cb-42f8-8243-5422071e1028",
+      "turnMode": "plan",
+      "followParty": false,
+      "tacticalInput": false,
+      "npcType": "important",
+      "controller": "model",
+      "characterId": null,
+      "side": "neutral",
+      "dialogue": [],
+      "abilities": [],
+      "combatPolicy": {
+        "strategy": "nearest",
+        "attackIds": [],
+        "guardRadius": 10,
+        "protectCharacterId": null,
+        "retreatPercent": 25,
+        "planOnTurn": true
+      },
+      "activity": {
+        "scope": "party",
+        "publishMode": "review",
+        "templates": [
+          {
+            "id": "d020924a-8b51-416f-8699-39258741eb74",
+            "type": "rescued",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 90,
+            "cooldownSeconds": 60
+          },
+          {
+            "id": "fcb36d81-9638-4363-b3d5-278bbfbc1bbc",
+            "type": "aided",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 50,
+            "cooldownSeconds": 60
+          },
+          {
+            "id": "51840e89-16a3-42dd-ad74-d6b96a7897a1",
+            "type": "critical",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 50,
+            "cooldownSeconds": 60
+          },
+          {
+            "id": "b82550b9-9075-4576-bd9b-ddbd2bbad4b7",
+            "type": "wounded",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 80,
+            "cooldownSeconds": 60
+          },
+          {
+            "id": "7c12b3bd-6fb6-449f-b3e5-759a39843cd0",
+            "type": "downed",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 100,
+            "cooldownSeconds": 60
+          },
+          {
+            "id": "db898ea8-cb9f-48b7-b6d2-6d9880c3bac4",
+            "type": "recovered",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 50,
+            "cooldownSeconds": 60
+          },
+          {
+            "id": "e21d92f1-8c74-4125-b932-13191c95d59a",
+            "type": "danger",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 50,
+            "cooldownSeconds": 60
+          },
+          {
+            "id": "0bbfddfb-4d75-4f35-a486-d80f226a1876",
+            "type": "goal",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 50,
+            "cooldownSeconds": 60
+          },
+          {
+            "id": "3e3793a7-704e-470c-bbeb-eb195930d146",
+            "type": "scene",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 50,
+            "cooldownSeconds": 300
+          },
+          {
+            "id": "66cd7f42-09e1-419d-868c-3c850dfde79c",
+            "type": "interaction",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 50,
+            "cooldownSeconds": 300
+          }
+        ],
+        "enabled": true,
+        "events": [
+          "scene.enter",
+          "point.result",
+          "target.resolved",
+          "gm.mark"
+        ],
+        "characterIds": [],
+        "range": 30,
+        "cooldownSeconds": 300,
+        "maxPerScene": 3,
+        "allowDuringCombat": false
+      },
+      "name": "管事青叶",
+      "sceneId": "b6d8e0e9-baee-4ff4-a0bb-114f85247785",
+      "position": {
+        "x": 6,
+        "y": 2
+      },
+      "hidden": false,
+      "enabled": true,
+      "description": "认真记账的驿站管事。",
+      "personality": "谨慎、简洁",
+      "goals": "",
+      "strategy": "依照已确认事实回应，重大行为提交 GM 审核。",
+      "knowledge": "知道三个场景的连接。",
+      "secrets": [],
+      "privateNote": "",
+      "fallbackReply": "先喝口茶，我们再一起找。",
+      "attitude": "indifferent",
+      "dialogueReview": {
+        "mode": "inherit",
+        "categories": []
+      },
+      "publicDialogue": "认真记账的驿站管事。",
+      "publicKnowledge": [
+        {
+          "id": "bfaa3334-7f53-49ae-8237-b4d01b11d44c",
+          "text": "知道三个场景的连接。"
+        }
+      ],
+      "autoDialogue": false,
+      "allowed": [
+        "hostile",
+        "start-combat",
+        "attack",
+        "flee",
+        "surrender",
+        "alert",
+        "promise",
+        "trade",
+        "reveal",
+        "move",
+        "action",
+        "ability",
+        "interact",
+        "travel"
+      ],
+      "stock": [],
+      "coins": 0,
+      "body": {
+        "templateMetadata": {
+          "englishName": "Commoner",
+          "category": "civilian",
+          "sourceVersion": "SRD 5.2.1",
+          "templateVersion": "1.0.0",
+          "pages": [
+            275
+          ],
+          "cr": "0",
+          "xp": 10,
+          "proficiencyBonus": 2,
+          "alignment": "中立",
+          "hitDice": "1d8",
+          "skills": {},
+          "senses": [],
+          "passivePerception": 10,
+          "languages": [
+            "通用语"
+          ],
+          "movement": [],
+          "gear": [
+            "木棒"
+          ],
+          "abilities": [
+            {
+              "id": "club",
+              "name": "木棒",
+              "support": "automatic",
+              "detail": "+2命中，1d4钝击。",
+              "cost": "action"
+            },
+            {
+              "id": "training",
+              "name": "训练",
+              "support": "gm",
+              "detail": "GM选择一个熟练技能；使用该技能进行属性检定时具有优势，选择与检定由GM处理。"
+            }
+          ]
+        },
+        "size": "medium",
+        "name": "管事青叶",
+        "ac": 10,
+        "maxHp": 4,
+        "hp": 4,
+        "temporaryHp": 0,
+        "creatureType": "humanoid",
+        "speed": 30,
+        "scores": {
+          "str": 10,
+          "dex": 10,
+          "con": 10,
+          "int": 10,
+          "wis": 10,
+          "cha": 10
+        },
+        "saves": {
+          "str": 0,
+          "dex": 0,
+          "con": 0,
+          "int": 0,
+          "wis": 0,
+          "cha": 0
+        },
+        "initiativeBonus": 0,
+        "attacks": [
+          {
+            "id": "club",
+            "name": "木棒",
+            "bonus": 2,
+            "damage": "1d4",
+            "damageType": "bludgeoning",
+            "reach": 5,
+            "range": 0,
+            "longRange": 0,
+            "kind": "weapon"
+          }
+        ],
+        "resistances": [],
+        "vulnerabilities": [],
+        "immunities": [],
+        "conditionImmunities": [],
+        "conditions": [],
+        "dead": false,
+        "source": "SRD 5.2.1，第 275 页；https://www.dndbeyond.com/srd"
+      },
+      "preauthorization": {
+        "trade": false,
+        "revealIds": [],
+        "maxQuantity": 1,
+        "maxDiscountGP": 0,
+        "maxValueGP": 0
+      }
+    },
+    {
+      "initiallyAbsent": false,
+      "initialMemories": [],
+      "affinityEnabled": false,
+      "initialRelations": [],
+      "id": "b1efa46f-49b5-4cb8-9cd1-6b99fdd0150b",
+      "turnMode": "plan",
+      "followParty": false,
+      "tacticalInput": false,
+      "npcType": "important",
+      "controller": "model",
+      "characterId": null,
+      "side": "neutral",
+      "dialogue": [],
+      "abilities": [],
+      "combatPolicy": {
+        "strategy": "nearest",
+        "attackIds": [],
+        "guardRadius": 10,
+        "protectCharacterId": null,
+        "retreatPercent": 25,
+        "planOnTurn": true
+      },
+      "activity": {
+        "scope": "party",
+        "publishMode": "review",
+        "templates": [
+          {
+            "id": "27baae1b-6f3f-4c69-8644-5c9f03be81e1",
+            "type": "rescued",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 90,
+            "cooldownSeconds": 60
+          },
+          {
+            "id": "8a181d9b-c427-4218-a456-f6eace313bb8",
+            "type": "aided",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 50,
+            "cooldownSeconds": 60
+          },
+          {
+            "id": "fe133bd5-a6a2-4d6a-a6e4-bb956cfc1c5e",
+            "type": "critical",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 50,
+            "cooldownSeconds": 60
+          },
+          {
+            "id": "f58eafd7-9628-4351-a5e1-4a7faaadf40a",
+            "type": "wounded",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 80,
+            "cooldownSeconds": 60
+          },
+          {
+            "id": "c78f9046-24b2-41bd-ad3a-ee4c5e68408c",
+            "type": "downed",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 100,
+            "cooldownSeconds": 60
+          },
+          {
+            "id": "f9d1c3bf-90ae-4a89-ad2b-d9b5949835f7",
+            "type": "recovered",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 50,
+            "cooldownSeconds": 60
+          },
+          {
+            "id": "6b05e090-dd30-477a-9c37-f567f9a2caf2",
+            "type": "danger",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 50,
+            "cooldownSeconds": 60
+          },
+          {
+            "id": "46f4613c-3374-4238-9e43-1ac72f9dba2d",
+            "type": "goal",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 50,
+            "cooldownSeconds": 60
+          },
+          {
+            "id": "004068d3-707c-4151-810e-f0d3f163a2fe",
+            "type": "scene",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 50,
+            "cooldownSeconds": 300
+          },
+          {
+            "id": "4b0c0b0f-bedb-4fa4-a103-a080ba1e43fc",
+            "type": "interaction",
+            "enabled": true,
+            "pointId": null,
+            "sceneId": null,
+            "outcome": "any",
+            "thresholdPercent": 25,
+            "tendency": "根据性格回应已确认事实，不添加行动结果或透露秘密。",
+            "priority": 50,
+            "cooldownSeconds": 300
+          }
+        ],
+        "enabled": true,
+        "events": [
+          "scene.enter",
+          "point.result",
+          "target.resolved",
+          "gm.mark"
+        ],
+        "characterIds": [],
+        "range": 30,
+        "cooldownSeconds": 300,
+        "maxPerScene": 3,
+        "allowDuringCombat": false
+      },
+      "name": "巡夜者小岚",
+      "sceneId": "73903e70-1230-4fc6-a43c-f1f23390c1a0",
+      "position": {
+        "x": 8,
+        "y": 3
+      },
+      "hidden": false,
+      "enabled": true,
+      "description": "",
+      "personality": "谨慎、简洁",
+      "goals": "",
+      "strategy": "依照已确认事实回应，重大行为提交 GM 审核。",
+      "knowledge": "",
+      "secrets": [],
+      "privateNote": "",
+      "fallbackReply": "我守在这里，箱子没有离开驿站。",
+      "attitude": "indifferent",
+      "dialogueReview": {
+        "mode": "inherit",
+        "categories": []
+      },
+      "publicDialogue": "",
+      "publicKnowledge": [],
+      "autoDialogue": false,
+      "allowed": [
+        "hostile",
+        "start-combat",
+        "attack",
+        "flee",
+        "surrender",
+        "alert",
+        "promise",
+        "trade",
+        "reveal",
+        "move",
+        "action",
+        "ability",
+        "interact",
+        "travel"
+      ],
+      "stock": [],
+      "coins": 0,
+      "body": {
+        "templateMetadata": {
+          "englishName": "Guard",
+          "category": "civilian",
+          "sourceVersion": "SRD 5.2.1",
+          "templateVersion": "1.0.0",
+          "pages": [
+            296
+          ],
+          "cr": "1/8",
+          "xp": 25,
+          "proficiencyBonus": 2,
+          "alignment": "中立",
+          "hitDice": "2d8+2",
+          "skills": {
+            "perception": 2
+          },
+          "senses": [],
+          "passivePerception": 12,
+          "languages": [
+            "通用语"
+          ],
+          "movement": [],
+          "gear": [
+            "链甲衫",
+            "盾牌",
+            "长矛"
+          ],
+          "abilities": [
+            {
+              "id": "spear",
+              "name": "长矛近战",
+              "support": "automatic",
+              "detail": "触及5尺，+3命中，1d6+1穿刺。",
+              "cost": "action"
+            },
+            {
+              "id": "thrown",
+              "name": "长矛投掷",
+              "support": "gm",
+              "detail": "20/60尺；投掷库存、落点和回收由GM核对，默认自动策略不用投掷。",
+              "cost": "action"
+            }
+          ]
+        },
+        "size": "medium",
+        "name": "巡夜者小岚",
+        "ac": 16,
+        "maxHp": 11,
+        "hp": 11,
+        "temporaryHp": 0,
+        "creatureType": "humanoid",
+        "speed": 30,
+        "scores": {
+          "str": 13,
+          "dex": 12,
+          "con": 12,
+          "int": 10,
+          "wis": 11,
+          "cha": 10
+        },
+        "saves": {
+          "str": 1,
+          "dex": 1,
+          "con": 1,
+          "int": 0,
+          "wis": 0,
+          "cha": 0
+        },
+        "initiativeBonus": 1,
+        "attacks": [
+          {
+            "id": "spear",
+            "name": "长矛（近战）",
+            "bonus": 3,
+            "damage": "1d6+1",
+            "damageType": "piercing",
+            "reach": 5,
+            "range": 0,
+            "longRange": 0,
+            "kind": "weapon"
+          },
+          {
+            "id": "spear-thrown",
+            "name": "长矛（投掷）",
+            "manualOnly": true,
+            "bonus": 3,
+            "damage": "1d6+1",
+            "damageType": "piercing",
+            "reach": 5,
+            "range": 20,
+            "longRange": 60,
+            "projectile": "ordinary",
+            "kind": "thrown"
+          }
+        ],
+        "resistances": [],
+        "vulnerabilities": [],
+        "immunities": [],
+        "conditionImmunities": [],
+        "conditions": [],
+        "dead": false,
+        "source": "SRD 5.2.1，第 296 页；https://www.dndbeyond.com/srd"
+      },
+      "preauthorization": {
+        "trade": false,
+        "revealIds": [],
+        "maxQuantity": 1,
+        "maxDiscountGP": 0,
+        "maxValueGP": 0
+      }
+    },
+    {
+      "initiallyAbsent": false,
+      "initialMemories": [],
+      "affinityEnabled": false,
+      "initialRelations": [],
+      "id": "9385d4f5-8ddc-4e71-8be2-15615478998b",
+      "turnMode": "automatic",
+      "followParty": false,
+      "tacticalInput": false,
+      "npcType": "ordinary",
+      "controller": "gm",
+      "characterId": null,
+      "side": "enemy",
+      "dialogue": [],
+      "abilities": [],
+      "combatPolicy": {
+        "strategy": "nearest",
+        "attackIds": [],
+        "guardRadius": 10,
+        "protectCharacterId": null,
+        "retreatPercent": 25,
+        "planOnTurn": true
+      },
+      "activity": {
+        "scope": "party",
+        "publishMode": "review",
+        "templates": [],
+        "enabled": false,
+        "events": [
+          "scene.enter"
+        ],
+        "characterIds": [],
+        "range": 30,
+        "cooldownSeconds": 300,
+        "maxPerScene": 3,
+        "allowDuringCombat": false
+      },
+      "name": "切磋伙伴甲",
+      "sceneId": "73903e70-1230-4fc6-a43c-f1f23390c1a0",
+      "position": {
+        "x": 11,
+        "y": 5
+      },
+      "hidden": false,
+      "enabled": true,
+      "description": "",
+      "personality": "谨慎、简洁",
+      "goals": "",
+      "strategy": "依照已确认事实回应，重大行为提交 GM 审核。",
+      "knowledge": "",
+      "secrets": [],
+      "privateNote": "",
+      "fallbackReply": "我听到了你的请求。此事请主持人确认。",
+      "attitude": "indifferent",
+      "publicDialogue": "",
+      "publicKnowledge": [],
+      "autoDialogue": false,
+      "allowed": [
+        "hostile",
+        "start-combat",
+        "attack",
+        "flee",
+        "surrender",
+        "alert",
+        "promise",
+        "trade",
+        "reveal",
+        "move",
+        "action",
+        "ability",
+        "interact",
+        "travel"
+      ],
+      "stock": [],
+      "coins": 0,
+      "body": {
+        "templateMetadata": {
+          "englishName": "Guard",
+          "category": "civilian",
+          "sourceVersion": "SRD 5.2.1",
+          "templateVersion": "1.0.0",
+          "pages": [
+            296
+          ],
+          "cr": "1/8",
+          "xp": 25,
+          "proficiencyBonus": 2,
+          "alignment": "中立",
+          "hitDice": "2d8+2",
+          "skills": {
+            "perception": 2
+          },
+          "senses": [],
+          "passivePerception": 12,
+          "languages": [
+            "通用语"
+          ],
+          "movement": [],
+          "gear": [
+            "链甲衫",
+            "盾牌",
+            "长矛"
+          ],
+          "abilities": [
+            {
+              "id": "spear",
+              "name": "长矛近战",
+              "support": "automatic",
+              "detail": "触及5尺，+3命中，1d6+1穿刺。",
+              "cost": "action"
+            },
+            {
+              "id": "thrown",
+              "name": "长矛投掷",
+              "support": "gm",
+              "detail": "20/60尺；投掷库存、落点和回收由GM核对，默认自动策略不用投掷。",
+              "cost": "action"
+            }
+          ]
+        },
+        "size": "medium",
+        "name": "切磋伙伴甲",
+        "ac": 16,
+        "maxHp": 11,
+        "hp": 11,
+        "temporaryHp": 0,
+        "creatureType": "humanoid",
+        "speed": 30,
+        "scores": {
+          "str": 13,
+          "dex": 12,
+          "con": 12,
+          "int": 10,
+          "wis": 11,
+          "cha": 10
+        },
+        "saves": {
+          "str": 1,
+          "dex": 1,
+          "con": 1,
+          "int": 0,
+          "wis": 0,
+          "cha": 0
+        },
+        "initiativeBonus": 1,
+        "attacks": [
+          {
+            "id": "spear",
+            "name": "长矛（近战）",
+            "bonus": 3,
+            "damage": "1d6+1",
+            "damageType": "piercing",
+            "reach": 5,
+            "range": 0,
+            "longRange": 0,
+            "kind": "weapon"
+          },
+          {
+            "id": "spear-thrown",
+            "name": "长矛（投掷）",
+            "manualOnly": true,
+            "bonus": 3,
+            "damage": "1d6+1",
+            "damageType": "piercing",
+            "reach": 5,
+            "range": 20,
+            "longRange": 60,
+            "projectile": "ordinary",
+            "kind": "thrown"
+          }
+        ],
+        "resistances": [],
+        "vulnerabilities": [],
+        "immunities": [],
+        "conditionImmunities": [],
+        "conditions": [],
+        "dead": false,
+        "source": "SRD 5.2.1，第 296 页；https://www.dndbeyond.com/srd"
+      },
+      "preauthorization": {
+        "trade": false,
+        "revealIds": [],
+        "maxQuantity": 1,
+        "maxDiscountGP": 0,
+        "maxValueGP": 0
+      }
+    },
+    {
+      "initiallyAbsent": false,
+      "initialMemories": [],
+      "affinityEnabled": false,
+      "initialRelations": [],
+      "id": "698d4968-18a7-4bca-a330-f92f9a6dd718",
+      "turnMode": "automatic",
+      "followParty": false,
+      "tacticalInput": false,
+      "npcType": "ordinary",
+      "controller": "gm",
+      "characterId": null,
+      "side": "enemy",
+      "dialogue": [],
+      "abilities": [],
+      "combatPolicy": {
+        "strategy": "nearest",
+        "attackIds": [],
+        "guardRadius": 10,
+        "protectCharacterId": null,
+        "retreatPercent": 25,
+        "planOnTurn": true
+      },
+      "activity": {
+        "scope": "party",
+        "publishMode": "review",
+        "templates": [],
+        "enabled": false,
+        "events": [
+          "scene.enter"
+        ],
+        "characterIds": [],
+        "range": 30,
+        "cooldownSeconds": 300,
+        "maxPerScene": 3,
+        "allowDuringCombat": false
+      },
+      "name": "切磋伙伴乙",
+      "sceneId": "73903e70-1230-4fc6-a43c-f1f23390c1a0",
+      "position": {
+        "x": 12,
+        "y": 5
+      },
+      "hidden": false,
+      "enabled": true,
+      "description": "",
+      "personality": "谨慎、简洁",
+      "goals": "",
+      "strategy": "依照已确认事实回应，重大行为提交 GM 审核。",
+      "knowledge": "",
+      "secrets": [],
+      "privateNote": "",
+      "fallbackReply": "我听到了你的请求。此事请主持人确认。",
+      "attitude": "indifferent",
+      "publicDialogue": "",
+      "publicKnowledge": [],
+      "autoDialogue": false,
+      "allowed": [
+        "hostile",
+        "start-combat",
+        "attack",
+        "flee",
+        "surrender",
+        "alert",
+        "promise",
+        "trade",
+        "reveal",
+        "move",
+        "action",
+        "ability",
+        "interact",
+        "travel"
+      ],
+      "stock": [],
+      "coins": 0,
+      "body": {
+        "templateMetadata": {
+          "englishName": "Guard",
+          "category": "civilian",
+          "sourceVersion": "SRD 5.2.1",
+          "templateVersion": "1.0.0",
+          "pages": [
+            296
+          ],
+          "cr": "1/8",
+          "xp": 25,
+          "proficiencyBonus": 2,
+          "alignment": "中立",
+          "hitDice": "2d8+2",
+          "skills": {
+            "perception": 2
+          },
+          "senses": [],
+          "passivePerception": 12,
+          "languages": [
+            "通用语"
+          ],
+          "movement": [],
+          "gear": [
+            "链甲衫",
+            "盾牌",
+            "长矛"
+          ],
+          "abilities": [
+            {
+              "id": "spear",
+              "name": "长矛近战",
+              "support": "automatic",
+              "detail": "触及5尺，+3命中，1d6+1穿刺。",
+              "cost": "action"
+            },
+            {
+              "id": "thrown",
+              "name": "长矛投掷",
+              "support": "gm",
+              "detail": "20/60尺；投掷库存、落点和回收由GM核对，默认自动策略不用投掷。",
+              "cost": "action"
+            }
+          ]
+        },
+        "size": "medium",
+        "name": "切磋伙伴乙",
+        "ac": 16,
+        "maxHp": 11,
+        "hp": 11,
+        "temporaryHp": 0,
+        "creatureType": "humanoid",
+        "speed": 30,
+        "scores": {
+          "str": 13,
+          "dex": 12,
+          "con": 12,
+          "int": 10,
+          "wis": 11,
+          "cha": 10
+        },
+        "saves": {
+          "str": 1,
+          "dex": 1,
+          "con": 1,
+          "int": 0,
+          "wis": 0,
+          "cha": 0
+        },
+        "initiativeBonus": 1,
+        "attacks": [
+          {
+            "id": "spear",
+            "name": "长矛（近战）",
+            "bonus": 3,
+            "damage": "1d6+1",
+            "damageType": "piercing",
+            "reach": 5,
+            "range": 0,
+            "longRange": 0,
+            "kind": "weapon"
+          },
+          {
+            "id": "spear-thrown",
+            "name": "长矛（投掷）",
+            "manualOnly": true,
+            "bonus": 3,
+            "damage": "1d6+1",
+            "damageType": "piercing",
+            "reach": 5,
+            "range": 20,
+            "longRange": 60,
+            "projectile": "ordinary",
+            "kind": "thrown"
+          }
+        ],
+        "resistances": [],
+        "vulnerabilities": [],
+        "immunities": [],
+        "conditionImmunities": [],
+        "conditions": [],
+        "dead": false,
+        "source": "SRD 5.2.1，第 296 页；https://www.dndbeyond.com/srd"
+      },
+      "preauthorization": {
+        "trade": false,
+        "revealIds": [],
+        "maxQuantity": 1,
+        "maxDiscountGP": 0,
+        "maxValueGP": 0
+      }
+    }
+  ],
+  "characters": [],
+  "dependencies": [
+    {
+      "id": "srd-5.2.1",
+      "version": "5.2.1"
+    }
+  ],
+  "packs": []
+}

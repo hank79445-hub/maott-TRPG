@@ -1,0 +1,5 @@
+import {z} from 'zod'
+const feet=z.number().finite().min(-10000).max(10000),extent=z.number().finite().min(0).max(100000)
+export const initialSpatialObjectSchema=z.object({id:z.string().regex(/^[a-zA-Z0-9-]{1,120}$/),name:z.string().min(1).max(200),kind:z.enum(['object','rope','stone','surface','liquid','plants']),x:z.number().int().min(0).max(79),y:z.number().int().min(0).max(79),height:feet,width:extent,heightFeet:extent,depth:extent,weight:extent,supportsStanding:z.boolean().optional(),loose:z.boolean(),enabled:z.boolean(),hidden:z.boolean()}).strict()
+export const initialSpatialSchema=z.object({floorHeight:feet,light:z.enum(['bright','dim','dark','magical-darkness']).optional(),openSky:z.boolean(),ceilingHeight:feet.optional(),objects:z.array(initialSpatialObjectSchema).max(1000).default([])}).strict().refine(s=>s.openSky||s.ceilingHeight!==undefined,'室内须登记实际天花板高度').refine(s=>s.ceilingHeight===undefined||s.ceilingHeight>=s.floorHeight,'天花板不能低于地面').refine(s=>new Set(s.objects.map(o=>o.id)).size===s.objects.length,'初始空间物件编号重复')
+export type InitialSpatial=z.infer<typeof initialSpatialSchema>

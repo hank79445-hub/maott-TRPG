@@ -1,0 +1,27 @@
+name: Public edition and website
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+        with: {version: 11.25.0}
+      - uses: actions/setup-node@v6
+        with: {node-version: 24}
+      - run: pnpm install --frozen-lockfile --prod=false
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: pnpm build
+      - run: pnpm public:audit
+      - run: pnpm install --frozen-lockfile --prod=false
+        working-directory: website
+      - run: pnpm exec vue-tsc --noEmit -p website/tsconfig.json
+      - run: pnpm build
+        working-directory: website

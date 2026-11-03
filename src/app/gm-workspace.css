@@ -1,0 +1,870 @@
+/* GM工作台：导航浮窗不占布局列；场景属性只有一个宿主。 */
+.room-page.workspace-active {
+  max-width: none;
+  margin: 0;
+  padding: 10px 366px 20px 16px;
+  min-width: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.workspace-active .room-bar {
+  padding: 0;
+  margin: 0;
+  min-height: 36px;
+  gap: 8px;
+  font-size: 14px;
+}
+.workspace-active .room-bar small {
+  display: none;
+}
+.workspace-active .room-sync {
+  font-size: 12px;
+}
+.workspace-active > .broadcast-latest {
+  order: 20;
+  margin: 0;
+  padding: 8px 12px;
+  max-height: 68px;
+  overflow: auto;
+  font-size: 13px;
+}
+.workspace-active > .room-rail {
+  top: 76px;
+  right: 12px;
+  bottom: 80px;
+  width: 338px;
+  overflow: auto;
+  z-index: 30;
+  padding: 0;
+  gap: 8px;
+  scrollbar-gutter: stable;
+}
+.workspace-active .rail-switch {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+  background: var(--surface);
+}
+.workspace-active .rail-switch button {
+  font-size: 14px;
+  min-height: 36px;
+  background: var(--surface);
+}
+.workspace-active .rail-switch .on {
+  background: var(--panel);
+  color: var(--ink);
+  font-weight: 700;
+}
+.workspace-active .rail-note {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.workspace-active .rail-card > summary {
+  font-size: 14px;
+  min-height: 32px;
+}
+.workspace-active .rail-card .status-chip strong {
+  font-size: 12px;
+  white-space: normal;
+}
+.workspace-active .rail-card .status-chip span {
+  display: none;
+}
+.workspace-active .rail-card .run-status-items {
+  display: flex;
+  flex-direction: column;
+}
+.workspace-active .rail-card .status-chip {
+  justify-content: flex-start;
+  min-height: 32px;
+}
+.workspace-active .rail-party {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-top: 6px;
+}
+.scene-inspector-host {
+  min-width: 0;
+}
+.scene-inspector-host > .map-inspector {
+  position: relative !important;
+  inset: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  width: auto !important;
+  border-radius: 10px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 10px;
+  min-width: 0;
+}
+.scene-inspector-host .map-tabs {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 4px;
+  position: sticky;
+  top: 44px;
+  z-index: 7;
+  background: var(--panel);
+  padding-bottom: 8px;
+}
+.scene-inspector-host .map-tabs button {
+  padding: 7px 2px;
+  min-width: 0;
+  font-size: 13px;
+  min-height: 34px;
+}
+.scene-inspector-host input:not([type='checkbox']):not([type='color']),
+.scene-inspector-host select,
+.scene-inspector-host textarea {
+  max-width: 100%;
+  min-width: 0;
+}
+.scene-inspector-host .gm-save-footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 8;
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+  padding: 10px 0 2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.scene-inspector-host .gm-save-footer button {
+  flex: 1;
+  min-height: 40px;
+}
+.scene-inspector-host .map-inline {
+  gap: 6px;
+}
+.scene-inspector-host details > summary {
+  min-height: 36px;
+}
+.scene-inspector-host h3 {
+  font-size: 15px;
+}
+.workspace-exploration {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+  padding: 8px 12px;
+}
+.workspace-exploration > summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 26px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+.workspace-exploration > summary span {
+  font-size: 12px;
+  color: var(--muted);
+}
+.workspace-exploration[open] > summary {
+  margin-bottom: 10px;
+}
+.workspace-character-controls {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: 5px 10px;
+  margin: 0;
+}
+.workspace-character-controls > summary {
+  font-size: 13px;
+  min-height: 28px;
+  cursor: pointer;
+}
+.workspace-active .map-page {
+  padding: 0;
+  max-width: none;
+}
+.workspace-active .map-version {
+  display: none;
+}
+.workspace-active .gm-external-inspector {
+  grid-template-columns: 148px minmax(0, 1fr) !important;
+  gap: 8px;
+}
+.workspace-active .gm-external-inspector.gm-left-closed,
+.workspace-active .gm-external-inspector.map-player-preview {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+.workspace-active .gm-external-inspector > .map-sidebar {
+  grid-column: 1;
+  max-height: calc(100dvh - 210px);
+  position: sticky;
+  top: 80px;
+  overflow: auto;
+  padding: 8px;
+}
+.workspace-active .gm-external-inspector > .map-center {
+  grid-column: auto;
+  min-width: 0;
+}
+.workspace-active .gm-scene-top {
+  padding: 8px !important;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.workspace-active .gm-scene-top h2 {
+  font-size: 18px;
+}
+.workspace-active .gm-scene-top .map-badge {
+  font-size: 11px;
+}
+.workspace-active .map-scene-heading {
+  gap: 6px;
+}
+.workspace-active .map-modes {
+  gap: 4px;
+}
+.workspace-active .map-modes button {
+  min-height: 32px;
+  padding: 5px 8px;
+  font-size: 12px;
+}
+.workspace-active .map-save-status {
+  margin: 0;
+  font-size: 12px;
+}
+.workspace-active .map-interaction-controls {
+  padding: 4px 8px;
+  background: var(--surface);
+  color: var(--muted);
+}
+.workspace-active .map-interaction-controls button {
+  min-height: 30px;
+  padding: 4px 8px;
+}
+.workspace-active .gm-external-inspector .map-viewport {
+  height: max(420px, calc(100dvh - 330px));
+  max-height: none;
+}
+.workspace-active .map-journal {
+  margin-top: 8px;
+}
+.workspace-active .gm-map-focused {
+  z-index: 40;
+}
+.workspace-active .gm-external-inspector.gm-map-focused .map-viewport {
+  height: calc(100dvh - 200px);
+}
+.workspace-rail-trigger,
+.workspace-rail-close {
+  display: none;
+}
+.room-page:not(.workspace-active) {
+  padding-left: 24px !important;
+  padding-bottom: 24px;
+}
+.workspace-active .rail-card .room-onboarding {
+  margin: 0;
+}
+@media (max-width: 1280px) {
+  .room-page.workspace-active {
+    padding-right: 326px;
+  }
+  .workspace-active > .room-rail {
+    position: fixed;
+    top: 74px;
+    right: 8px;
+    bottom: 80px;
+    width: 306px;
+    max-height: none;
+    overflow: auto;
+  }
+  .workspace-active .gm-external-inspector {
+    grid-template-columns: 128px minmax(0, 1fr) !important;
+  }
+  .workspace-active .gm-external-inspector > .map-sidebar {
+    grid-column: 1;
+    max-height: calc(100dvh - 210px);
+  }
+}
+@media (max-width: 1024px) {
+  .room-page.workspace-active {
+    padding: 10px 12px 90px;
+  }
+  .workspace-active > .room-rail {
+    display: none;
+    z-index: 145;
+    top: 74px;
+    right: 8px;
+    bottom: 84px;
+    width: min(360px, calc(100vw - 16px));
+    background: var(--panel);
+    padding: 8px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+  }
+  .workspace-active > .room-rail.rail-open {
+    display: flex;
+  }
+  .workspace-rail-trigger {
+    display: block;
+    align-self: flex-end;
+    font-size: 13px;
+    padding: 6px 10px;
+    min-height: 36px;
+  }
+  .workspace-rail-close {
+    display: block;
+    min-height: 36px;
+  }
+  .workspace-active .scene-inspector-host .map-tabs {
+    top: 44px;
+  }
+  .workspace-active .gm-external-inspector > .map-sidebar {
+    position: static;
+    max-height: 220px;
+  }
+  .workspace-active .gm-external-inspector {
+    display: grid !important;
+  }
+  .workspace-active .gm-external-inspector .map-viewport {
+    height: max(400px, calc(100dvh - 300px));
+  }
+  .workspace-active .room-bar {
+    padding-left: 60px;
+    min-height: 44px;
+  }
+}
+@media (max-width: 650px) {
+  .workspace-active .gm-external-inspector {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .workspace-active .gm-external-inspector > .map-sidebar {
+    width: 100%;
+    max-height: 140px;
+  }
+  .workspace-active .map-scene-heading {
+    flex-wrap: wrap;
+  }
+  .workspace-active .gm-external-inspector .map-viewport {
+    height: max(380px, calc(100dvh - 260px));
+  }
+  .workspace-active .map-inline {
+    flex-wrap: wrap;
+  }
+}
+/* Flex item auto margins must not size the workspace to its intrinsic toolbar width. */
+.workspace-active > .map-page {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+.workspace-active .map-interaction-controls > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.room-page.workspace-active > .workspace-rail-trigger,
+.room-page.workspace-active .workspace-rail-close {
+  display: none;
+}
+.workspace-active .gm-scene-top .map-scene-heading {
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+}
+.workspace-active .gm-scene-top .map-modes button {
+  min-height: 32px;
+  padding: 5px 8px;
+}
+.workspace-active .editor-tool-groups {
+  padding: 5px 8px;
+  gap: 6px;
+}
+.workspace-active .editor-tool-groups button,
+.workspace-active .editor-tool-groups summary {
+  min-height: 34px;
+  padding: 5px 7px;
+}
+.workspace-active .workspace-character-controls {
+  padding: 2px 8px;
+}
+.workspace-active .workspace-character-controls > summary {
+  min-height: 30px;
+  padding: 3px 0;
+}
+.workspace-active .workspace-exploration > summary {
+  padding: 2px 0;
+  min-height: 28px;
+}
+@media (max-width: 1024px) {
+  .room-page.workspace-active > .workspace-rail-trigger,
+  .room-page.workspace-active .workspace-rail-close {
+    display: block;
+  }
+  .room-page.workspace-active > .workspace-rail-trigger {
+    align-self: flex-end;
+    width: auto;
+  }
+}
+@media (pointer: coarse) {
+  .workspace-active .editor-tool-groups button,
+  .workspace-active .editor-tool-groups summary,
+  .workspace-active .gm-scene-top .map-modes button,
+  .room-page.workspace-active .workspace-rail-close {
+    min-height: 44px;
+  }
+}
+.workspace-active .editor-tool-groups details.editor-tool-menu {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.workspace-active .map-page details.workspace-character-controls {
+  margin: 0;
+  padding: 2px 8px;
+  border-bottom: 1px solid var(--line);
+}
+@media (min-width: 701px) and (max-width: 1024px) {
+  .app-shell:has(.workspace-active) .header-center {
+    display: none;
+  }
+  .app-shell:has(.workspace-active) .header-actions {
+    min-width: 0;
+    max-width: calc(100% - 180px);
+    overflow-x: auto;
+    flex-shrink: 1;
+  }
+  .app-shell:has(.workspace-active) .brand {
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 700px) {
+  .app-shell:has(.workspace-active) .header-actions {
+    flex-wrap: nowrap;
+    min-width: 0;
+    max-width: calc(100% - 90px);
+    overflow-x: auto;
+  }
+  .app-shell:has(.workspace-active) .header-actions > button {
+    flex-shrink: 0;
+  }
+  .app-shell:has(.workspace-active) .brand {
+    flex-shrink: 0;
+  }
+}
+/* V18-4/5 layout revision: common top navigation, GM room tools and player left rail. */
+.room-page > .room-top-nav {
+  order: -2;
+  width: 100%;
+  margin: 0;
+}
+.player-workspace {
+  max-width: none;
+  margin: 0;
+  padding: 10px 16px 24px 314px !important;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.player-workspace > .room-rail {
+  position: fixed;
+  left: 12px;
+  right: auto;
+  top: 116px;
+  bottom: 82px;
+  width: 286px;
+  z-index: 30;
+  overflow: auto;
+}
+.player-workspace .rail-switch {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+  background: var(--panel);
+}
+.player-workspace .rail-switch button {
+  min-height: 36px;
+  background: var(--button-bg);
+}
+.player-workspace .player-map-workspace {
+  width: 100%;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr);
+  margin: 0;
+}
+.player-workspace .player-map-sidebar {
+  margin: 0;
+  padding: 12px;
+  min-width: 0;
+  max-width: 100%;
+}
+.player-workspace > .room-bar {
+  padding: 0;
+  min-height: 36px;
+}
+.player-workspace .room-bar small {
+  display: none;
+}
+.player-workspace .workspace-rail-trigger,
+.player-workspace .workspace-rail-close {
+  display: none;
+}
+.workspace-active #gm-room-control .workspace-character-controls {
+  margin: 0;
+  padding: 4px 8px;
+}
+.workspace-active .rail-stack > .workspace-exploration {
+  padding: 6px 8px;
+}
+.room-rail .quest-panel {
+  margin: 0;
+  padding: 10px;
+  min-width: 0;
+  font-size: 13px;
+}
+.room-rail .quest-panel input,
+.room-rail .quest-panel select,
+.room-rail .quest-panel textarea {
+  min-width: 0;
+  max-width: 100%;
+}
+@media (max-width: 1024px) {
+  .player-workspace {
+    padding: 10px 12px 90px !important;
+  }
+  .player-workspace > .room-rail {
+    display: none;
+    position: fixed;
+    left: 8px;
+    top: 110px;
+    bottom: 82px;
+    width: min(360px, calc(100vw - 16px));
+    background: var(--panel);
+    padding: 8px;
+    z-index: 145;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+  .player-workspace > .room-rail.rail-open {
+    display: flex;
+  }
+  .player-workspace .workspace-rail-trigger,
+  .player-workspace .workspace-rail-close {
+    display: block;
+    min-height: 44px;
+  }
+  .player-workspace > .workspace-rail-trigger {
+    align-self: flex-start;
+    width: auto;
+  }
+}
+@media (max-width: 700px) {
+  .player-workspace .player-map-toolbar {
+    gap: 6px;
+  }
+  .player-workspace .room-sight {
+    max-width: 180px;
+  }
+  .room-page .room-top-nav {
+    padding: 2px 0;
+  }
+}
+.room-page.player-workspace {
+  padding-left: 314px !important;
+  padding-right: 16px;
+}
+@media (max-width: 1024px) {
+  .room-page.player-workspace {
+    padding-left: 12px !important;
+    padding-right: 12px;
+  }
+}
+
+/* TASK-UI-003：场景侧栏按钮分级与间距压缩 */
+/* TASK-UI-008：右栏默认宽度统一 360；1025–1279 降级 320 保护主区 */
+@media (min-width: 1025px) {
+  .room-page.workspace-active {
+    padding-right: 344px;
+  }
+  .workspace-active > .room-rail {
+    top: 86px;
+    width: 320px;
+    gap: 6px;
+  }
+}
+@media (min-width: 1280px) {
+  .room-page.workspace-active {
+    padding-right: 384px;
+  }
+  .workspace-active > .room-rail {
+    width: 360px;
+  }
+}
+.workspace-active .rail-switch button {
+  min-height: 32px;
+  font-size: 13px;
+}
+.workspace-active .rail-card > summary {
+  min-height: 30px;
+  font-size: 13px;
+}
+.workspace-active .rail-scene-summary {
+  padding: 6px 10px;
+}
+.workspace-active .rail-scene-summary .rail-note {
+  margin: 2px 0 0;
+  font-size: 11px;
+  line-height: 1.4;
+}
+.scene-inspector-host > .map-inspector {
+  padding: 8px;
+}
+.scene-inspector-host .map-tabs {
+  top: 38px;
+  grid-template-columns: repeat(20, minmax(0, 1fr));
+  gap: 3px;
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+}
+.scene-inspector-host .map-tabs button {
+  grid-column: span 5;
+  min-height: 26px;
+  padding: 3px 2px;
+  font-size: 11.5px;
+}
+.scene-inspector-host .map-tabs button:nth-child(n + 5) {
+  grid-column: span 4;
+}
+.scene-inspector-host .map-tabs .active {
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+.scene-inspector-host details > summary {
+  min-height: 32px;
+  padding: 5px 8px;
+}
+.scene-inspector-host .map-inspector h3 {
+  margin: 8px 0 6px;
+  font-size: 14px;
+}
+.scene-inspector-host .map-gm-adjust {
+  margin-top: 8px;
+  padding-top: 8px;
+}
+.scene-inspector-host .map-gm-adjust button.subtle {
+  min-height: 28px;
+  padding: 2px 6px;
+  font-size: 11px;
+  color: var(--danger);
+  border: 1px solid #dcbab6;
+  background: transparent;
+}
+.scene-inspector-host .gm-save-footer {
+  padding: 8px 0 2px;
+}
+.scene-inspector-host .gm-save-footer button {
+  min-height: 40px;
+}
+.scene-inspector-host .gm-scene-section button.secondary {
+  min-height: 28px;
+  padding: 2px 6px;
+  font-size: 11px;
+}
+@media (min-width: 1025px) {
+  .room-page.player-workspace {
+    padding: 10px 344px 24px 16px !important;
+  }
+  .player-workspace > .room-rail {
+    left: auto;
+    right: 12px;
+    top: 86px;
+    bottom: 80px;
+    width: 320px;
+    gap: 6px;
+  }
+}
+@media (min-width: 1280px) {
+  .room-page.player-workspace {
+    padding: 10px 384px 24px 16px !important;
+  }
+  .player-workspace > .room-rail {
+    width: 360px;
+  }
+}
+.player-workspace .rail-switch button {
+  min-height: 32px;
+  font-size: 13px;
+}
+.player-workspace .player-map-sidebar {
+  padding: 10px;
+}
+#player-scene-tools .map-quick-strip button {
+  min-height: 34px;
+  height: 34px;
+  min-width: 48px;
+  padding: 5px 7px;
+}
+#player-scene-tools .map-quick-strip .subtle {
+  min-height: 30px;
+  height: 30px;
+}
+#player-scene-tools .quick-action-select select {
+  min-height: 34px;
+}
+#player-scene-tools .room-card > summary {
+  min-height: 32px;
+  padding: 5px 8px;
+}
+#player-scene-tools .scene-rail-primary {
+  min-height: 40px;
+  padding: 0 12px;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--panel);
+  font-weight: 600;
+}
+#player-scene-tools .scene-rail-primary:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 85%, var(--ink));
+}
+.map-layout-buttons button {
+  min-height: 34px;
+}
+@media (pointer: coarse) {
+  .workspace-active .rail-switch button,
+  .workspace-active .scene-inspector-host button {
+    min-height: 44px;
+  }
+  .scene-inspector-host .map-tabs button,
+  .scene-inspector-host details > summary {
+    min-height: 44px;
+  }
+  #player-scene-tools .map-quick-strip button,
+  #player-scene-tools .quick-action-select select,
+  #player-scene-tools .room-card > summary,
+  .map-layout-buttons button {
+    min-height: 44px;
+    height: auto;
+  }
+}
+
+/* TASK-UI-004：角色页身份行 + 两端右栏滚动条统一 */
+.room-identity-row {
+  display: flex;
+  align-items: center;
+  gap: 10px 14px;
+  flex-wrap: wrap;
+  margin: 6px 0 2px;
+}
+.room-identity-main {
+  min-width: 0;
+}
+.room-identity-main h2 {
+  margin: 0;
+}
+.room-identity-row > label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 0 auto;
+  max-width: none;
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.room-identity-row > label select {
+  display: inline-block;
+  width: auto;
+  min-width: 132px;
+  max-width: 220px;
+  margin: 0;
+  padding: 4px 6px;
+  font-size: 12px;
+}
+@media (max-width: 650px) {
+  .room-identity-row > label {
+    margin: 0;
+  }
+  .room-identity-row > label select {
+    min-width: 108px;
+  }
+}
+@media (min-width: 1025px) {
+  .workspace-active > .room-rail,
+  .player-workspace > .room-rail {
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+    padding: 0;
+  }
+}
+
+/* v.21: reserve precisely the fixed rail width plus its viewport inset. */
+@media (min-width: 1025px) {
+  main.room-page:is(.workspace-active, .player-workspace) {
+    max-width: none;
+    margin: 0;
+    --room-side-width: 320px;
+    padding-right: calc(var(--room-side-width) + 12px) !important;
+  }
+  main.room-page:is(.workspace-active, .player-workspace).character-theme {
+    --room-side-width: var(--character-rail-w, 360px);
+    padding-right: calc(var(--room-side-width) + 12px) !important;
+  }
+  main.room-page:is(.workspace-active, .player-workspace) > .room-rail {
+    right: 12px;
+    left: auto;
+    width: var(--room-side-width);
+    border-left: 1px solid var(--line);
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 1280px) {
+  main.room-page:is(.workspace-active, .player-workspace) { --room-side-width: 360px; }
+}
+@media (max-width: 1024px) {
+  /* Keep the tools entry reachable beside the GM's fixed review button. */
+  main.room-page.workspace-active > .workspace-rail-trigger {
+    right: calc(88px + env(safe-area-inset-right, 0px));
+  }
+}
+
+/* TASK-UI-008 P2：窄屏「房间工具」浮钮常显（滚动不再滚走） */
+@media (max-width: 1024px) {
+  .room-page.workspace-active > .workspace-rail-trigger,
+  .room-page.player-workspace > .workspace-rail-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 12px;
+    bottom: 88px;
+    z-index: 40;
+    align-self: auto;
+    margin: 0;
+    min-height: 40px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--ink);
+    font-size: 13px;
+    box-shadow: 0 8px 20px rgb(38 54 64 / 16%);
+  }
+  .room-page.workspace-active > .workspace-rail-trigger[data-float='true'],
+  .room-page.player-workspace > .workspace-rail-trigger[data-float='true'] {
+    background: color-mix(in srgb, var(--panel) 92%, transparent);
+    backdrop-filter: blur(8px);
+  }
+  .room-page.workspace-active > .workspace-rail-trigger[aria-expanded='true'],
+  .room-page.player-workspace > .workspace-rail-trigger[aria-expanded='true'] {
+    visibility: hidden;
+  }
+  .room-page .workspace-rail-close {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+  }
+}
